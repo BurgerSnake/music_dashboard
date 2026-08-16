@@ -1,6 +1,12 @@
 name: Publier le site
 
 on:
+  # Après chaque workflow qui régénère les données.
+  # IMPORTANT : un commit fait par GITHUB_TOKEN ne déclenche PAS un workflow "push",
+  # d'où ce déclencheur workflow_run, qui lui fonctionne.
+  workflow_run:
+    workflows: ["Écoutes (toutes les 30 min)", "Synchro quotidienne", "File d'actions"]
+    types: [completed]
   push:
     branches: [ main ]
     paths: [ "site/**" ]
@@ -23,6 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { ref: main }
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: "site" }
