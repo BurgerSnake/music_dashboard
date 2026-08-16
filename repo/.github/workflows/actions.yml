@@ -1,0 +1,48 @@
+name: File d'actions
+
+on:
+  push:
+    paths: [ "data/actions.jsonl" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Exécuter les actions en attente
+        env:
+          SPOTIFY_CLIENT_ID:     ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          DISCOGS_TOKEN:         ${{ secrets.DISCOGS_TOKEN }}
+          DISCOGS_USER:          ${{ secrets.DISCOGS_USER }}
+        run: python scripts/process_actions.py
+
+      - name: Rafraîchir les données touchées
+        continue-on-error: true
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+          DISCOGS_USER:  ${{ secrets.DISCOGS_USER }}
+        run: python scripts/sync_discogs.py
+
+      - run: python scripts/build_site.py
+
+      - name: Commiter
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add data site/data
+          git diff --staged --quiet || git commit -m "actions traitées"
+          git pull --rebase --autostash || true
+          git push
