@@ -10,8 +10,8 @@ Prérequis, dans https://developer.spotify.com/dashboard :
   - ajouter EXACTEMENT cette Redirect URI : http://127.0.0.1:8974/callback
   - noter le Client ID et le Client Secret
 """
-import base64, http.server, json, secrets, sys, threading, urllib.parse, webbrowser
-from common import http
+import base64, http.server, json, secrets, sys, threading, time, urllib.parse, webbrowser
+from common import http as api  # renommé : 'http' entrerait en conflit avec http.server
 
 REDIRECT = "http://127.0.0.1:8974/callback"
 SCOPES = " ".join([
@@ -63,13 +63,12 @@ def main():
     for _ in range(240):
         if got:
             break
-        import time
         time.sleep(0.5)
     if got.get("state") != state or "code" not in got:
         sys.exit("Autorisation refusée ou expirée.")
 
     basic = base64.b64encode(f"{cid}:{csec}".encode()).decode()
-    st, tok = http("https://accounts.spotify.com/api/token", method="POST",
+    st, tok = api("https://accounts.spotify.com/api/token", method="POST",
                    headers={"Authorization": "Basic " + basic},
                    form={"grant_type": "authorization_code", "code": got["code"],
                          "redirect_uri": REDIRECT})
