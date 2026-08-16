@@ -28,14 +28,17 @@ jobs:
           LISTENBRAINZ_TOKEN:    ${{ secrets.LISTENBRAINZ_TOKEN }}
         run: python scripts/collect_listens.py
 
+      - name: Récupérer les écritures faites depuis le site
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git pull --rebase --autostash
+
       - name: Recalculer le tableau de bord
         run: python scripts/build_site.py
 
       - name: Commiter s'il y a du nouveau
         run: |
-          git config user.name  "dashboard-bot"
-          git config user.email "dashboard-bot@users.noreply.github.com"
-          git add data site/data
+          git add data/listens data/state.json site/data
           git diff --staged --quiet || git commit -m "écoutes $(date -u +%Y-%m-%dT%H:%M)"
-          git pull --rebase --autostash || true
           git push

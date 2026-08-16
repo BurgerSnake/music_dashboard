@@ -83,6 +83,22 @@ background:var(--deep);border:1px solid var(--cyan);color:var(--bone);padding:11
 font-family:ui-monospace,Menlo,monospace;font-size:13px;z-index:99;transition:transform .25s;max-width:92vw}
 #toast.on{transform:translateX(-50%) translateY(0)}
 a{color:var(--cyan)}
+.av{width:38px;height:38px;object-fit:cover;background:#241536;display:block;border:1px solid var(--line)}
+.row.pic{grid-template-columns:30px 44px 1fr auto}
+.periods{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 0 14px}
+.periods::-webkit-scrollbar{display:none}
+.periods button{flex:0 0 auto;background:var(--deep);border:1px solid var(--line);color:var(--dim);
+padding:7px 13px;font-family:ui-monospace,Menlo,monospace;font-size:12px;cursor:pointer}
+.periods button[aria-pressed=true]{background:var(--violet);border-color:var(--violet);color:#fff;font-weight:700}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:1px;background:var(--line);
+border:1px solid var(--line);margin:0 0 16px}
+.mini div{background:var(--deep);padding:11px 9px}
+.mini b{display:block;font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.mini span{font-family:ui-monospace,Menlo,monospace;font-size:9.5px;letter-spacing:.1em;
+text-transform:uppercase;color:var(--dim);display:block;margin-top:6px}
+.del{border-color:rgba(255,46,126,.45);color:var(--magenta)}
+.edit{display:none;padding:12px;background:var(--deep);border:1px solid var(--violet);margin:6px 0 14px}
+.edit.on{display:block}
 .grid3{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
 .vin{background:var(--deep);border:1px solid var(--line);padding:9px}
 .vin img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#241536}
@@ -97,8 +113,10 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
 
 <nav><div class="navrow">
 <button data-t="ov" aria-selected="true">Vue d'ensemble</button>
+<button data-t="per">Périodes</button>
 <button data-t="rec">Récent</button>
 <button data-t="art">Artistes</button>
+<button data-t="lib">Bibliothèque</button>
 <button data-t="alb">Albums</button>
 <button data-t="trk">Titres</button>
 <button data-t="vin">Vinyles</button>
@@ -117,6 +135,29 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   </div>
   <div class="card"><div id="c4"></div><p class="cap">Répartition sur la journée, toutes années confondues</p></div>
   <div id="gaps"></div>
+</div>
+
+<div class="panel" id="p-per">
+  <h2>Par période</h2><p class="sub">Les mêmes données vues sur une fenêtre glissante.</p>
+  <div class="periods" id="pTabs"></div>
+  <div class="mini" id="pKpi"></div>
+  <div class="card"><div id="pClock"></div><p class="cap">Répartition sur la journée</p></div>
+  <div class="card"><div id="pDow"></div><p class="cap">Répartition sur la semaine</p></div>
+  <h3>Artistes</h3><div class="rows" id="pA"></div>
+  <h3>Albums</h3><div class="rows" id="pB"></div>
+  <h3>Titres</h3><div class="rows" id="pT"></div>
+</div>
+
+<div class="panel" id="p-lib">
+  <h2>Bibliothèque</h2><p class="sub" id="subL"></p>
+  <div class="chips" id="fL">
+    <button class="chip" data-v="tracks" aria-pressed="true">titres likés</button>
+    <button class="chip" data-v="albums">albums</button>
+    <button class="chip" data-v="artists">artistes suivis</button></div>
+  <div class="ctl"><input type="search" id="qL" placeholder="Chercher…">
+    <select id="sL"><option value="plays">par écoutes</option><option value="az">alphabétique</option>
+      <option value="never">jamais écoutés d'abord</option></select></div>
+  <p class="count" id="nL"></p><div class="rows" id="lL"></div><button class="more" id="mL">Afficher plus</button>
 </div>
 
 <div class="panel" id="p-rec">
@@ -173,7 +214,8 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   <div class="card">
     <h3 style="margin-top:0">Ajouter une date</h3>
     <div class="ctl">
-      <input class="wide" id="cA" placeholder="Artiste">
+      <input class="wide" id="cA" list="artistList" placeholder="Artiste" autocomplete="off">
+      <datalist id="artistList"></datalist>
       <input class="wide" id="cV" placeholder="Salle ou festival">
       <input class="wide" id="cC" placeholder="Ville">
     </div>
@@ -182,8 +224,10 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
       <select id="cT"><option>Salle</option><option>Festival</option></select>
       <input class="wide" id="cG" placeholder="Genre (facultatif)">
       <button class="btn" id="cAdd">Ajouter</button>
+      <button class="btn ghost" id="cCancel" style="display:none">Annuler</button>
     </div>
   </div>
+  <p class="cap" id="cHint" style="margin:0 0 10px">Choisis un artiste dans la liste pour que les statistiques se rattachent. Un nom absent de la liste est accepté : c'est un artiste que tu n'as pas encore écouté.</p>
   <div class="ctl"><input type="search" id="qD" placeholder="Artiste, salle ou ville…">
     <select id="tD"><option value="all">salles + festivals</option><option>Salle</option><option>Festival</option></select></div>
   <div class="chips" id="fD">
@@ -244,11 +288,19 @@ const fm=n=>Number(n).toLocaleString('fr-FR').replace(/[\u202f,]/g,' ');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const today=new Date().toISOString().slice(0,10);
 let D=null;
-const S={rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
+const S={per:{id:'j30'},lib:{k:'tracks',q:'',s:'plays',n:60},rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
          con:{q:'',f:'all',t:'all',n:120},rel:{f:'all'},evt:{q:'',f:'all',n:60},vin:{f:'coll'}};
 
 function toast(m,ms=3200){const t=$('#toast');t.textContent=m;t.classList.add('on');
   clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),ms);}
+
+/* ---------- images ---------- */
+const nrm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+  .replace(/\s*[\(\[][^()\[\]]*\b(deluxe|remaster|remastered|expanded|anniversary|special|bonus|legacy|edition|version|reissue|explicit|mono|stereo)\b[^()\[\]]*[\)\]]/g,'')
+  .replace(/^the\s+/,'').replace(/[^a-z0-9]/g,'');
+const imgA=n=>(D.images&&D.images.artists&&D.images.artists[nrm(n)])||'';
+const imgB=(a,b)=>(D.images&&D.images.albums&&D.images.albums[nrm(a)+'|'+nrm(b)])||'';
+const pic=u=>u?`<img class="av" loading="lazy" src="${esc(u)}" alt="">`:'<span class="av"></span>';
 
 /* ---------- graphiques ---------- */
 function bars(v,lab,col,unit){
@@ -327,6 +379,54 @@ function drawOv(){
     <b>${fm(missA)}</b> albums non enregistrés, <b>${fm(missT)}</b> titres non likés.
     Chaque onglet a un filtre pour les isoler.</div>`;
 }
+function renderPer(){
+  const P=D.per||{},ids=Object.keys(P);
+  if(!ids.length){$('#p-per').innerHTML='<div class="note">Relance build_site.py pour générer les périodes.</div>';return;}
+  $('#pTabs').innerHTML=ids.map(k=>`<button data-p="${k}" aria-pressed="${k===S.per.id}">${esc(P[k].label)}</button>`).join('');
+  $$('#pTabs button').forEach(b=>b.onclick=()=>{S.per.id=b.dataset.p;renderPer();});
+  const p=P[S.per.id];
+  $('#pKpi').innerHTML=[[p.hours+' h','écoutées'],[fm(p.plays),'lectures'],[fm(p.artists),'artistes'],
+    [fm(p.albums),'albums'],[fm(p.tracks),'titres'],[p.actifs,'jours actifs'],
+    [p.eff,'artistes effectifs'],[p.top10+' %','part du top 10']]
+    .map(([a,b])=>`<div><b>${a}</b><span>${b}</span></div>`).join('');
+  $('#pClock').innerHTML=bars(p.clock,[...Array(24)].map((_,i)=>i),'#2FE3DF',' h');
+  $('#pDow').innerHTML=bars(p.dow,['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'],'#FFB84D',' h');
+  if(!p.plays){['#pA','#pB','#pT'].forEach(x=>$(x).innerHTML='<div class="note">Rien sur cette période.</div>');return;}
+  $('#pA').innerHTML=p.topA.map((a,i)=>`<div class="row pic"><span class="rk">${i+1}</span>${pic(imgA(a[0]))}
+    <span><span class="nm">${esc(a[0])}</span><span class="mt">${a[3]} titres</span></span>
+    <span class="vv">${a[1]} h<small>${fm(a[2])} lect.</small></span></div>`).join('');
+  $('#pB').innerHTML=p.topB.map((a,i)=>`<div class="row pic"><span class="rk">${i+1}</span>${pic(imgB(a[1],a[0]))}
+    <span><span class="nm">${esc(a[0])}</span><span class="by">${esc(a[1])}</span></span>
+    <span class="vv">${a[2]} h<small>${fm(a[3])} lect.</small></span></div>`).join('');
+  $('#pT').innerHTML=p.topT.map((a,i)=>`<div class="row pic"><span class="rk">${i+1}</span>${pic(imgB(a[1],''))||pic(imgA(a[1]))}
+    <span><span class="nm">${esc(a[0])}</span><span class="by">${esc(a[1])}</span></span>
+    <span class="vv">${fm(a[2])}<small>lectures</small></span></div>`).join('');
+}
+function renderLib(){
+  const L=D.library||{tracks:[],albums:[],artists:[]},k=S.lib.k;
+  let r=(L[k]||[]).slice();
+  const lbl={tracks:'titres likés',albums:'albums enregistrés',artists:'artistes suivis'}[k];
+  if(S.lib.q)r=r.filter(x=>(x[0]+' '+(x[1]||'')).toLowerCase().includes(S.lib.q));
+  const pi=k==='tracks'?3:(k==='albums'?2:1);
+  if(S.lib.s==='plays')r.sort((a,b)=>b[pi]-a[pi]);
+  else if(S.lib.s==='never')r.sort((a,b)=>a[pi]-b[pi]);
+  else r.sort((a,b)=>a[0].localeCompare(b[0],'fr'));
+  $('#subL').textContent=`${fm(L.tracks.length)} titres likés · ${fm(L.albums.length)} albums enregistrés · ${fm(L.artists.length)} artistes suivis.`;
+  $('#nL').textContent=fm(r.length)+' '+lbl;
+  $('#lL').innerHTML=r.slice(0,S.lib.n).map((x,i)=>{
+    const zero=!x[pi]?'<span class="tag t-miss">jamais écouté</span>':'';
+    if(k==='artists')return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgA(x[0]))}
+      <span><span class="nm">${esc(x[0])}</span><span class="mt">${zero}</span></span>
+      <span class="vv">${x[2]} h<small>${fm(x[1])} lect.</small></span></div>`;
+    if(k==='albums')return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgB(x[1],x[0]))}
+      <span><span class="nm">${esc(x[0])}</span><span class="by">${esc(x[1])}</span><span class="mt">${zero}</span></span>
+      <span class="vv">${fm(x[2])}<small>lectures</small></span></div>`;
+    return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgB(x[1],x[2]))}
+      <span><span class="nm">${esc(x[0])}</span><span class="by">${esc(x[1])}</span>
+      <span class="mt">${esc(x[2]||'')} ${zero}</span></span>
+      <span class="vv">${fm(x[3])}<small>lectures</small></span></div>`;}).join('');
+  $('#mL').style.display=r.length>S.lib.n?'block':'none';
+}
 function renderRec(){
   const rec=D.recent||[];
   let r=rec; if(S.rec.q)r=r.filter(x=>((x.track||'')+' '+(x.artist||'')+' '+(x.album||'')).toLowerCase().includes(S.rec.q));
@@ -341,7 +441,7 @@ function renderRec(){
     const sep=(j!==day)?(day=j,`<div class="row" style="border-bottom:none;padding-bottom:2px">
       <span></span><span class="mt" style="margin:0;color:var(--cyan)">${esc(j)}</span><span></span></div>`):'';
     const part=(x.ms||0)<30000?'<span class="tag t-n">passé rapidement</span>':'';
-    return sep+`<div class="row"><span class="rk">${h}</span>
+    return sep+`<div class="row pic"><span class="rk">${h}</span>${pic(imgB(x.artist,x.album)||imgA(x.artist))}
       <span><span class="nm">${esc(x.track)}</span><span class="by">${esc(x.artist)}</span>
       <span class="mt">${esc(x.album||'')} ${part}</span></span>
       <span class="vv">${Math.round((x.ms||0)/1000)}s<small>joué</small></span></div>`;}).join('');
@@ -357,7 +457,8 @@ function renderArt(){
     const t=[];if(!a[5])t.push('<span class="tag t-miss">non suivi</span>');
     if(a[6])t.push(`<span class="tag t-gig">vu ${a[6]}×</span>`);
     if(a[7])t.push(`<span class="tag t-soon">concert ${a[7].slice(8)}/${a[7].slice(5,7)}</span>`);
-    return `<div class="row"><span class="rk">${i+1}</span><span><span class="nm">${esc(a[0])}</span>
+    return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgA(a[0]))}
+      <span><span class="nm">${esc(a[0])}</span>
       <span class="mt">${a[3]} titres · ${a[4]} jours ${t.join(' ')}</span>${spark(a[8])}</span>
       <span class="vv">${a[1]} h<small>${fm(a[2])} lect.</small></span></div>`;}).join('');
   $('#mA').style.display=r.length>s.n?'block':'none';
@@ -373,7 +474,8 @@ function renderAlb(){
     const t=[];if(!a[6])t.push('<span class="tag t-miss">non enregistré</span>');
     const save=(!a[6]&&a[7])?`<button class="act" data-save="${esc(a[7])}">enregistrer</button>`:'';
     const vin=`<button class="act" data-want="${esc(a[1])}||${esc(a[0])}">wantlist vinyle</button>`;
-    return `<div class="row"><span class="rk">${i+1}</span><span><span class="nm">${esc(a[0])}</span>
+    return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgB(a[1],a[0]))}
+      <span><span class="nm">${esc(a[0])}</span>
       <span class="by">${esc(a[1])}</span><span class="mt">${a[4]} titres · ${a[5]} jours ${t.join(' ')} ${save} ${vin}</span></span>
       <span class="vv">${a[2]} h<small>${fm(a[3])} lect.</small></span></div>`;}).join('');
   $('#mB').style.display=r.length>s.n?'block':'none';
@@ -410,7 +512,9 @@ function renderVin(){
   $('#lV').innerHTML=list.map(x=>
     `<div class="vin">${x.thumb?`<img loading="lazy" src="${esc(x.thumb)}" alt="">`:'<div style="aspect-ratio:1;background:#241536"></div>'}
      <b>${esc(x.title)}</b><span>${esc(x.artist)}${x.year?' · '+x.year:''}</span>
-     <span><a href="${esc(x.url)}" target="_blank" rel="noopener">Discogs</a></span></div>`).join('');
+     <span><a href="${esc(x.url)}" target="_blank" rel="noopener">Discogs</a>
+     ${f==='coll'&&x.instance_id?` · <button class="act del" data-vdel="${x.id}|${x.instance_id}|${x.folder_id||1}">retirer</button>`:''}
+     ${f==='want'?` · <button class="act del" data-wdel="${x.id}">retirer</button>`:''}</span></div>`).join('');
 }
 function renderCon(){
   const s=S.con;let r=D.concerts;
@@ -426,9 +530,12 @@ function renderCon(){
     if(c.type==='Festival')t.push('<span class="tag t-n">festival</span>');
     if((c.hours||0)<1)t.push('<span class="tag t-miss">quasi jamais écouté</span>');
     const lk=(c.setlist||'').startsWith('http')?` · <a href="${esc(c.setlist)}" target="_blank" rel="noopener">setlist</a>`:'';
-    return `<div class="row"><span class="rk">${d[0]?d[0].slice(2):''}</span>
+    const idx=D.concerts.indexOf(c);
+    return `<div class="row pic"><span class="rk">${d[0]?d[0].slice(2):''}</span>${pic(imgA(c.artist))}
       <span><span class="nm">${esc(c.artist)}</span><span class="by">${esc(c.venue)} — ${esc(c.city)}</span>
-      <span class="mt">${d[2]||''}/${d[1]||''}/${d[0]||''} · ${esc(c.genre||'')} ${t.join(' ')}${lk}</span></span>
+      <span class="mt">${d[2]||''}/${d[1]||''}/${d[0]||''} · ${esc(c.genre||'')} ${t.join(' ')}${lk}
+      <button class="act" data-cedit="${idx}">modifier</button>
+      <button class="act del" data-cdel="${idx}">supprimer</button></span></span>
       <span class="vv">${c.hours||0} h<small>écoutées</small></span></div>`;}).join('');
   $('#mD').style.display=r.length>s.n?'block':'none';
 }
@@ -459,10 +566,11 @@ function renderEvt(){
   $('#nF').textContent=fm(r.length)+' dates';
   $('#lF').innerHTML=r.length?r.slice(0,s.n).map(e=>{
     const d=e.date.split('-'),have=known.includes((e.artist||'').toLowerCase()+e.date);
-    return `<div class="row"><span class="rk">${d[0].slice(2)}</span>
+    const payload=esc(JSON.stringify({a:e.artist,v:e.venue,c:e.city,d:e.date}));
+    return `<div class="row pic"><span class="rk">${d[0].slice(2)}</span>${pic(imgA(e.artist))}
       <span><span class="nm">${esc(e.artist)}</span><span class="by">${esc(e.venue)} — ${esc(e.city)} (${esc(e.country)})</span>
       <span class="mt">${d[2]}/${d[1]}/${d[0]}
-      ${have?'<span class="tag t-n">déjà dans ton agenda</span>':''}
+      ${have?'<span class="tag t-n">déjà dans ton agenda</span>':`<button class="act" data-evadd="${payload}">j'y vais</button>`}
       <a href="${esc(e.url)}" target="_blank" rel="noopener">billets</a></span></span>
       <span class="vv">${e.hours||0} h<small>écoutées</small></span></div>`;}).join('')
     : `<div class="note">Rien pour l'instant — le workflow quotidien remplira ça.</div>`;
@@ -473,6 +581,29 @@ function chips(sel,key,obj,fn){$$(sel+' .chip').forEach(b=>b.onclick=()=>{
   obj[key]=b.dataset.v;if('n'in obj)obj.n=60;
   $$(sel+' .chip').forEach(x=>x.setAttribute('aria-pressed',x===b));fn();});}
 document.addEventListener('click',async e=>{
+  const ce=e.target.closest('[data-cedit]'),cd=e.target.closest('[data-cdel]'),
+        ev=e.target.closest('[data-evadd]');
+  if(ce){const c=D.concerts[+ce.dataset.cedit];fillForm(c);setEdit(+ce.dataset.cedit);
+    $('#cA').scrollIntoView({behavior:'smooth',block:'center'});return;}
+  if(cd){const i=+cd.dataset.cdel,c=D.concerts[i];
+    if(!confirm(`Supprimer ${c.artist} du ${c.date} ?`))return;
+    if(!GH.ok){toast('Renseigne le dépôt et le jeton dans Réglages');return;}
+    cd.disabled=true;
+    try{const list=D.concerts.filter((_,j)=>j!==i);
+      await saveConcerts(list,'concert supprimé : '+c.artist);
+      D.concerts=list;renderCon();toast('Supprimé.');}
+    catch(err){toast('Échec : '+err.message,6000);cd.disabled=false;}
+    return;}
+  if(ev){const d=JSON.parse(ev.dataset.evadd);
+    fillForm({artist:d.a,venue:d.v,city:d.c,date:d.d,type:/festival|fest/i.test(d.v)?'Festival':'Salle',genre:''});
+    setEdit(-1);tab('con');$('#cA').scrollIntoView({behavior:'smooth',block:'center'});
+    toast('Formulaire pré-rempli — vérifie et clique Ajouter.');return;}
+  const vd=e.target.closest('[data-vdel]'),wd=e.target.closest('[data-wdel]');
+  if(vd){const[id,inst,fold]=vd.dataset.vdel.split('|');
+    if(!confirm('Retirer ce disque de la collection Discogs ?'))return;vd.disabled=true;
+    await queue({type:'discogs_coll_remove',release_id:+id,instance_id:+inst,folder_id:+fold});return;}
+  if(wd){if(!confirm('Retirer ce disque de la wantlist ?'))return;wd.disabled=true;
+    await queue({type:'discogs_want_remove',release_id:+wd.dataset.wdel});return;}
   const s=e.target.closest('[data-save]'),w=e.target.closest('[data-want]');
   if(s){s.disabled=true;await queue({type:'spotify_save',uris:[s.dataset.save]});}
   if(w){w.disabled=true;const[a,t]=w.dataset.want.split('||');
@@ -482,6 +613,25 @@ function tab(id){$$('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+id)
   $$('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===id));scrollTo({top:0});}
 $$('nav button').forEach(b=>b.onclick=()=>tab(b.dataset.t));
 
+const hoursOf=name=>{const k=nrm(name);const a=(D.arts||[]).find(x=>nrm(x[0])===k);return a?a[1]:0;};
+let editIdx=-1;
+function fillForm(c){
+  $('#cA').value=c.artist||'';$('#cV').value=c.venue||'';$('#cC').value=c.city||'';
+  $('#cD').value=c.date||'';$('#cT').value=c.type||'Salle';$('#cG').value=c.genre||'';
+}
+function setEdit(i){
+  editIdx=i;
+  $('#cAdd').textContent=i<0?'Ajouter':'Enregistrer les modifications';
+  $('#cCancel').style.display=i<0?'none':'inline-block';
+  if(i<0)['#cA','#cV','#cC','#cG'].forEach(x=>$(x).value='');
+}
+$('#cCancel').onclick=()=>setEdit(-1);
+
+async function saveConcerts(list,msg){
+  const f=await ghGet('data/concerts.json');
+  list.sort((a,b)=>(a.date||'').localeCompare(b.date||''));
+  await ghPut('data/concerts.json',JSON.stringify(list.map(({hours,...r})=>r),null,1),f.sha,msg);
+}
 $('#cAdd').onclick=async()=>{
   const c={artist:$('#cA').value.trim(),venue:$('#cV').value.trim(),city:$('#cC').value.trim(),
            date:$('#cD').value,type:$('#cT').value,genre:$('#cG').value.trim(),setlist:''};
@@ -489,13 +639,12 @@ $('#cAdd').onclick=async()=>{
   if(!GH.ok){toast('Renseigne le dépôt et le jeton dans Réglages');return;}
   $('#cAdd').disabled=true;
   try{
-    const f=await ghGet('data/concerts.json');
-    const list=f.text?JSON.parse(f.text):[];
-    list.push(c);list.sort((a,b)=>(a.date||'').localeCompare(b.date||''));
-    await ghPut('data/concerts.json',JSON.stringify(list,null,1),f.sha,'concert : '+c.artist);
-    D.concerts.push({...c,hours:0});renderCon();
-    ['#cA','#cV','#cC','#cG'].forEach(x=>$(x).value='');
-    toast('Concert ajouté.');
+    c.hours=hoursOf(c.artist);
+    const list=D.concerts.slice();
+    if(editIdx>=0)list[editIdx]=c; else list.push(c);
+    await saveConcerts(list,(editIdx>=0?'concert modifié : ':'concert : ')+c.artist);
+    D.concerts=list;setEdit(-1);renderCon();
+    toast(c.hours?`Enregistré — ${c.hours} h sur cet artiste.`:'Enregistré (artiste pas encore écouté).');
   }catch(err){toast('Échec : '+err.message,6000);}
   $('#cAdd').disabled=false;
 };
@@ -519,10 +668,15 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
     $('#p-ov').innerHTML=`<div class="note warn">${esc(e.message)}</div>`;return;}
   D.events=D.events||[];D.releases=D.releases||[];
   D.vinyl=D.vinyl||{collection:[],wantlist:[]};D.vinyl_gaps=D.vinyl_gaps||[];D.recent=D.recent||[];
-  drawOv();renderRec();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();renderEvt();
+  D.images=D.images||{artists:{},albums:{}};D.library=D.library||{tracks:[],albums:[],artists:[]};D.per=D.per||{};
+  $('#artistList').innerHTML=(D.names||[]).map(n=>`<option value="${esc(n)}">`).join('');
+  drawOv();renderPer();renderLib();renderRec();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();renderEvt();
   chips('#fA','f',S.art,renderArt);chips('#fB','f',S.alb,renderAlb);chips('#fC','f',S.trk,renderTrk);
   chips('#fD','f',S.con,renderCon);chips('#fE','f',S.rel,renderRel);chips('#fF','f',S.evt,renderEvt);
-  chips('#fV','f',S.vin,renderVin);
+  chips('#fV','f',S.vin,renderVin);chips('#fL','k',S.lib,renderLib);
+  $('#qL').oninput=e=>{S.lib.q=e.target.value.toLowerCase();S.lib.n=60;renderLib();};
+  $('#sL').onchange=e=>{S.lib.s=e.target.value;renderLib();};
+  $('#mL').onclick=()=>{S.lib.n+=100;renderLib();};
   $('#qR').oninput=e=>{S.rec.q=e.target.value.toLowerCase();renderRec();};
   $('#qA').oninput=e=>{S.art.q=e.target.value.toLowerCase();S.art.n=60;renderArt();};
   $('#qB').oninput=e=>{S.alb.q=e.target.value.toLowerCase();S.alb.n=60;renderAlb();};

@@ -9,6 +9,7 @@ Types gérés :
   {"type":"discogs_coll_add",    "release_id":123456}
   {"type":"spotify_save",        "uris":["spotify:album:..."]}
   {"type":"spotify_unsave",      "uris":["spotify:track:..."]}
+  {"type":"discogs_coll_remove", "release_id":123456, "instance_id":789}
 
 Les concerts ne passent pas par ici : le site écrit directement
 data/concerts.json, qu'aucun script automatique ne touche.
@@ -65,6 +66,18 @@ def run(a):
         return discogs("DELETE", f"/users/{{user}}/wants/{rid}")
     if t == "discogs_coll_add":
         return discogs("POST", f"/users/{{user}}/collection/folders/1/releases/{rid}")
+    if t == "discogs_coll_search":
+        rid = discogs_search(a.get("artist", ""), a.get("title", ""))
+        if not rid:
+            return False, "aucun pressage vinyle trouvé"
+        return discogs("POST", f"/users/{{user}}/collection/folders/1/releases/{rid}")
+    if t == "discogs_coll_remove":
+        iid = a.get("instance_id")
+        if not iid:
+            return False, "instance_id manquant"
+        return discogs("DELETE",
+                       f"/users/{{user}}/collection/folders/{a.get('folder_id', 1)}"
+                       f"/releases/{rid}/instances/{iid}")
     if t == "spotify_save":
         return spotify("PUT", a.get("uris", []))
     if t == "spotify_unsave":

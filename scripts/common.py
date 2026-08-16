@@ -63,10 +63,11 @@ def read_json(path, default):
         return default
 
 
-def write_json(path, obj):
+def write_json(path, obj, compact=False):
     p = pathlib.Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
+    kw = dict(separators=(",", ":")) if compact else dict(indent=1)
+    p.write_text(json.dumps(obj, ensure_ascii=False, **kw), encoding="utf-8")
     print(f"  écrit {p.relative_to(ROOT)} ({p.stat().st_size // 1024} Ko)")
 
 

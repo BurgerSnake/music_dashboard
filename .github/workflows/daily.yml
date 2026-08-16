@@ -49,14 +49,21 @@ jobs:
           TICKETMASTER_KEY: ${{ secrets.TICKETMASTER_KEY }}
         run: python scripts/fetch_events.py
 
+      - name: Images (Deezer, sans clé)
+        continue-on-error: true
+        run: python scripts/fetch_images.py
+
+      - name: Récupérer les écritures faites depuis le site
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git pull --rebase --autostash
+
       - name: Recalculer le tableau de bord
         run: python scripts/build_site.py
 
       - name: Commiter
         run: |
-          git config user.name  "dashboard-bot"
-          git config user.email "dashboard-bot@users.noreply.github.com"
-          git add data site/data
+          git add data/library.json data/vinyl.json data/releases.json data/events.json data/images.json data/mbid_cache.json site/data
           git diff --staged --quiet || git commit -m "synchro quotidienne $(date -u +%F)"
-          git pull --rebase --autostash || true
           git push

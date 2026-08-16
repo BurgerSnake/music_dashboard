@@ -33,6 +33,8 @@ def flat(entry, kind):
     return {
         "kind": kind,
         "id": entry.get("id"),
+        "instance_id": entry.get("instance_id"),
+        "folder_id": entry.get("folder_id", 1),
         "title": b.get("title", ""),
         "artist": ", ".join(a.get("name", "").split(" (")[0] for a in b.get("artists", [])),
         "year": b.get("year") or None,
