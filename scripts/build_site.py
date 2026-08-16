@@ -121,7 +121,12 @@ def main():
                   if (norm(a[1]) + "|" + norm(a[0])) not in own
                   and (norm(a[1]) + "|" + norm(a[0])) not in want][:40]
 
-    out = dict(ov=ov, arts=arts, albs=albs, trks=trks, concerts=concerts,
+    # les 200 dernières écoutes, pour l'onglet Récent
+    recent = [{"ts": r["ts"], "track": r.get("track", ""), "artist": r.get("artist", ""),
+               "album": r.get("album", ""), "ms": r.get("ms", 0)}
+              for r in raw[-200:]][::-1]
+
+    out = dict(ov=ov, arts=arts, albs=albs, trks=trks, recent=recent, concerts=concerts,
                events=events, releases=releases, vinyl=vinyl, vinyl_gaps=vinyl_gaps,
                stats=dict(listens=len(raw), artists=len(arts), albums=len(albs),
                           tracks=len(trks), liked=len(lib["tracks"]),

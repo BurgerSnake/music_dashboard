@@ -97,6 +97,7 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
 
 <nav><div class="navrow">
 <button data-t="ov" aria-selected="true">Vue d'ensemble</button>
+<button data-t="rec">Récent</button>
 <button data-t="art">Artistes</button>
 <button data-t="alb">Albums</button>
 <button data-t="trk">Titres</button>
@@ -116,6 +117,12 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   </div>
   <div class="card"><div id="c4"></div><p class="cap">Répartition sur la journée, toutes années confondues</p></div>
   <div id="gaps"></div>
+</div>
+
+<div class="panel" id="p-rec">
+  <h2>Écoutes récentes</h2><p class="sub" id="subR"></p>
+  <div class="ctl"><input type="search" id="qR" placeholder="Filtrer…"></div>
+  <p class="count" id="nR"></p><div class="rows" id="lR"></div>
 </div>
 
 <div class="panel" id="p-art">
@@ -237,7 +244,7 @@ const fm=n=>Number(n).toLocaleString('fr-FR').replace(/[\u202f,]/g,' ');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const today=new Date().toISOString().slice(0,10);
 let D=null;
-const S={art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
+const S={rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
          con:{q:'',f:'all',t:'all',n:120},rel:{f:'all'},evt:{q:'',f:'all',n:60},vin:{f:'coll'}};
 
 function toast(m,ms=3200){const t=$('#toast');t.textContent=m;t.classList.add('on');
@@ -319,6 +326,25 @@ function drawOv(){
   $('#gaps').innerHTML=`<div class="note">Bibliothèque : <b>${fm(miss)}</b> artistes écoutés non suivis,
     <b>${fm(missA)}</b> albums non enregistrés, <b>${fm(missT)}</b> titres non likés.
     Chaque onglet a un filtre pour les isoler.</div>`;
+}
+function renderRec(){
+  const rec=D.recent||[];
+  let r=rec; if(S.rec.q)r=r.filter(x=>((x.track||'')+' '+(x.artist||'')+' '+(x.album||'')).toLowerCase().includes(S.rec.q));
+  $('#subR').textContent=rec.length?`Les ${rec.length} dernières écoutes enregistrées.`:'';
+  $('#nR').textContent=fm(r.length)+' écoutes';
+  if(!rec.length){$('#lR').innerHTML='<div class="note">Rien pour l\'instant — le workflow de collecte remplira ça.</div>';return;}
+  let day='';
+  $('#lR').innerHTML=r.map(x=>{
+    const d=new Date(x.ts);
+    const j=d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+    const h=d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    const sep=(j!==day)?(day=j,`<div class="row" style="border-bottom:none;padding-bottom:2px">
+      <span></span><span class="mt" style="margin:0;color:var(--cyan)">${esc(j)}</span><span></span></div>`):'';
+    const part=(x.ms||0)<30000?'<span class="tag t-n">passé rapidement</span>':'';
+    return sep+`<div class="row"><span class="rk">${h}</span>
+      <span><span class="nm">${esc(x.track)}</span><span class="by">${esc(x.artist)}</span>
+      <span class="mt">${esc(x.album||'')} ${part}</span></span>
+      <span class="vv">${Math.round((x.ms||0)/1000)}s<small>joué</small></span></div>`;}).join('');
 }
 function renderArt(){
   const s=S.art;let r=D.arts;
@@ -492,11 +518,12 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
     $('#stamp').textContent='erreur';
     $('#p-ov').innerHTML=`<div class="note warn">${esc(e.message)}</div>`;return;}
   D.events=D.events||[];D.releases=D.releases||[];
-  D.vinyl=D.vinyl||{collection:[],wantlist:[]};D.vinyl_gaps=D.vinyl_gaps||[];
-  drawOv();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();renderEvt();
+  D.vinyl=D.vinyl||{collection:[],wantlist:[]};D.vinyl_gaps=D.vinyl_gaps||[];D.recent=D.recent||[];
+  drawOv();renderRec();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();renderEvt();
   chips('#fA','f',S.art,renderArt);chips('#fB','f',S.alb,renderAlb);chips('#fC','f',S.trk,renderTrk);
   chips('#fD','f',S.con,renderCon);chips('#fE','f',S.rel,renderRel);chips('#fF','f',S.evt,renderEvt);
   chips('#fV','f',S.vin,renderVin);
+  $('#qR').oninput=e=>{S.rec.q=e.target.value.toLowerCase();renderRec();};
   $('#qA').oninput=e=>{S.art.q=e.target.value.toLowerCase();S.art.n=60;renderArt();};
   $('#qB').oninput=e=>{S.alb.q=e.target.value.toLowerCase();S.alb.n=60;renderAlb();};
   $('#qC').oninput=e=>{S.trk.q=e.target.value.toLowerCase();S.trk.n=60;renderTrk();};
