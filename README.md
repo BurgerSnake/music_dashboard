@@ -12,6 +12,7 @@ la donnée bouge réellement :
 | Écoutes | toutes les 30 min | ~1 min | écoutes Spotify + envoi ListenBrainz |
 | Synchro quotidienne | 4h20 | ~1-2 min | bibliothèque Spotify + vinyles Discogs |
 | Sorties et concerts | lundi et jeudi | ~4 min | MusicBrainz + Ticketmaster |
+| Genres | samedi | ~8 min | familles de genres depuis MusicBrainz |
 | Images | le 1er du mois | ~4 min | photos et pochettes Deezer |
 - Le site est une page statique publiée par GitHub Pages.
 - Les écritures depuis le site (ajouter un concert, mettre un disque en wantlist)
@@ -20,6 +21,7 @@ la donnée bouge réellement :
 ```
 data/listens/AAAA-MM.jsonl   écoutes brutes, une par ligne     ← écrit par l'Action
 data/images.json             photos et pochettes (cache)       ← écrit par l'Action
+data/genres.json             famille de genre par artiste      ← écrit par l'Action
 data/library.json            likes, albums, artistes suivis    ← écrit par l'Action
 data/vinyl.json              collection + wantlist Discogs     ← écrit par l'Action
 data/releases.json           sorties MusicBrainz               ← écrit par l'Action
@@ -28,6 +30,7 @@ data/concerts.json           TES concerts                      ← écrit par to
 data/actions.jsonl           file d'attente des demandes       ← écrit par le site
 site/data/dashboard.json     tout l'agrégé pour la page        ← recalculé à chaque fois
 site/data/matrix.json        matrice jour × artiste/album      ← chargée à la demande seulement
+site/data/matrix_tracks.json matrice jour × titre              ← chargée à la demande seulement
 ```
 
 ---
@@ -157,8 +160,26 @@ seulement quand tu ouvres cet écran. Les deux chemins donnent exactement les
 mêmes chiffres, ce qui est vérifiable : choisis « du J-29 à aujourd'hui » et tu
 retrouves les valeurs de l'onglet « 30 jours ».
 
-La matrice ne contient pas les titres, seulement artistes et albums : les
-titres auraient triplé sa taille pour un usage marginal.
+Les titres vivent dans `matrix_tracks.json`, un troisième fichier chargé
+seulement si tu ouvres l'onglet Titres sur une plage libre — il est plus gros
+que les deux autres réunis.
+
+Granularité de la courbe, choisie automatiquement : heures sur 24 h, jours
+jusqu'à 45 jours, semaines jusqu'à 220 jours, mois jusqu'à 1 000 jours, années
+au-delà.
+
+## Les genres
+
+`fetch_genres.py` interroge les genres et tags MusicBrainz, puis les range dans
+16 familles lisibles définies en haut du script. **L'ordre de cette liste
+compte** : elle va du plus spécifique au plus générique, sinon
+« Indie / Alternative » aspirerait tout ce qui porte le tag `alternative rock`.
+Pour reclasser un artiste, ajuste les mots-clés d'une famille et supprime son
+entrée dans `data/genres.json`.
+
+Les artistes sans tag exploitable restent non classés ; le tableau de bord
+affiche le taux de couverture sous la barre des genres pour que tu saches à
+quel point la répartition est représentative.
 
 ## Vérifier en local
 

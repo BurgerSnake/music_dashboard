@@ -1,0 +1,35 @@
+name: Genres (hebdomadaire)
+
+# Les genres d'un artiste ne changent jamais : une fois classé, il l'est.
+# Le plafond de 400 appels borne la durée à ~8 min ; il faut 3 ou 4 passages
+# pour couvrir les 700 artistes, puis c'est quasi instantané.
+# Tu peux lancer ce workflow à la main plusieurs fois de suite le premier jour.
+
+on:
+  schedule:
+    - cron: "30 5 * * 6"      # samedi
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  genres:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/fetch_genres.py
+      - run: python scripts/build_site.py
+      - name: Publier
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add data/genres.json data/mbid_cache.json site/data
+          git diff --staged --quiet || git commit -m "genres $(date -u +%F)"
+          git pull --rebase || true
+          for i in 1 2 3; do git push && exit 0; sleep $((i*5)); git pull --rebase || true; done
+          git push

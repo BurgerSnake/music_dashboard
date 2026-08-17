@@ -39,6 +39,8 @@ def main():
     releases = read_json(DATA / "releases.json", [])
     events = read_json(DATA / "events.json", [])
     images = read_json(DATA / "images.json", {"artists": {}, "albums": {}})
+    gen = read_json(DATA / "genres.json", {"by_artist": {}, "tags": {}})
+    GEN = gen.get("by_artist", {})
     today = dt.date.today().isoformat()
 
     liked_t = {(norm(t["artist"]), norm(t["track"])) for t in lib["tracks"]}
@@ -122,6 +124,52 @@ def main():
         ov["eff"].append(round(math.exp(ent), 1))
         ov["top10"].append(round(sum(sorted(w, reverse=True)[:10]) / tot * 100, 1))
 
+    # granularité de la courbe selon la fenêtre
+    GRAIN = {"j1": "hour", "j7": "day", "j30": "day", "j180": "month",
+             "j365": "month", "all": "year"}
+
+    def series(pid, grain):
+        buck = collections.Counter()
+        cut = cutoffs[pid]
+        for r in raw:
+            if r.get("ms", 0) < MIN_MS:
+                continue
+            d = parse(r["ts"])
+            day = d.date().isoformat()
+            if cut and day < cut:
+                continue
+            k = {"hour": f"{d.hour:02d}h", "day": day,
+                 "month": day[:7], "year": day[:4]}[grain]
+            buck[k] += r["ms"] / 60000
+        if grain == "hour":
+            keys = [f"{h:02d}h" for h in range(24)]
+        else:
+            keys = sorted(buck)
+            if grain == "day" and cut:      # on montre aussi les jours à zéro
+                a = dt.date.fromisoformat(cut)
+                keys = [(a + dt.timedelta(days=i)).isoformat()
+                        for i in range((td - a).days + 1)]
+        short = {"hour": lambda k: k, "day": lambda k: k[8:10] + "/" + k[5:7],
+                 "month": lambda k: k[5:7] + "/" + k[2:4], "year": lambda k: k}[grain]
+        return dict(grain=grain, labels=[short(k) for k in keys],
+                    values=[round(buck.get(k, 0) / 60, 2) for k in keys])
+
+    def genre_share(adict):
+        """Part des heures par famille de genre, sur les artistes classés."""
+        g = collections.Counter()
+        for k, v in adict.items():
+            fam = GEN.get(k)
+            if fam:
+                g[fam] += v["min"]
+        tot = sum(g.values())
+        if not tot:
+            return dict(couverture=0, parts=[])
+        classed = sum(v["min"] for k, v in adict.items() if GEN.get(k))
+        whole = sum(v["min"] for v in adict.values()) or 1
+        return dict(couverture=round(classed / whole * 100, 1),
+                    parts=[[fam, round(m / tot * 100, 1), round(m / 60, 1)]
+                           for fam, m in g.most_common()])
+
     per = {}
     for pid, label, days in PERIODS:
         p = P[pid]
@@ -134,12 +182,14 @@ def main():
             artists=len(p["A"]), albums=len(p["B"]), tracks=len(p["T"]),
             eff=round(math.exp(ent), 1) if w else 0,
             top10=round(sum(w[:10]) / tot * 100, 1) if w else 0,
+            serie=series(pid, GRAIN[pid]),
+            genres=genre_share(p["A"]),
             clock=[round(x / 60, 1) for x in p["clock"]],
             dow=[round(x / 60, 1) for x in p["dow"]],
             # mêmes champs que les listes globales, pour que les filtres
             # (non suivi / pas liké / concert) fonctionnent sur toutes les périodes
             topA=[[v["name"], round(v["min"] / 60, 1), v["n"], len(v["tracks"]), 0,
-                   k in follow, seen_gigs.get(k, 0), next_gig.get(k)]
+                   k in follow, seen_gigs.get(k, 0), next_gig.get(k), None, GEN.get(k, "")]
                   for k, v in top(p["A"], 300)],
             topB=[[v["name"], v["artist"], round(v["min"] / 60, 1), v["n"], 0, 0,
                    k in saved_a, ""]
@@ -149,9 +199,22 @@ def main():
                   for k, v in top(p["T"], 250, key=lambda v: v["n"])],
         )
 
+    gy = collections.defaultdict(lambda: collections.Counter())
+    for k, v in A.items():
+        fam = GEN.get(k)
+        if not fam:
+            continue
+        for y, m in v["yr"].items():
+            gy[y][fam] += m
+    fams = sorted({f for c in gy.values() for f in c},
+                  key=lambda f: -sum(c.get(f, 0) for c in gy.values()))
+    ov["genre_fams"] = fams
+    ov["genre_years"] = {f: [round(gy[y][f] / (sum(gy[y].values()) or 1) * 100, 1)
+                             for y in years] for f in fams}
+
     arts = [[v["name"], round(v["min"] / 60, 1), v["n"], len(v["tracks"]), len(v["days"]),
              k in follow, seen_gigs.get(k, 0), next_gig.get(k),
-             [round(v["yr"][y] / 60, 1) for y in years]]
+             [round(v["yr"][y] / 60, 1) for y in years], GEN.get(k, "")]
             for k, v in top(A, 10 ** 6) if v["n"] >= 3]
     albs = [[v["name"], v["artist"], round(v["min"] / 60, 1), v["n"],
              len(v["tracks"]), len(v["days"]), k in saved_a, v["uri"]]
@@ -166,14 +229,33 @@ def main():
     pb = {k: v["n"] for k, v in B.items()}
     pa = {k: v["n"] for k, v in A.items()}
 
+    # Spotify garde une entrée par version d'un titre (album, remaster, live,
+    # compilation) : on fusionne sur artiste + titre normalisés, sinon la
+    # bibliothèque affiche trois fois "Here Comes Your Man".
+    def dedup(rows, keyf):
+        seen, out = {}, []
+        for r in rows:
+            k = keyf(r)
+            if k in seen:
+                seen[k][-1] += 1          # compteur de versions
+                continue
+            seen[k] = r + [1]
+            out.append(seen[k])
+        return out
+
     library = dict(
-        tracks=[[t["track"], t["artist"], t["album"], pt.get((norm(t["artist"]), norm(t["track"])), 0),
-                 t.get("uri", "")] for t in lib["tracks"]],
-        albums=[[a["album"], a["artist"], pb.get((norm(a["artist"]), norm(a["album"])), 0),
-                 a.get("uri", "")] for a in lib["albums"]],
-        artists=[[a["artist"], pa.get(norm(a["artist"]), 0),
-                  round(A.get(norm(a["artist"]), {"min": 0})["min"] / 60, 1)] for a in lib["artists"]],
+        tracks=dedup([[t["track"], t["artist"], t["album"],
+                       pt.get((norm(t["artist"]), norm(t["track"])), 0), t.get("uri", "")]
+                      for t in lib["tracks"]], lambda r: (norm(r[1]), norm(r[0]))),
+        albums=dedup([[a["album"], a["artist"],
+                       pb.get((norm(a["artist"]), norm(a["album"])), 0), a.get("uri", "")]
+                      for a in lib["albums"]], lambda r: (norm(r[1]), norm(r[0]))),
+        artists=dedup([[a["artist"], pa.get(norm(a["artist"]), 0),
+                        round(A.get(norm(a["artist"]), {"min": 0})["min"] / 60, 1)]
+                       for a in lib["artists"]], lambda r: norm(r[0])),
     )
+    print(f"  bibliothèque dédoublonnée : {len(lib['tracks'])} → {len(library['tracks'])} titres, "
+          f"{len(lib['albums'])} → {len(library['albums'])} albums")
 
     for c in concerts:
         c["hours"] = hmap.get(norm(c.get("artist", "")), 0)
@@ -231,7 +313,26 @@ def main():
     matrix = dict(d0=d0.isoformat(), artists=labA, albums=labB,
                   A=pack(cellA, cntA), B=pack(cellB, cntB))
     write_json(SITE / "matrix.json", matrix, compact=True)
-    print(f"  matrice : {len(cellA)} cellules artiste, {len(cellB)} cellules album")
+
+    # Les titres vivent dans leur propre fichier : bien plus volumineux, et
+    # utile seulement quand on ouvre l'onglet Titres sur une période libre.
+    cellT, cntT, iT, labT = collections.Counter(), collections.Counter(), {}, []
+    for r in raw:
+        if r.get("ms", 0) < MIN_MS:
+            continue
+        d = parse(r["ts"]).date()
+        off = (d - d0).days
+        if off < 0 or not r.get("track"):
+            continue
+        art, trk = r.get("artist", ""), r["track"]
+        k = norm(art) + "|" + norm(trk)
+        if k not in iT:
+            iT[k] = len(labT); labT.append([trk, art])
+        cellT[(off, iT[k])] += r["ms"] / 60000
+        cntT[(off, iT[k])] += 1
+    write_json(SITE / "matrix_tracks.json",
+               dict(d0=d0.isoformat(), tracks=labT, T=pack(cellT, cntT)), compact=True)
+    print(f"  matrice : {len(cellA)} cellules artiste, {len(cellB)} album, {len(cellT)} titre")
 
     out = dict(ov=ov, per=per, matrix_ready=True, arts=arts, albs=albs, trks=trks, recent=recent,
                library=library, concerts=concerts, events=events, releases=releases,
@@ -240,7 +341,8 @@ def main():
                stats=dict(listens=len(raw), artists=len(arts), albums=len(albs),
                           tracks=len(trks), liked=len(lib["tracks"]),
                           saved=len(lib["albums"]), followed=len(lib["artists"]),
-                          vinyls=len(vinyl["collection"]), wants=len(vinyl["wantlist"])))
+                          vinyls=len(vinyl["collection"]), wants=len(vinyl["wantlist"]),
+                          genres=len(GEN)))
     write_json(SITE / "dashboard.json", out, compact=True)
     print(f"  {len(raw)} écoutes · {len(arts)} artistes · {len(albs)} albums · {len(trks)} titres")
     print(f"  périodes : " + " · ".join(f"{p['label']} {p['hours']}h" for p in per.values()))

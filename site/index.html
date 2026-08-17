@@ -104,6 +104,11 @@ font-family:ui-monospace,Menlo,monospace;font-size:11px;padding:1px 6px}
 .custom label{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;
 text-transform:uppercase;color:var(--dim);min-width:52px}
 .custom input[type=date]{padding:7px 9px;font-size:14px}
+.gbar{display:flex;height:26px;border:1px solid var(--line);overflow:hidden;margin:4px 0 8px}
+.gbar span{display:block;min-width:2px}
+.glist{display:grid;gap:5px 14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--dim)}
+.glist i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
 .delta{font-family:ui-monospace,Menlo,monospace;font-size:11px}
 .up{color:var(--green)}.dn{color:var(--magenta)}
 .viewsw{display:flex;gap:5px;margin-left:auto}
@@ -160,6 +165,13 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
       <span class="cap" id="custState"></span></div>
   </div>
   <div class="mini" id="pKpi"></div>
+  <div class="card"><div id="pSerie"></div><p class="cap" id="pSerieCap"></p></div>
+  <div class="card" id="gCard"><h3 style="margin:0 0 8px">Genres</h3>
+    <div class="gbar" id="gBar"></div><div class="glist" id="gList"></div>
+    <p class="cap" id="gCap"></p></div>
+  <div class="card" id="gYearCard"><div id="gYear"></div>
+    <div class="glist" id="gYearLeg"></div>
+    <p class="cap">Part des heures par genre, année par année</p></div>
   <div class="g2">
     <div class="card"><div id="pClock"></div><p class="cap">Répartition sur la journée</p></div>
     <div class="card"><div id="pDow"></div><p class="cap">Répartition sur la semaine</p></div>
@@ -199,6 +211,7 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   <h2>Artistes</h2><p class="sub" id="subA"></p>
   <div class="periods" id="pT_art"></div>
   <div class="ctl"><input type="search" id="qA" placeholder="Chercher un artiste…">
+    <select id="gA"></select>
     <select id="sA"><option value="1">par heures</option><option value="2">par lectures</option>
       <option value="3">par titres connus</option><option value="4">par régularité</option></select></div>
   <div class="chips" id="fA">
@@ -324,7 +337,7 @@ const fm=n=>Number(n).toLocaleString('fr-FR').replace(/[\u202f,]/g,' ');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const today=new Date().toISOString().slice(0,10);
 let D=null;
-const S={per:{ov:'all',art:'all',alb:'all',trk:'all'},vw:{art:'list',alb:'list',lib:'grid'},lib:{k:'tracks',q:'',s:'plays',n:60},rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
+const S={gf:'',per:{ov:'all',art:'all',alb:'all',trk:'all'},vw:{art:'list',alb:'list',lib:'grid'},lib:{k:'tracks',q:'',s:'plays',n:60},rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
          con:{q:'',f:'all',t:'all',n:120},rel:{f:'all'},evt:{q:'',f:'all',n:60},vin:{f:'coll'}};
 
 function toast(m,ms=3200){const t=$('#toast');t.textContent=m;t.classList.add('on');
@@ -347,7 +360,8 @@ function bars(v,lab,col,unit){
       +`<text x="${P.l-6}" y="${y+4}" fill="#9A8AAE" font-size="11" text-anchor="end" font-family="monospace">${Math.round(val)}${unit||''}</text>`;}
   v.forEach((x,i)=>{const h=(y0-P.t)*(x/hi);
     s+=`<rect x="${P.l+sp*i+sp*.18}" y="${y0-h}" width="${sp*.64}" height="${Math.max(h,0)}" fill="${col}" rx="2"/>`;});
-  lab.forEach((l,i)=>{if(n>8&&i%2)return;
+  const step=Math.max(1,Math.ceil(n/12));
+  lab.forEach((l,i)=>{if(i%step)return;
     s+=`<text x="${P.l+sp*i+sp/2}" y="${H-8}" fill="#9A8AAE" font-size="11" text-anchor="middle" font-family="monospace">${l}</text>`;});
   return s+'</svg>';}
 function line(v,lab,col,hi0,unit){
@@ -359,7 +373,21 @@ function line(v,lab,col,hi0,unit){
       +`<text x="${P.l-6}" y="${Y(val)+4}" fill="#9A8AAE" font-size="11" text-anchor="end" font-family="monospace">${Math.round(val)}${unit||''}</text>`;}
   s+=`<path d="${v.map((x,i)=>`${i?'L':'M'}${X(i)},${Y(x)}`).join(' ')}" fill="none" stroke="${col}" stroke-width="2.8" stroke-linejoin="round"/>`;
   v.forEach((x,i)=>{s+=`<circle cx="${X(i)}" cy="${Y(x)}" r="3.4" fill="#12071C" stroke="${col}" stroke-width="2"/>`;});
-  lab.forEach((l,i)=>{if(n>8&&i%2)return;
+  const stp=Math.max(1,Math.ceil(n/10));
+  lab.forEach((l,i)=>{if(i%stp)return;
+    s+=`<text x="${X(i)}" y="${H-8}" fill="#9A8AAE" font-size="11" text-anchor="middle" font-family="monospace">${l}</text>`;});
+  return s+'</svg>';}
+function stack(series,labels){
+  const W=680,H=230,P={l:36,r:8,t:8,b:26},n=labels.length;
+  const X=i=>P.l+(W-P.l-P.r)*(i/Math.max(n-1,1)),Y=v=>H-P.b-(H-P.b-P.t)*(v/100);
+  let base=new Array(n).fill(0),s=`<svg viewBox="0 0 ${W} ${H}" width="100%">`;
+  series.forEach(se=>{const top=base.map((b,i)=>b+(se.v[i]||0));
+    const up=top.map((v,i)=>`${i?'L':'M'}${X(i)},${Y(v)}`).join(' ');
+    const dn=base.map((v,i)=>[X(i),Y(v)]).reverse().map(([x,y])=>`L${x},${y}`).join(' ');
+    s+=`<path d="${up} ${dn} Z" fill="${se.c}" opacity=".9"/>`;base=top;});
+  [0,50,100].forEach(t=>{s+=`<text x="${P.l-6}" y="${Y(t)+4}" fill="#9A8AAE" font-size="11" text-anchor="end" font-family="monospace">${t}%</text>`;});
+  const st=Math.max(1,Math.ceil(n/10));
+  labels.forEach((l,i)=>{if(i%st)return;
     s+=`<text x="${X(i)}" y="${H-8}" fill="#9A8AAE" font-size="11" text-anchor="middle" font-family="monospace">${l}</text>`;});
   return s+'</svg>';}
 function spark(v){
@@ -435,6 +463,34 @@ function srcAlb(){const k=S.per.alb;return k==='all'?D.albs:((D.per[k]||{}).topB
 function srcTrk(){const k=S.per.trk;return k==='all'?D.trks:((D.per[k]||{}).topT||[]);}
 function periodNote(k,n){return k==='all'?'':` · top ${n} de la période`;}
 
+const GRAINLBL={hour:"heure par heure",day:"jour par jour",week:"semaine par semaine",month:"mois par mois",year:"année par année"};
+function drawSerie(se){
+  if(!se||!se.labels||!se.labels.length){$('#pSerie').innerHTML='';$('#pSerieCap').textContent='';return;}
+  const many=se.labels.length>40;
+  $('#pSerie').innerHTML=many?line(se.values,se.labels,'#FF2E7E',0,' h')
+                             :bars(se.values,se.labels,'#FF2E7E',' h');
+  $('#pSerieCap').textContent=`Heures écoutées, ${GRAINLBL[se.grain]||''} (${se.labels.length} points)`;
+}
+const GCOL=['#FF2E7E','#2FE3DF','#8B5CF6','#FFB84D','#6EE7A8','#F49AC2','#38BDF8',
+  '#E4572E','#C084FC','#FDE68A','#8578A0','#A3E635','#FB7185','#22D3EE','#FACC15','#463759'];
+const gcol=f=>GCOL[((D.ov.genre_fams||[]).indexOf(f)+16)%16];
+function drawGenres(g){
+  const card=$('#gCard');
+  if(!g||!g.parts||!g.parts.length){$('#gBar').innerHTML='';$('#gList').innerHTML='';
+    $('#gCap').textContent="Aucun genre disponible — lance le workflow des genres.";return;}
+  $('#gBar').innerHTML=g.parts.map(([f,pc])=>
+    `<span style="width:${pc}%;background:${gcol(f)}" title="${esc(f)} ${pc} %"></span>`).join('');
+  $('#gList').innerHTML=g.parts.map(([f,pc,h])=>
+    `<span><i style="background:${gcol(f)}"></i>${esc(f)} — <b style="color:var(--bone)">${pc} %</b> · ${h} h</span>`).join('');
+  $('#gCap').textContent=`${g.couverture} % des heures de la période sont classées ; le reste est sans genre exploitable.`;
+}
+function drawGenreYears(){
+  const fams=D.ov.genre_fams||[],GY=D.ov.genre_years||{};
+  if(!fams.length){$('#gYear').innerHTML='';$('#gYearLeg').innerHTML='';return;}
+  const L=D.ov.years.map(y=>String(y).slice(2));
+  $('#gYear').innerHTML=stack(fams.map(f=>({v:GY[f]||[],c:gcol(f)})),L);
+  $('#gYearLeg').innerHTML=fams.map(f=>`<span><i style="background:${gcol(f)}"></i>${esc(f)}</span>`).join('');
+}
 function renderOv2(){
   periodBar('ov',renderOv2);
   const p=(D.per||{})[S.per.ov];if(!p)return;
@@ -442,6 +498,7 @@ function renderOv2(){
     [fm(p.albums),'albums'],[fm(p.tracks),'titres'],[p.actifs,'jours actifs'],
     [p.eff,'artistes effectifs'],[p.top10+' %','part du top 10']]
     .map(([a,b])=>`<div><b>${a}</b><span>${b}</span></div>`).join('');
+  drawSerie(p.serie);drawGenres(p.genres);
   $('#pClock').innerHTML=bars(p.clock,[...Array(24)].map((_,i)=>i),'#2FE3DF',' h');
   $('#pDow').innerHTML=bars(p.dow,['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'],'#FFB84D',' h');
 }
@@ -486,9 +543,10 @@ function renderLib(){
       const sub=k==='artists'?`${x[2]} h`:esc(x[1]);
       const val=k==='artists'?`${fm(x[1])} lect.`:(k==='albums'?`${fm(x[2])} lect.`:`${fm(x[3])} lect.`);
       const z=!x[pi]?'<i style="color:var(--magenta)">jamais écouté</i>':'';
+      const nv=(x[x.length-1]>1)?`<i>${x[x.length-1]} versions</i>`:'';
       return `<div class="cd"><span class="n">${i+1}</span>
         ${u?`<img class="ph" loading="lazy" src="${esc(u)}" alt="">`:'<span class="ph"></span>'}
-        <b>${esc(x[0])}</b><i>${sub}</i><span class="v">${val}</span>${z}</div>`;}).join('');
+        <b>${esc(x[0])}</b><i>${sub}</i><span class="v">${val}</span>${z}${nv}</div>`;}).join('');
     $('#mL').style.display=r.length>S.lib.n?'block':'none';return;}
   $('#lL').className='rows';
   $('#lL').innerHTML=r.slice(0,S.lib.n).map((x,i)=>{
@@ -529,6 +587,7 @@ function renderArt(){
   const s=S.art;let r=srcArt();
   if(s.q)r=r.filter(a=>a[0].toLowerCase().includes(s.q));
   if(s.f==='miss')r=r.filter(a=>!a[5]); if(s.f==='gig')r=r.filter(a=>a[6]>0); if(s.f==='next')r=r.filter(a=>a[7]);
+  if(S.gf)r=r.filter(a=>a[9]===S.gf);
   r=[...r].sort((a,b)=>b[s.s]-a[s.s]);
   $('#subA').textContent=`${fm(D.arts.length)} artistes écoutés au moins 3 fois.`;
   $('#nA').textContent=fm(r.length)+' artistes'+periodNote(S.per.art,300);
@@ -536,7 +595,7 @@ function renderArt(){
     $('#lA').className='cards';
     $('#lA').innerHTML=r.slice(0,s.n).map((a,i)=>`<div class="cd"><span class="n">${i+1}</span>
       ${imgA(a[0])?`<img class="ph" loading="lazy" src="${esc(imgA(a[0]))}" alt="">`:'<span class="ph"></span>'}
-      <b>${esc(a[0])}</b><i>${a[3]} titres</i><span class="v">${a[1]} h · ${fm(a[2])} lect.</span>
+      <b>${esc(a[0])}</b><i>${a[3]?a[3]+' titres':(a[4]?a[4]+' jours':'')}</i><span class="v">${a[1]} h · ${fm(a[2])} lect.</span>
       ${!a[5]?'<i style="color:var(--magenta)">non suivi</i>':''}</div>`).join('');
     $('#mA').style.display=r.length>s.n?'block':'none';return;}
   $('#lA').className='rows';
@@ -544,9 +603,10 @@ function renderArt(){
     const t=[];if(!a[5])t.push('<span class="tag t-miss">non suivi</span>');
     if(a[6])t.push(`<span class="tag t-gig">vu ${a[6]}×</span>`);
     if(a[7])t.push(`<span class="tag t-soon">concert ${a[7].slice(8)}/${a[7].slice(5,7)}</span>`);
+    const gg=a[9]?`<span class="tag" style="color:${gcol(a[9])};border-color:${gcol(a[9])}55">${esc(a[9])}</span>`:'';
     return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgA(a[0]))}
       <span><span class="nm">${esc(a[0])}</span>
-      <span class="mt">${a[3]} titres${a[4]?' · '+a[4]+' jours':''} ${t.join(' ')}</span>${a[8]?spark(a[8]):''}</span>
+      <span class="mt">${a[3]?a[3]+' titres':''}${a[4]?(a[3]?' · ':'')+a[4]+' jours':''} ${gg} ${t.join(' ')}</span>${a[8]?spark(a[8]):''}</span>
       <span class="vv">${a[1]} h<small>${fm(a[2])} lect.</small></span></div>`;}).join('');
   $('#mA').style.display=r.length>s.n?'block':'none';
 }
@@ -673,6 +733,15 @@ function renderEvt(){
     : `<div class="note">Rien pour l'instant — le workflow quotidien remplira ça.</div>`;
 }
 
+/* ---------- index pour retrouver suivi / enregistré / concerts ---------- */
+let FA=null,FB=null;
+function flags(){
+  if(FA)return;
+  FA=new Map();FB=new Map();
+  (D.arts||[]).forEach(a=>FA.set(nrm(a[0]),a));
+  (D.albs||[]).forEach(a=>FB.set(nrm(a[1])+'|'+nrm(a[0]),a));
+}
+
 /* ---------- période personnalisée : matrice chargée à la demande ---------- */
 let M=null,loadingM=null;
 async function loadMatrix(){
@@ -684,21 +753,43 @@ async function loadMatrix(){
     return r.json();}).then(j=>{M=j;$('#custState').textContent='';return j;});
   try{return await loadingM;}catch(e){$('#custState').textContent=e.message;loadingM=null;throw e;}
 }
+let MT=null,loadingMT=null;
+async function loadTracks(){
+  if(MT)return MT;
+  if(loadingMT)return loadingMT;
+  loadingMT=fetch('data/matrix_tracks.json?v='+Date.now()).then(r=>{
+    if(!r.ok)throw new Error('matrix_tracks.json introuvable');return r.json();})
+    .then(j=>{MT=j;return j;});
+  try{return await loadingMT;}catch(e){loadingMT=null;throw e;}
+}
 const dayIdx=(d0,iso)=>Math.round((Date.parse(iso)-Date.parse(d0))/86400000);
 function rangeTotals(mat,part,from,to){
+  flags();
   const a=dayIdx(mat.d0,from),b=dayIdx(mat.d0,to),P=mat[part];
-  const h=new Map(),n=new Map();
+  const h=new Map(),n=new Map(),dd=new Map();
   for(let i=0;i<P.day.length;i++){
     const d=P.day[i];if(d<a||d>b)continue;
     const k=P.idx[i];
     h.set(k,(h.get(k)||0)+P.cmin[i]/100);
     n.set(k,(n.get(k)||0)+P.n[i]);
+    if(!dd.has(k))dd.set(k,new Set());
+    dd.get(k).add(d);                       // jours réellement écoutés dans la plage
   }
-  const lab=part==='A'?mat.artists:mat.albums;
-  return [...h.entries()].map(([k,v])=>part==='A'
-    ? [lab[k],Math.round(v/60*10)/10,n.get(k),0,0,false,0,null]
-    : [lab[k][0],lab[k][1],Math.round(v/60*10)/10,n.get(k),0,0,false,''])
-    .sort((x,y)=>(part==='A'?y[1]-x[1]:y[2]-x[2]));
+  const lab=part==='A'?mat.artists:(part==='B'?mat.albums:mat.tracks);
+  const rows=[...h.entries()].map(([k,v])=>{
+    const hrs=Math.round(v/60*10)/10,days=dd.get(k).size;
+    if(part==='A'){
+      const g=FA.get(nrm(lab[k]));           // suivi, concerts vus, concert à venir
+      return [lab[k],hrs,n.get(k),0,days,g?g[5]:false,g?g[6]:0,g?g[7]:null];
+    }
+    if(part==='B'){
+      const g=FB.get(nrm(lab[k][1])+'|'+nrm(lab[k][0]));
+      return [lab[k][0],lab[k][1],hrs,n.get(k),0,days,g?g[6]:false,g?g[7]:''];
+    }
+    const g=(D.trks||[]).find(t=>nrm(t[0])===nrm(lab[k][0])&&nrm(t[1])===nrm(lab[k][1]));
+    return [lab[k][0],lab[k][1],n.get(k),hrs,days,g?g[5]:false,g?g[6]:''];
+  });
+  return rows.sort((x,y)=>part==='A'?y[1]-x[1]:(part==='B'?y[2]-x[2]:y[2]-x[2]));
 }
 function summarize(mat,from,to){
   const A=rangeTotals(mat,'A',from,to),B=rangeTotals(mat,'B',from,to);
@@ -717,6 +808,27 @@ function summarize(mat,from,to){
     actifs:days.size,eff:wv.length?Math.round(Math.exp(ent)*10)/10:0,
     top10:mins?Math.round(wv.slice(0,10).reduce((s,x)=>s+x,0)/mins*1000)/10:0};
 }
+const monday=iso=>{const d=new Date(Date.parse(iso));
+  d.setUTCDate(d.getUTCDate()-((d.getUTCDay()+6)%7));return d.toISOString().slice(0,10);};
+function customSerie(mat,from,to){
+  const span=Math.round((Date.parse(to)-Date.parse(from))/86400000)+1;
+  const grain=span<=45?'day':(span<=220?'week':(span<=1000?'month':'year'));
+  const a=dayIdx(mat.d0,from),P=mat.A,buck=new Map();
+  const b=dayIdx(mat.d0,to);
+  const iso=off=>new Date(Date.parse(mat.d0)+off*86400000).toISOString().slice(0,10);
+  for(let i=0;i<P.day.length;i++){
+    const d=P.day[i];if(d<a||d>b)continue;
+    const s=iso(d);
+    const k=grain==='day'?s:(grain==='week'?monday(s):(grain==='month'?s.slice(0,7):s.slice(0,4)));
+    buck.set(k,(buck.get(k)||0)+P.cmin[i]/100);
+  }
+  let keys=[];
+  if(grain==='day'){for(let o=a;o<=b;o++)keys.push(iso(o));}
+  else keys=[...buck.keys()].sort();
+  const short=k=>(grain==='day'||grain==='week')?k.slice(8,10)+'/'+k.slice(5,7)
+    :(grain==='month'?k.slice(5,7)+'/'+k.slice(2,4):k);
+  return {grain,labels:keys.map(short),values:keys.map(k=>Math.round((buck.get(k)||0)/60*100)/100)};
+}
 function cmpLine(a,b,unit){
   if(!b)return `<b>${a}${unit||''}</b>`;
   const d=a-b,pc=b?Math.round(d/b*100):0;
@@ -732,10 +844,19 @@ async function runCustom(){
     let s2=null;
     if($('#cmpOn').checked&&$('#d3').value&&$('#d4').value)
       s2=summarize(mat,$('#d3').value,$('#d4').value);
+    let topT=[],perArtist=new Map();
+    try{
+      const mt=await loadTracks();
+      const all=rangeTotals({d0:mt.d0,tracks:mt.tracks,T:mt.T},'T',f,t);
+      topT=all.slice(0,250);
+      // combien de titres différents par artiste sur la plage
+      all.forEach(x=>{const k=nrm(x[1]);perArtist.set(k,(perArtist.get(k)||0)+1);});
+      s1.A.forEach(a=>{a[3]=perArtist.get(nrm(a[0]))||0;});
+    }catch(e){console.warn(e);}
     D.per.custom={label:'Personnalisé',hours:s1.hours,plays:s1.plays,artists:s1.artists,
-      albums:s1.albums,tracks:0,actifs:s1.actifs,eff:s1.eff,top10:s1.top10,
-      clock:new Array(24).fill(0),dow:new Array(7).fill(0),
-      topA:s1.A.slice(0,300),topB:s1.B.slice(0,250),topT:[]};
+      albums:s1.albums,tracks:topT.length,actifs:s1.actifs,eff:s1.eff,top10:s1.top10,
+      serie:customSerie(mat,f,t),clock:new Array(24).fill(0),dow:new Array(7).fill(0),
+      topA:s1.A.slice(0,300),topB:s1.B.slice(0,250),topT:topT};
     $('#pKpi').innerHTML=[[s1.hours,'heures',s2&&s2.hours,' h'],[s1.plays,'lectures',s2&&s2.plays,''],
       [s1.artists,'artistes',s2&&s2.artists,''],[s1.albums,'albums',s2&&s2.albums,''],
       [s1.actifs,'jours actifs',s2&&s2.actifs,''],[s1.eff,'artistes effectifs',s2&&s2.eff,''],
@@ -744,9 +865,10 @@ async function runCustom(){
     $('#custState').textContent=s2
       ? `${f} → ${t} comparé à ${$('#d3').value} → ${$('#d4').value}`
       : `${f} → ${t} · ${s1.actifs} jours avec de la musique`;
-    ['art','alb'].forEach(k=>{S.per[k]='custom';});
-    renderArt();renderAlb();
-    toast('Période appliquée aux onglets Artistes et Albums.');
+    ['art','alb','trk'].forEach(k=>{S.per[k]='custom';});
+    drawSerie(D.per.custom.serie);
+    renderArt();renderAlb();renderTrk();
+    toast('Période appliquée aux onglets Artistes, Albums et Titres.');
   }catch(e){toast('Échec : '+e.message,6000);}
   $('#custGo').disabled=false;
 }
@@ -767,7 +889,7 @@ document.addEventListener('click',async e=>{
     cd.disabled=true;
     try{const list=D.concerts.filter((_,j)=>j!==i);
       await saveConcerts(list,'concert supprimé : '+c.artist);
-      D.concerts=list;renderCon();toast('Supprimé.');}
+      D.concerts=list;renderCon();renderEvt();toast('Supprimé.');}
     catch(err){toast('Échec : '+err.message,6000);cd.disabled=false;}
     return;}
   if(ev){const d=JSON.parse(ev.dataset.evadd);
@@ -823,7 +945,7 @@ $('#cAdd').onclick=async()=>{
     const list=D.concerts.slice();
     if(editIdx>=0)list[editIdx]=c; else list.push(c);
     await saveConcerts(list,(editIdx>=0?'concert modifié : ':'concert : ')+c.artist);
-    D.concerts=list;setEdit(-1);renderCon();
+    D.concerts=list;setEdit(-1);renderCon();renderEvt();
     toast(c.hours?`Enregistré — ${c.hours} h sur cet artiste.`:'Enregistré (artiste pas encore écouté).');
   }catch(err){toast('Échec : '+err.message,6000);}
   $('#cAdd').disabled=false;
@@ -850,10 +972,13 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
   D.vinyl=D.vinyl||{collection:[],wantlist:[]};D.vinyl_gaps=D.vinyl_gaps||[];D.recent=D.recent||[];
   D.images=D.images||{artists:{},albums:{}};D.library=D.library||{tracks:[],albums:[],artists:[]};D.per=D.per||{};
   $('#artistList').innerHTML=(D.names||[]).map(n=>`<option value="${esc(n)}">`).join('');
-  drawOv();renderOv2();renderLib();renderRec();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();renderEvt();
+  drawOv();renderOv2();drawGenreYears();renderLib();renderRec();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();renderEvt();
   chips('#fA','f',S.art,renderArt);chips('#fB','f',S.alb,renderAlb);chips('#fC','f',S.trk,renderTrk);
   chips('#fD','f',S.con,renderCon);chips('#fE','f',S.rel,renderRel);chips('#fF','f',S.evt,renderEvt);
   chips('#fV','f',S.vin,renderVin);chips('#fL','k',S.lib,renderLib);
+  (()=>{const fams=D.ov.genre_fams||[];
+    $('#gA').innerHTML='<option value="">tous les genres</option>'+fams.map(f=>`<option>${esc(f)}</option>`).join('');
+    $('#gA').onchange=e=>{S.gf=e.target.value;S.art.n=60;renderArt();};})();
   $('#qL').oninput=e=>{S.lib.q=e.target.value.toLowerCase();S.lib.n=60;renderLib();};
   $('#sL').onchange=e=>{S.lib.s=e.target.value;renderLib();};
   $('#mL').onclick=()=>{S.lib.n+=100;renderLib();};
