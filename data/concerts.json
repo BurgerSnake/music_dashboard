@@ -792,13 +792,13 @@
   "setlist": "A venir (concert futur, pas encore de setlist)"
  },
  {
-  "artist": "BDRRM",
-  "genre": "A completer",
+  "artist": "BDRMM",
   "venue": "Manchester Psych Fest",
   "city": "Manchester",
-  "type": "Festival",
   "date": "2026-09-05",
-  "setlist": "A venir (concert futur, pas encore de setlist)"
+  "type": "Festival",
+  "genre": "A completer",
+  "setlist": ""
  },
  {
   "artist": "Bleech 93",
