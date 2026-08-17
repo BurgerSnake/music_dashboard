@@ -52,8 +52,11 @@ def main():
             k = norm(c.get("artist", ""))
             next_gig[k] = min(next_gig.get(k, "9999"), c["date"])
 
-    now = dt.datetime.now(dt.timezone.utc)
-    cutoffs = {pid: (now - dt.timedelta(days=d)).isoformat() if d else ""
+    # Fenêtres en JOURS CALENDAIRES locaux, et non en heures glissantes :
+    # c'est plus intuitif, et surtout ça donne exactement les mêmes chiffres
+    # que la période personnalisée calculée depuis la matrice.
+    td = dt.datetime.now(TZ).date()
+    cutoffs = {pid: (td - dt.timedelta(days=d - 1)).isoformat() if d else ""
                for pid, _, d in PERIODS}
 
     def blank():
@@ -89,8 +92,8 @@ def main():
         yy["alb"].add(kb); yy["days"].add(day)
         clock[d.hour] += m
 
-        for pid, _, _ in PERIODS:                       # fenêtres glissantes
-            if cutoffs[pid] and r["ts"] < cutoffs[pid]:
+        for pid, _, _ in PERIODS:                       # fenêtres en jours entiers
+            if cutoffs[pid] and day < cutoffs[pid]:
                 continue
             p = P[pid]
             p["min"] += m; p["n"] += 1; p["days"].add(day)
@@ -189,7 +192,48 @@ def main():
                "album": r.get("album", ""), "ms": r.get("ms", 0)}
               for r in raw[-200:]][::-1]
 
-    out = dict(ov=ov, per=per, arts=arts, albs=albs, trks=trks, recent=recent,
+    # ---- matrice creuse jour × artiste et jour × album ----
+    # Fichier séparé, chargé seulement quand on ouvre une période personnalisée :
+    # le tableau de bord principal reste léger. Tableaux d'entiers parallèles
+    # plutôt que des triplets : ça se compresse beaucoup mieux.
+    d0 = dt.date.fromisoformat(min(parse(r["ts"]).date().isoformat() for r in raw[:200]))
+    cellA, cellB = collections.Counter(), collections.Counter()
+    cntA, cntB = collections.Counter(), collections.Counter()
+    iA, iB, labA, labB = {}, {}, [], []
+    for r in raw:
+        if r.get("ms", 0) < MIN_MS:
+            continue
+        d = parse(r["ts"]).date()
+        off = (d - d0).days
+        if off < 0:
+            continue
+        art, alb = r.get("artist", ""), r.get("album", "")
+        ka = norm(art)
+        if ka not in iA:
+            iA[ka] = len(labA); labA.append(art)
+        cellA[(off, iA[ka])] += r["ms"] / 60000
+        cntA[(off, iA[ka])] += 1
+        if alb:
+            kb = norm(art) + "|" + norm(alb)
+            if kb not in iB:
+                iB[kb] = len(labB)
+                shown = B.get((norm(art), norm(alb)), {}).get("name") or alb
+                labB.append([shown, art])
+            cellB[(off, iB[kb])] += r["ms"] / 60000
+            cntB[(off, iB[kb])] += 1
+
+    def pack(cells, counts):
+        ks = sorted(cells)
+        return dict(day=[k[0] for k in ks], idx=[k[1] for k in ks],
+                    cmin=[int(round(cells[k] * 100)) for k in ks],  # centièmes de minute
+                    n=[counts[k] for k in ks])
+
+    matrix = dict(d0=d0.isoformat(), artists=labA, albums=labB,
+                  A=pack(cellA, cntA), B=pack(cellB, cntB))
+    write_json(SITE / "matrix.json", matrix, compact=True)
+    print(f"  matrice : {len(cellA)} cellules artiste, {len(cellB)} cellules album")
+
+    out = dict(ov=ov, per=per, matrix_ready=True, arts=arts, albs=albs, trks=trks, recent=recent,
                library=library, concerts=concerts, events=events, releases=releases,
                vinyl=vinyl, vinyl_gaps=vinyl_gaps, images=images,
                names=sorted(nmap.values(), key=lambda s: s.lower()),

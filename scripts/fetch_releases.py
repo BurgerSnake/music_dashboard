@@ -11,6 +11,8 @@ from common import DATA, all_listens, http, read_json, write_json
 
 MB = "https://musicbrainz.org/ws/2"
 TOP_N = 120          # artistes suivis pour les sorties
+STALE_DAYS = 10      # on ne réinterroge un artiste que tous les 10 jours
+MAX_CALLS = 70       # plafond d'appels par passage, pour borner la durée
 WINDOW_BACK = 400    # jours d'historique de sorties à conserver
 WINDOW_FWD = 400     # jours d'annonces à venir
 
@@ -48,16 +50,32 @@ def releases_for(mbid):
 
 
 def main():
-    cache = read_json(DATA / "mbid_cache.json", {})
+    raw = read_json(DATA / "mbid_cache.json", {})
+    # migration depuis l'ancien format plat {nom: mbid}
+    if raw and "mbid" not in raw:
+        raw = {"mbid": raw, "checked": {}}
+    cache, checked = raw.get("mbid", {}), raw.get("checked", {})
+    keep = read_json(DATA / "releases.json", [])
     today = dt.date.today()
     lo = (today - dt.timedelta(days=WINDOW_BACK)).isoformat()
     hi = (today + dt.timedelta(days=WINDOW_FWD)).isoformat()
 
-    out = []
     artists = top_artists(TOP_N)
-    print(f"  {len(artists)} artistes à interroger (~{len(artists)*2}s)")
-    for i, name in enumerate(artists, 1):
+    limit = (today - dt.timedelta(days=STALE_DAYS)).isoformat()
+    due = [a for a in artists if checked.get(a.lower(), "") < limit]
+    due.sort(key=lambda a: checked.get(a.lower(), ""))     # les plus anciens d'abord
+    calls = 0
+    budget = [a for a in due if (calls := calls + (1 if a.lower() in cache else 2)) <= MAX_CALLS]
+    fresh = {a for a in artists if a not in budget}
+    print(f"  {len(artists)} artistes suivis · {len(due)} à rafraîchir · "
+          f"{len(budget)} traités ce passage (plafond {MAX_CALLS} appels)")
+
+    # on repart des sorties déjà connues pour les artistes non réinterrogés
+    out = [r for r in keep if r.get("artist") in fresh]
+
+    for i, name in enumerate(budget, 1):
         mbid = find_mbid(name, cache)
+        checked[name.lower()] = today.isoformat()
         if not mbid:
             continue
         for rg in releases_for(mbid):
@@ -73,8 +91,8 @@ def main():
                         "mbid": rg.get("id", ""),
                         "url": f"https://musicbrainz.org/release-group/{rg.get('id','')}"})
         if i % 20 == 0:
-            print(f"  {i}/{len(artists)}…")
-            write_json(DATA / "mbid_cache.json", cache)
+            print(f"  {i}/{len(budget)}…")
+            write_json(DATA / "mbid_cache.json", {"mbid": cache, "checked": checked})
 
     seen, uniq = set(), []
     for r in sorted(out, key=lambda x: x["date"], reverse=True):
@@ -82,8 +100,9 @@ def main():
         if k not in seen:
             seen.add(k)
             uniq.append(r)
-    print(f"  {len(uniq)} sorties retenues entre {lo} et {hi}")
-    write_json(DATA / "mbid_cache.json", cache)
+    print(f"  {len(uniq)} sorties retenues entre {lo} et {hi} "
+          f"(dont {len(out) - sum(1 for r in out if r.get('artist') in fresh)} nouvelles)")
+    write_json(DATA / "mbid_cache.json", {"mbid": cache, "checked": checked})
     write_json(DATA / "releases.json", uniq)
 
 

@@ -15,10 +15,6 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    env:
-      HOME_LAT: "50.4108"
-      HOME_LON: "4.4446"
-      RADIUS_KM: "350"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,20 +35,6 @@ jobs:
           DISCOGS_USER:  ${{ secrets.DISCOGS_USER }}
         run: python scripts/sync_discogs.py
 
-      - name: Sorties d'albums (MusicBrainz)
-        continue-on-error: true
-        run: python scripts/fetch_releases.py
-
-      - name: Concerts à proximité (Ticketmaster)
-        continue-on-error: true
-        env:
-          TICKETMASTER_KEY: ${{ secrets.TICKETMASTER_KEY }}
-        run: python scripts/fetch_events.py
-
-      - name: Images (Deezer, sans clé)
-        continue-on-error: true
-        run: python scripts/fetch_images.py
-
       - name: Publier les données
         run: |
           git config user.name  "dashboard-bot"
@@ -60,7 +42,7 @@ jobs:
 
           # 1. on committe NOS fichiers d'abord : plus rien d'intraçable ne traîne,
           #    sinon un fichier non suivi (actions_log.jsonl) bloque le pull.
-          git add data/library.json data/vinyl.json data/releases.json data/events.json data/images.json data/mbid_cache.json
+          git add data/library.json data/vinyl.json
           git diff --staged --quiet || git commit -m "synchro quotidienne $(date -u +%F)"
 
           # 2. on récupère ce que le site a écrit pendant l'exécution

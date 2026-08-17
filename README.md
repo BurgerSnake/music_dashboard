@@ -3,14 +3,23 @@
 Historique d'écoute, bibliothèque, vinyles, sorties d'albums et concerts,
 dans un dépôt GitHub qui se met à jour tout seul. Aucun serveur.
 
-- Une Action toutes les 30 min récupère les écoutes Spotify et les archive.
-- Une Action quotidienne synchronise bibliothèque, Discogs, sorties et concerts.
+Chaque collecteur a sa propre cadence, choisie selon la vitesse à laquelle
+la donnée bouge réellement :
+
+| Workflow | Quand | Durée | Ce qu'il fait |
+|---|---|---|---|
+| **Recalculer le site** | à la demande | ~30 s | rien d'autre que `build_site.py` — **c'est celui à lancer après un changement de code** |
+| Écoutes | toutes les 30 min | ~1 min | écoutes Spotify + envoi ListenBrainz |
+| Synchro quotidienne | 4h20 | ~1-2 min | bibliothèque Spotify + vinyles Discogs |
+| Sorties et concerts | lundi et jeudi | ~4 min | MusicBrainz + Ticketmaster |
+| Images | le 1er du mois | ~4 min | photos et pochettes Deezer |
 - Le site est une page statique publiée par GitHub Pages.
 - Les écritures depuis le site (ajouter un concert, mettre un disque en wantlist)
   passent par un commit, qui déclenche une Action qui détient les secrets.
 
 ```
 data/listens/AAAA-MM.jsonl   écoutes brutes, une par ligne     ← écrit par l'Action
+data/images.json             photos et pochettes (cache)       ← écrit par l'Action
 data/library.json            likes, albums, artistes suivis    ← écrit par l'Action
 data/vinyl.json              collection + wantlist Discogs     ← écrit par l'Action
 data/releases.json           sorties MusicBrainz               ← écrit par l'Action
@@ -18,6 +27,7 @@ data/events.json             concerts Ticketmaster             ← écrit par l'
 data/concerts.json           TES concerts                      ← écrit par toi / le site
 data/actions.jsonl           file d'attente des demandes       ← écrit par le site
 site/data/dashboard.json     tout l'agrégé pour la page        ← recalculé à chaque fois
+site/data/matrix.json        matrice jour × artiste/album      ← chargée à la demande seulement
 ```
 
 ---
@@ -108,8 +118,17 @@ RADIUS_KM: "350"
 ```
 
 Dans `scripts/build_site.py` : `MIN_MS = 30000` (durée minimale d'une écoute).
-Dans `scripts/fetch_releases.py` et `fetch_events.py` : `TOP_N`, le nombre
-d'artistes suivis. Plus haut = plus complet et plus lent.
+
+Dans `scripts/fetch_releases.py` :
+- `TOP_N` — artistes surveillés (120)
+- `STALE_DAYS` — un artiste n'est réinterrogé que tous les 10 jours
+- `MAX_CALLS` — plafond d'appels par passage (70), ce qui borne la durée
+
+Dans `scripts/fetch_images.py` : `MAX_NEW` (400) — plafond de recherches par
+passage. Ce qui dépasse est repris au passage suivant, rien n'est perdu.
+
+Dans `scripts/fetch_events.py` : `TOP_N`, et le geohash calculé depuis
+`HOME_LAT` / `HOME_LON`.
 
 ---
 
@@ -127,6 +146,19 @@ Les étapes de la synchro quotidienne sont en `continue-on-error` : si Discogs
 tombe, le reste passe quand même.
 
 ---
+
+## Les périodes
+
+Les fenêtres préréglées (24 h, 7 j, 30 j, 6 mois, 1 an, tout) sont calculées
+par `build_site.py` en **jours calendaires locaux**, pas en heures glissantes.
+La période personnalisée, elle, se calcule dans le navigateur depuis
+`matrix.json` — une matrice creuse jour × artiste et jour × album, chargée
+seulement quand tu ouvres cet écran. Les deux chemins donnent exactement les
+mêmes chiffres, ce qui est vérifiable : choisis « du J-29 à aujourd'hui » et tu
+retrouves les valeurs de l'onglet « 30 jours ».
+
+La matrice ne contient pas les titres, seulement artistes et albums : les
+titres auraient triplé sa taille pour un usage marginal.
 
 ## Vérifier en local
 

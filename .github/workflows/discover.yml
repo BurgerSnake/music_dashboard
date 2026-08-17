@@ -1,0 +1,49 @@
+name: Sorties et concerts (bihebdomadaire)
+
+# Sorties d'albums et annonces de tournées : ça bouge à la semaine,
+# pas à l'heure. Deux passages par semaine suffisent.
+
+on:
+  schedule:
+    - cron: "10 4 * * 1,4"    # lundi et jeudi
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    env:
+      HOME_LAT: "50.4108"
+      HOME_LON: "4.4446"
+      RADIUS_KM: "350"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sorties d'albums (MusicBrainz)
+        continue-on-error: true
+        run: python scripts/fetch_releases.py
+
+      - name: Concerts à proximité (Ticketmaster)
+        continue-on-error: true
+        env:
+          TICKETMASTER_KEY: ${{ secrets.TICKETMASTER_KEY }}
+        run: python scripts/fetch_events.py
+
+      - name: Publier
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add data/releases.json data/events.json data/mbid_cache.json
+          git diff --staged --quiet || git commit -m "sorties et concerts $(date -u +%F)"
+          git pull --rebase
+          python scripts/build_site.py
+          git add site/data
+          git diff --staged --quiet || git commit -m "tableau de bord"
+          for i in 1 2 3 4 5; do git push && exit 0; sleep $((i*5)); git pull --rebase || true; done
+          git push

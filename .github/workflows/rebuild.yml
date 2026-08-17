@@ -1,0 +1,33 @@
+name: Recalculer le site
+
+# Le seul workflow à lancer après un changement de code ou de données :
+# aucun appel API, ~30 secondes.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths: [ "scripts/build_site.py", "scripts/common.py", "data/concerts.json" ]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/build_site.py
+      - name: Publier
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add site/data
+          git diff --staged --quiet || git commit -m "recalcul du tableau de bord"
+          git pull --rebase || true
+          for i in 1 2 3; do git push && exit 0; sleep $((i*5)); git pull --rebase || true; done
+          git push

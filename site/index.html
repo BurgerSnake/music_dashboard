@@ -98,6 +98,14 @@ a{color:var(--cyan)}
 .cd .v{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--cyan);margin-top:5px;display:block}
 .cd .n{position:absolute;top:8px;left:8px;background:rgba(10,6,17,.82);color:var(--bone);
 font-family:ui-monospace,Menlo,monospace;font-size:11px;padding:1px 6px}
+.custom{display:none;background:var(--deep);border:1px solid var(--violet);padding:11px;margin:0 0 14px}
+.custom.on{display:block}
+.custom .ln{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:7px}
+.custom label{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;
+text-transform:uppercase;color:var(--dim);min-width:52px}
+.custom input[type=date]{padding:7px 9px;font-size:14px}
+.delta{font-family:ui-monospace,Menlo,monospace;font-size:11px}
+.up{color:var(--green)}.dn{color:var(--magenta)}
 .viewsw{display:flex;gap:5px;margin-left:auto}
 .viewsw button{background:transparent;border:1px solid var(--line);color:var(--dim);
 padding:5px 10px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;cursor:pointer}
@@ -144,6 +152,13 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
 
 <div class="panel on" id="p-ov">
   <div class="periods" id="pT_ov"></div>
+  <div class="custom" id="cust">
+    <div class="ln"><label>du</label><input type="date" id="d1"><label>au</label><input type="date" id="d2"></div>
+    <div class="ln"><label><input type="checkbox" id="cmpOn" style="width:auto"> comparer à</label>
+      <input type="date" id="d3"><label>→</label><input type="date" id="d4"></div>
+    <div class="ln"><button class="btn" id="custGo">Calculer</button>
+      <span class="cap" id="custState"></span></div>
+  </div>
   <div class="mini" id="pKpi"></div>
   <div class="g2">
     <div class="card"><div id="pClock"></div><p class="cap">Répartition sur la journée</p></div>
@@ -404,9 +419,15 @@ function periodBar(key,fn){
   const P=D.per||{},ids=Object.keys(P);const host=$('#pT_'+key);
   if(!host)return;
   if(!ids.length){host.innerHTML='';return;}
-  host.innerHTML=ids.map(k=>`<button data-pk="${key}" data-p="${k}" aria-pressed="${k===S.per[key]}">${esc(P[k].label)}</button>`).join('');
-  $$('#pT_'+key+' button').forEach(b=>b.onclick=()=>{S.per[key]=b.dataset.p;
-    if(S[key]&&'n'in S[key])S[key].n=60;fn();});
+  const list=ids.filter(k=>k!=='custom');
+  host.innerHTML=list.map(k=>`<button data-pk="${key}" data-p="${k}" aria-pressed="${k===S.per[key]}">${esc(P[k].label)}</button>`).join('')
+    +`<button data-pk="${key}" data-p="custom" aria-pressed="${S.per[key]==='custom'}">Personnalisé…</button>`;
+  $$('#pT_'+key+' button').forEach(b=>b.onclick=()=>{
+    S.per[key]=b.dataset.p;
+    if(S[key]&&'n'in S[key])S[key].n=60;
+    const cu=$('#cust');if(cu)cu.classList.toggle('on',b.dataset.p==='custom');
+    if(b.dataset.p==='custom'){tab('ov');if(!D.per.custom){loadMatrix().catch(()=>{});return;}}
+    fn();});
 }
 // listes de la période choisie ; "all" utilise les listes complètes, plus riches
 function srcArt(){const k=S.per.art;return k==='all'?D.arts:((D.per[k]||{}).topA||[]);}
@@ -652,6 +673,85 @@ function renderEvt(){
     : `<div class="note">Rien pour l'instant — le workflow quotidien remplira ça.</div>`;
 }
 
+/* ---------- période personnalisée : matrice chargée à la demande ---------- */
+let M=null,loadingM=null;
+async function loadMatrix(){
+  if(M)return M;
+  if(loadingM)return loadingM;
+  $('#custState').textContent='chargement de la matrice…';
+  loadingM=fetch('data/matrix.json?v='+Date.now()).then(r=>{
+    if(!r.ok)throw new Error('matrix.json introuvable — relance build_site.py');
+    return r.json();}).then(j=>{M=j;$('#custState').textContent='';return j;});
+  try{return await loadingM;}catch(e){$('#custState').textContent=e.message;loadingM=null;throw e;}
+}
+const dayIdx=(d0,iso)=>Math.round((Date.parse(iso)-Date.parse(d0))/86400000);
+function rangeTotals(mat,part,from,to){
+  const a=dayIdx(mat.d0,from),b=dayIdx(mat.d0,to),P=mat[part];
+  const h=new Map(),n=new Map();
+  for(let i=0;i<P.day.length;i++){
+    const d=P.day[i];if(d<a||d>b)continue;
+    const k=P.idx[i];
+    h.set(k,(h.get(k)||0)+P.cmin[i]/100);
+    n.set(k,(n.get(k)||0)+P.n[i]);
+  }
+  const lab=part==='A'?mat.artists:mat.albums;
+  return [...h.entries()].map(([k,v])=>part==='A'
+    ? [lab[k],Math.round(v/60*10)/10,n.get(k),0,0,false,0,null]
+    : [lab[k][0],lab[k][1],Math.round(v/60*10)/10,n.get(k),0,0,false,''])
+    .sort((x,y)=>(part==='A'?y[1]-x[1]:y[2]-x[2]));
+}
+function summarize(mat,from,to){
+  const A=rangeTotals(mat,'A',from,to),B=rangeTotals(mat,'B',from,to);
+  // Totaux calculés sur les minutes brutes, jamais sur des heures déjà arrondies
+  // par artiste : sinon les centaines d'artistes à quelques minutes gonflent la somme.
+  const P=mat.A,a=dayIdx(mat.d0,from),b=dayIdx(mat.d0,to);
+  const days=new Set();const w=new Map();let mins=0,plays=0;
+  for(let i=0;i<P.day.length;i++){
+    const d=P.day[i];if(d<a||d>b)continue;
+    days.add(d);mins+=P.cmin[i]/100;plays+=P.n[i];
+    w.set(P.idx[i],(w.get(P.idx[i])||0)+P.cmin[i]/100);
+  }
+  const wv=[...w.values()].filter(x=>x>0).sort((x,y)=>y-x);
+  const ent=mins?wv.reduce((s,x)=>s-(x/mins)*Math.log(x/mins),0):0;
+  return {A,B,hours:Math.round(mins/60*10)/10,plays,artists:A.length,albums:B.length,
+    actifs:days.size,eff:wv.length?Math.round(Math.exp(ent)*10)/10:0,
+    top10:mins?Math.round(wv.slice(0,10).reduce((s,x)=>s+x,0)/mins*1000)/10:0};
+}
+function cmpLine(a,b,unit){
+  if(!b)return `<b>${a}${unit||''}</b>`;
+  const d=a-b,pc=b?Math.round(d/b*100):0;
+  return `<b>${a}${unit||''}</b><span class="delta ${d>=0?'up':'dn'}">${d>=0?'+':''}${pc} %</span>`;
+}
+async function runCustom(){
+  const f=$('#d1').value,t=$('#d2').value;
+  if(!f||!t||f>t){toast('Choisis une plage valide');return;}
+  $('#custGo').disabled=true;
+  try{
+    const mat=await loadMatrix();
+    const s1=summarize(mat,f,t);
+    let s2=null;
+    if($('#cmpOn').checked&&$('#d3').value&&$('#d4').value)
+      s2=summarize(mat,$('#d3').value,$('#d4').value);
+    D.per.custom={label:'Personnalisé',hours:s1.hours,plays:s1.plays,artists:s1.artists,
+      albums:s1.albums,tracks:0,actifs:s1.actifs,eff:s1.eff,top10:s1.top10,
+      clock:new Array(24).fill(0),dow:new Array(7).fill(0),
+      topA:s1.A.slice(0,300),topB:s1.B.slice(0,250),topT:[]};
+    $('#pKpi').innerHTML=[[s1.hours,'heures',s2&&s2.hours,' h'],[s1.plays,'lectures',s2&&s2.plays,''],
+      [s1.artists,'artistes',s2&&s2.artists,''],[s1.albums,'albums',s2&&s2.albums,''],
+      [s1.actifs,'jours actifs',s2&&s2.actifs,''],[s1.eff,'artistes effectifs',s2&&s2.eff,''],
+      [s1.top10,'part du top 10',s2&&s2.top10,' %']]
+      .map(([a,l,b,u])=>`<div>${cmpLine(a,b,u)}<span>${l}</span></div>`).join('');
+    $('#custState').textContent=s2
+      ? `${f} → ${t} comparé à ${$('#d3').value} → ${$('#d4').value}`
+      : `${f} → ${t} · ${s1.actifs} jours avec de la musique`;
+    ['art','alb'].forEach(k=>{S.per[k]='custom';});
+    renderArt();renderAlb();
+    toast('Période appliquée aux onglets Artistes et Albums.');
+  }catch(e){toast('Échec : '+e.message,6000);}
+  $('#custGo').disabled=false;
+}
+$('#custGo').onclick=runCustom;
+
 /* ---------- interactions ---------- */
 function chips(sel,key,obj,fn){$$(sel+' .chip').forEach(b=>b.onclick=()=>{
   obj[key]=b.dataset.v;if('n'in obj)obj.n=60;
@@ -769,6 +869,9 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
   $('#mA').onclick=()=>{S.art.n+=100;renderArt();};$('#mB').onclick=()=>{S.alb.n+=100;renderAlb();};
   $('#mC').onclick=()=>{S.trk.n+=100;renderTrk();};$('#mD').onclick=()=>{S.con.n+=150;renderCon();};
   $('#mF').onclick=()=>{S.evt.n+=100;renderEvt();};
+  (()=>{const last=(D.ov.last_listen||'').slice(0,10);
+    const back=n=>new Date(Date.parse(last)-n*86400000).toISOString().slice(0,10);
+    $('#d2').value=last;$('#d1').value=back(30);$('#d4').value=back(31);$('#d3').value=back(61);})();
   $('#gRepo').value=GH.repo;$('#gTok').value=GH.tok;ghState();
 })();
 </script>

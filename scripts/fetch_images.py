@@ -16,6 +16,7 @@ DZ = "https://api.deezer.com"
 TOP_ARTISTS = 600
 TOP_ALBUMS = 500
 PAUSE = 0.22          # Deezer tolère ~50 requêtes / 5 s, on reste large
+MAX_NEW = 400         # plafond de recherches par passage : borne la durée
 
 
 def ranked():
@@ -51,8 +52,14 @@ def main():
     todo_b = [(a, b) for a, b in albs
               if f"{norm(a)}|{norm(b)}" not in img["albums"]
               and "b:" + f"{norm(a)}|{norm(b)}" not in misses]
-    print(f"  {len(todo_a)} artistes et {len(todo_b)} albums à chercher "
-          f"(déjà en cache : {len(img['artists'])} / {len(img['albums'])})")
+    tot_a, tot_b = len(todo_a), len(todo_b)
+    todo_a = todo_a[:MAX_NEW // 2]
+    todo_b = todo_b[:MAX_NEW - len(todo_a)]
+    print(f"  {tot_a} artistes et {tot_b} albums manquants · "
+          f"{len(todo_a)}+{len(todo_b)} traités ce passage (plafond {MAX_NEW})")
+    print(f"  déjà en cache : {len(img['artists'])} artistes, {len(img['albums'])} pochettes")
+    if tot_a + tot_b > len(todo_a) + len(todo_b):
+        print("  le reste sera pris au passage suivant — rien n'est perdu")
 
     for i, a in enumerate(todo_a, 1):
         u = search("artist", a)

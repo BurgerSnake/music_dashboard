@@ -1,0 +1,33 @@
+name: Images (mensuel)
+
+# Les pochettes et photos d'artistes ne changent jamais.
+# Un passage par mois suffit largement ; le cache fait le reste.
+
+on:
+  schedule:
+    - cron: "40 3 1 * *"      # le 1er du mois
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/fetch_images.py
+      - run: python scripts/build_site.py
+      - name: Publier
+        run: |
+          git config user.name  "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add data/images.json site/data
+          git diff --staged --quiet || git commit -m "images $(date -u +%F)"
+          git pull --rebase || true
+          for i in 1 2 3; do git push && exit 0; sleep $((i*5)); git pull --rebase || true; done
+          git push
