@@ -1,0 +1,911 @@
+[
+ {
+  "artist": "Dionysos",
+  "genre": "French Rock",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2012-11-01",
+  "setlist": "https://www.setlist.fm/setlist/dionysos/2012/ancienne-belgique-brussels-belgium-5bdd43d0.html"
+ },
+ {
+  "artist": "Dionysos",
+  "genre": "French Rock",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2016-05-13",
+  "setlist": "https://www.setlist.fm/setlist/dionysos/2016/cirque-royal-koninklijk-circus-brussels-belgium-13f159b1.html"
+ },
+ {
+  "artist": "Garbage",
+  "genre": "Grunge/90s Alt",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2016-11-11",
+  "setlist": "https://www.setlist.fm/setlist/garbage/2016/cirque-royal-koninklijk-circus-brussels-belgium-3fa2917.html"
+ },
+ {
+  "artist": "Girls In Hawaii",
+  "genre": "Indie Pop",
+  "venue": "Ferme du Biereau",
+  "city": "Louvain-la-Neuve",
+  "type": "Salle",
+  "date": "2018-02-07",
+  "setlist": "Non trouvee"
+ },
+ {
+  "artist": "Franz Ferdinand",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2018-02-28",
+  "setlist": "https://www.setlist.fm/setlist/franz-ferdinand/2018/vorst-nationaal-forest-national-vorst-forest-belgium-63ee561f.html"
+ },
+ {
+  "artist": "Blood Red Shoes",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2019-10-16",
+  "setlist": "https://www.setlist.fm/setlist/blood-red-shoes/2019/vorst-nationaal-forest-national-vorst-forest-belgium-339d90e1.html"
+ },
+ {
+  "artist": "Pixies",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2019-10-16",
+  "setlist": "https://www.setlist.fm/setlist/pixies/2019/vorst-nationaal-forest-national-vorst-forest-belgium-139d91e9.html"
+ },
+ {
+  "artist": "Vampire Weekend",
+  "genre": "Indie Pop",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2019-11-18",
+  "setlist": "https://www.setlist.fm/setlist/vampire-weekend/2019/ancienne-belgique-brussels-belgium-1b9a85dc.html"
+ },
+ {
+  "artist": "Supergrass",
+  "genre": "Britpop",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2020-02-05",
+  "setlist": "https://www.setlist.fm/setlist/supergrass/2020/ancienne-belgique-brussels-belgium-398e52b.html"
+ },
+ {
+  "artist": "Dionysos",
+  "genre": "French Rock",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2021-09-03",
+  "setlist": "https://www.setlist.fm/setlist/dionysos/2021/cirque-royal-koninklijk-circus-brussels-belgium-3b8cc818.html"
+ },
+ {
+  "artist": "Girls In Hawaii",
+  "genre": "Indie Pop",
+  "venue": "Ferme du Biereau",
+  "city": "Louvain-la-Neuve",
+  "type": "Salle",
+  "date": "2021-09-04",
+  "setlist": "Non trouvee"
+ },
+ {
+  "artist": "Blood Red Shoes",
+  "genre": "Indie/Alt Rock",
+  "venue": "Hear Hear",
+  "city": "Hasselt",
+  "type": "Festival",
+  "date": "2022-08-14",
+  "setlist": "https://www.setlist.fm/setlist/blood-red-shoes/2022/domein-kiewit-hasselt-belgium-bb3d96a.html"
+ },
+ {
+  "artist": "Editors",
+  "genre": "Post-Punk",
+  "venue": "Hear Hear",
+  "city": "Hasselt",
+  "type": "Festival",
+  "date": "2022-08-14",
+  "setlist": "https://www.setlist.fm/setlist/editors/2022/domein-kiewit-hasselt-belgium-63b3e67b.html"
+ },
+ {
+  "artist": "Liam Gallagher",
+  "genre": "Britpop",
+  "venue": "Hear Hear",
+  "city": "Hasselt",
+  "type": "Festival",
+  "date": "2022-08-14",
+  "setlist": "https://www.setlist.fm/setlist/liam-gallagher/2022/domein-kiewit-hasselt-belgium-43b3efb3.html"
+ },
+ {
+  "artist": "Pixies",
+  "genre": "Indie/Alt Rock",
+  "venue": "Hear Hear",
+  "city": "Hasselt",
+  "type": "Festival",
+  "date": "2022-08-14",
+  "setlist": "https://www.setlist.fm/setlist/pixies/2022/domein-kiewit-hasselt-belgium-bb3f17a.html"
+ },
+ {
+  "artist": "Wolf Alice",
+  "genre": "Indie/Alt Rock",
+  "venue": "Hear Hear",
+  "city": "Hasselt",
+  "type": "Festival",
+  "date": "2022-08-14",
+  "setlist": "https://www.setlist.fm/setlist/wolf-alice/2022/domein-kiewit-hasselt-belgium-bb3d966.html"
+ },
+ {
+  "artist": "Pixies",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2023-03-07",
+  "setlist": "https://www.setlist.fm/setlist/pixies/2023/vorst-nationaal-forest-national-vorst-forest-belgium-1bba0d08.html"
+ },
+ {
+  "artist": "Wunderhorse",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2023-03-07",
+  "setlist": "https://www.setlist.fm/setlist/wunderhorse/2023/vorst-nationaal-forest-national-vorst-forest-belgium-3bba70e4.html"
+ },
+ {
+  "artist": "Iggy Pop",
+  "genre": "Grunge/90s Alt",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-06-29",
+  "setlist": "https://www.setlist.fm/setlist/iggy-pop/2023/festivalpark-werchter-belgium-5ba7abb4.html"
+ },
+ {
+  "artist": "Warhaus",
+  "genre": "Indie Pop",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-06-29",
+  "setlist": "https://www.setlist.fm/setlist/warhaus/2023/festivalpark-werchter-belgium-43a7abb7.html"
+ },
+ {
+  "artist": "Liam Gallagher",
+  "genre": "Britpop",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-06-30",
+  "setlist": "https://www.setlist.fm/setlist/liam-gallagher/2023/festivalpark-werchter-belgium-53a79f59.html"
+ },
+ {
+  "artist": "Red Hot Chili Peppers",
+  "genre": "Grunge/90s Alt",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-06-30",
+  "setlist": "https://www.setlist.fm/setlist/red-hot-chili-peppers/2023/festivalpark-werchter-belgium-3a79d6f.html"
+ },
+ {
+  "artist": "The Haunted Youth",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-06-30",
+  "setlist": "https://www.setlist.fm/setlist/the-haunted-youth/2023/festivalpark-werchter-belgium-1ba799a4.html"
+ },
+ {
+  "artist": "Interpol",
+  "genre": "Post-Punk",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-07-01",
+  "setlist": "https://www.setlist.fm/setlist/interpol/2023/festivalpark-werchter-belgium-73a79215.html"
+ },
+ {
+  "artist": "Muse",
+  "genre": "Hard Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-07-01",
+  "setlist": "https://www.setlist.fm/setlist/muse/2023/festivalpark-werchter-belgium-3a7913b.html"
+ },
+ {
+  "artist": "Sigur Ros",
+  "genre": "Art Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-07-01",
+  "setlist": "https://www.setlist.fm/setlist/sigur-ros/2023/festivalpark-werchter-belgium-3a78d8b.html"
+ },
+ {
+  "artist": "Amenra",
+  "genre": "Post-Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-07-02",
+  "setlist": "https://www.setlist.fm/setlist/amenra/2023/festivalpark-werchter-belgium-23a78433.html"
+ },
+ {
+  "artist": "Arctic Monkeys",
+  "genre": "Indie/Alt Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-07-02",
+  "setlist": "https://www.setlist.fm/setlist/arctic-monkeys/2023/festivalpark-werchter-belgium-23a7843f.html"
+ },
+ {
+  "artist": "Queens of the Stone Age",
+  "genre": "Hard Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2023-07-02",
+  "setlist": "https://www.setlist.fm/setlist/queens-of-the-stone-age/2023/festivalpark-werchter-belgium-3ba78438.html"
+ },
+ {
+  "artist": "Blur",
+  "genre": "Britpop",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2023-08-08",
+  "setlist": "https://www.setlist.fm/setlist/blur/2023/grote-kaai-lokeren-belgium-2ba4740e.html"
+ },
+ {
+  "artist": "Warhaus",
+  "genre": "Indie Pop",
+  "venue": "Eden",
+  "city": "Charleroi",
+  "type": "Salle",
+  "date": "2023-11-10",
+  "setlist": "Non trouvee"
+ },
+ {
+  "artist": "Girls In Hawaii",
+  "genre": "Indie Pop",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2023-12-17",
+  "setlist": "https://www.setlist.fm/setlist/girls-in-hawaii/2023/ancienne-belgique-brussels-belgium-1bae655c.html"
+ },
+ {
+  "artist": "Dionysos",
+  "genre": "French Rock",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-02-27",
+  "setlist": "https://www.setlist.fm/setlist/dionysos/2024/ancienne-belgique-brussels-belgium-33ad7cb5.html"
+ },
+ {
+  "artist": "DIIV",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-03-06",
+  "setlist": "https://www.setlist.fm/setlist/diiv/2024/ancienne-belgique-brussels-belgium-43ad4373.html"
+ },
+ {
+  "artist": "Eosine",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Ferme du Biereau",
+  "city": "Louvain-la-Neuve",
+  "type": "Salle",
+  "date": "2024-03-29",
+  "setlist": "Non trouvee"
+ },
+ {
+  "artist": "Slowdive",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-05-27",
+  "setlist": "https://www.setlist.fm/setlist/slowdive/2024/cirque-royal-koninklijk-circus-brussels-belgium-1b56fdb0.html"
+ },
+ {
+  "artist": "Royal Blood",
+  "genre": "Hard Rock",
+  "venue": "Aeronef",
+  "city": "Lille (FR)",
+  "type": "Salle",
+  "date": "2024-07-03",
+  "setlist": "https://www.setlist.fm/setlist/royal-blood/2024/laeronef-lille-france-43aa430f.html"
+ },
+ {
+  "artist": "Brutus",
+  "genre": "Post-Rock",
+  "venue": "Ronquieres Festival",
+  "city": "Ronquieres",
+  "type": "Festival",
+  "date": "2024-08-04",
+  "setlist": "https://www.setlist.fm/setlist/brutus/2024/plan-incline-ronquieres-belgium-43566f9b.html"
+ },
+ {
+  "artist": "Pixies",
+  "genre": "Indie/Alt Rock",
+  "venue": "Ronquieres Festival",
+  "city": "Ronquieres",
+  "type": "Festival",
+  "date": "2024-08-04",
+  "setlist": "https://www.setlist.fm/setlist/pixies/2024/plan-incline-ronquieres-belgium-5bab3fe4.html"
+ },
+ {
+  "artist": "Warhaus",
+  "genre": "Indie Pop",
+  "venue": "Ronquieres Festival",
+  "city": "Ronquieres",
+  "type": "Festival",
+  "date": "2024-08-04",
+  "setlist": "https://www.setlist.fm/setlist/warhaus/2024/plan-incline-ronquieres-belgium-4b566f86.html"
+ },
+ {
+  "artist": "Gurriers",
+  "genre": "Post-Punk",
+  "venue": "AB (Petite Salle)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-10-14",
+  "setlist": "https://www.setlist.fm/setlist/gurriers/2024/ancienne-belgique-club-brussels-belgium-7b54c248.html"
+ },
+ {
+  "artist": "Fontaines D.C.",
+  "genre": "Post-Punk",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-11-15",
+  "setlist": "https://www.setlist.fm/setlist/fontaines-dc/2024/vorst-nationaal-forest-national-vorst-forest-belgium-5ba85780.html"
+ },
+ {
+  "artist": "Wunderhorse",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-11-15",
+  "setlist": "https://www.setlist.fm/setlist/wunderhorse/2024/vorst-nationaal-forest-national-vorst-forest-belgium-43a85787.html"
+ },
+ {
+  "artist": "DIIV",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "OM (Osloplein Music)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-11-30",
+  "setlist": "https://www.setlist.fm/setlist/diiv/2024/om-seraing-belgium-635582d3.html"
+ },
+ {
+  "artist": "Alcest",
+  "genre": "Post-Rock",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2024-12-05",
+  "setlist": "https://www.setlist.fm/setlist/alcest/2024/ancienne-belgique-brussels-belgium-635fa22b.html"
+ },
+ {
+  "artist": "Mogwai",
+  "genre": "Post-Rock",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-02-17",
+  "setlist": "https://www.setlist.fm/setlist/mogwai/2025/ancienne-belgique-brussels-belgium-5353f309.html"
+ },
+ {
+  "artist": "Ride",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Aeronef",
+  "city": "Lille (FR)",
+  "type": "Salle",
+  "date": "2025-04-23",
+  "setlist": "https://www.setlist.fm/setlist/ride/2025/laeronef-lille-france-4b5c0b0a.html"
+ },
+ {
+  "artist": "The Murder Capital",
+  "genre": "Post-Punk",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-05-13",
+  "setlist": "https://www.setlist.fm/setlist/the-murder-capital/2025/ancienne-belgique-brussels-belgium-6b5e2272.html"
+ },
+ {
+  "artist": "Beach House",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-06-01",
+  "setlist": "https://www.setlist.fm/setlist/beach-house/2025/ancienne-belgique-brussels-belgium-635af24f.html"
+ },
+ {
+  "artist": "Sparks",
+  "genre": "Art Rock",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-06-28",
+  "setlist": "https://www.setlist.fm/setlist/sparks/2025/cirque-royal-koninklijk-circus-brussels-belgium-b5ad9da.html"
+ },
+ {
+  "artist": "Amyl and The Sniffers",
+  "genre": "Post-Punk",
+  "venue": "Aeronef",
+  "city": "Lille (FR)",
+  "type": "Salle",
+  "date": "2025-06-30",
+  "setlist": "https://www.setlist.fm/setlist/amyl-and-the-sniffers/2025/laeronef-lille-france-135d01d5.html"
+ },
+ {
+  "artist": "Fontaines D.C.",
+  "genre": "Post-Punk",
+  "venue": "Neimenster",
+  "city": "Luxembourg",
+  "type": "Salle",
+  "date": "2025-07-08",
+  "setlist": "https://www.setlist.fm/setlist/fontaines-dc/2025/neimenster-luxembourg-luxembourg-5b516bd8.html"
+ },
+ {
+  "artist": "DIIV",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2025-08-08",
+  "setlist": "https://www.setlist.fm/setlist/diiv/2025/grote-kaai-lokeren-belgium-1b5bf9e0.html"
+ },
+ {
+  "artist": "The Haunted Youth",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2025-08-08",
+  "setlist": "https://www.setlist.fm/setlist/the-haunted-youth/2025/grote-kaai-lokeren-belgium-135bf9e5.html"
+ },
+ {
+  "artist": "The Smashing Pumpkins",
+  "genre": "Grunge/90s Alt",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2025-08-08",
+  "setlist": "https://www.setlist.fm/setlist/the-smashing-pumpkins/2025/grote-kaai-lokeren-belgium-7b5d9624.html"
+ },
+ {
+  "artist": "NewDad",
+  "genre": "Indie/Alt Rock",
+  "venue": "Botanique",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-10-13",
+  "setlist": "https://www.setlist.fm/setlist/newdad/2025/le-musee-sint-joost-ten-noode-saint-josse-ten-noode-belgium-1b441da4.html"
+ },
+ {
+  "artist": "Shame",
+  "genre": "Post-Punk",
+  "venue": "Aeronef",
+  "city": "Lille (FR)",
+  "type": "Salle",
+  "date": "2025-11-07",
+  "setlist": "https://www.setlist.fm/setlist/shame/2025/laeronef-lille-france-4b4497aa.html"
+ },
+ {
+  "artist": "Yard Act",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National ",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-11-19",
+  "setlist": "https://www.setlist.fm/setlist/yard-act/2025/vorst-nationaal-forest-national-vorst-forest-belgium-2b465cda.html"
+ },
+ {
+  "artist": "The Hives",
+  "genre": "Garage Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-11-19",
+  "setlist": "https://www.setlist.fm/setlist/the-hives/2025/vorst-nationaal-forest-national-vorst-forest-belgium-b59a92a.html"
+ },
+ {
+  "artist": "Florence Road",
+  "genre": "Indie/Alt Rock",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-11-24",
+  "setlist": "https://www.setlist.fm/setlist/wolf-alice/2025/cirque-royal-koninklijk-circus-brussels-belgium-2b47f4d6.html"
+ },
+ {
+  "artist": "Wolf Alice",
+  "genre": "Indie/Alt Rock",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2025-11-24",
+  "setlist": "https://www.setlist.fm/setlist/wolf-alice/2025/cirque-royal-koninklijk-circus-brussels-belgium-2b47f4d6.html"
+ },
+ {
+  "artist": "Blonde Redhead",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-02-14",
+  "setlist": "https://www.setlist.fm/setlist/blonde-redhead/2026/ancienne-belgique-brussels-belgium-3b4fac14.html"
+ },
+ {
+  "artist": "Stereolab",
+  "genre": "Noise Rock",
+  "venue": "Botanique",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-03-05",
+  "setlist": "https://www.setlist.fm/setlist/stereolab/2026/le-botanique-lorangerie-sint-joost-ten-noode-saint-josse-ten-noode-belgium-5b487ba0.html"
+ },
+ {
+  "artist": "Marathon",
+  "genre": "Post-Punk",
+  "venue": "Botanique",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-03-11",
+  "setlist": "https://www.setlist.fm/setlist/marathon/2026/le-botanique-lorangerie-sint-joost-ten-noode-saint-josse-ten-noode-belgium-234880f7.html"
+ },
+ {
+  "artist": "SPRINTS",
+  "genre": "Post-Punk",
+  "venue": "Botanique",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-03-11",
+  "setlist": "https://www.setlist.fm/setlist/sprints/2026/le-botanique-lorangerie-sint-joost-ten-noode-saint-josse-ten-noode-belgium-4b45a3e6.html"
+ },
+ {
+  "artist": "The Haunted Youth",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "IkZieUGraag",
+  "city": "Breda",
+  "type": "Festival",
+  "date": "2026-03-28",
+  "setlist": "https://www.setlist.fm/setlist/the-haunted-youth/2026/mezz-grote-zaal-breda-netherlands-734abefd.html"
+ },
+ {
+  "artist": "Eosine",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "IkZieUGraag",
+  "city": "Breda",
+  "type": "Festival",
+  "date": "2026-03-28",
+  "setlist": "Non trouvee"
+ },
+ {
+  "artist": "Franz Ferdinand",
+  "genre": "Indie/Alt Rock",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-04-03",
+  "setlist": "https://www.setlist.fm/setlist/franz-ferdinand/2026/vorst-nationaal-forest-national-vorst-forest-belgium-2b44083e.html"
+ },
+ {
+  "artist": "The Sophs",
+  "genre": "A completer",
+  "venue": "Botanique",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-04-25",
+  "setlist": "Non trouvee"
+ },
+ {
+  "artist": "The Haunted Youth",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-04-29",
+  "setlist": "https://www.setlist.fm/setlist/the-haunted-youth/2026/cirque-royal-koninklijk-circus-brussels-belgium-7b466290.html"
+ },
+ {
+  "artist": "The Haunted Youth",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Cirque Royal",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-05-01",
+  "setlist": "https://www.setlist.fm/setlist/the-haunted-youth/2026/cirque-royal-koninklijk-circus-brussels-belgium-1b423908.html"
+ },
+ {
+  "artist": "shame",
+  "genre": "Post-Punk",
+  "venue": "Nuits Botanique",
+  "city": "Bruxelles",
+  "type": "Festival",
+  "date": "2026-05-23",
+  "setlist": "https://www.setlist.fm/setlist/shame/2026/le-botanique-fountain-sint-joost-ten-noode-saint-josse-ten-noode-belgium-b4cf10e.html"
+ },
+ {
+  "artist": "Girls In Hawaii",
+  "genre": "Indie Pop",
+  "venue": "Mons Arts de la Scene (Theatre le Manege)",
+  "city": "Mons",
+  "type": "Salle",
+  "date": "2026-07-01",
+  "setlist": "https://www.setlist.fm/setlist/girls-in-hawaii/2026/mons-arts-de-la-scene-theatre-le-manege-mons-belgium-3b763cc0.html"
+ },
+ {
+  "artist": "Florence Road",
+  "genre": "Indie/Alt Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2026-07-04",
+  "setlist": "https://www.setlist.fm/setlist/florence-road/2026/festivalpark-werchter-belgium-3b4bc070.html"
+ },
+ {
+  "artist": "Pixies",
+  "genre": "Indie/Alt Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2026-07-04",
+  "setlist": "https://www.setlist.fm/setlist/pixies/2026/festivalpark-werchter-belgium-2b4cbc82.html"
+ },
+ {
+  "artist": "The Haunted Youth",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2026-07-04",
+  "setlist": "https://www.setlist.fm/setlist/the-haunted-youth/2026/festivalpark-werchter-belgium-434cbf7b.html"
+ },
+ {
+  "artist": "Bad Nerves",
+  "genre": "Garage Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2026-07-05",
+  "setlist": "https://www.setlist.fm/setlist/bad-nerves/2026/festivalpark-werchter-belgium-6348eef3.html"
+ },
+ {
+  "artist": "NewDad",
+  "genre": "Indie/Alt Rock",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2026-07-05",
+  "setlist": "https://www.setlist.fm/setlist/newdad/2026/festivalpark-werchter-belgium-2b4bc06e.html"
+ },
+ {
+  "artist": "Sons",
+  "genre": "A completer",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2026-07-05",
+  "setlist": "https://www.setlist.fm/setlist/sons/2026/festivalpark-werchter-belgium-348e503.html"
+ },
+ {
+  "artist": "The Cure",
+  "genre": "Post-Punk",
+  "venue": "Rock Werchter",
+  "city": "Werchter",
+  "type": "Festival",
+  "date": "2026-07-05",
+  "setlist": "https://www.setlist.fm/setlist/the-cure/2026/festivalpark-werchter-belgium-2341407f.html"
+ },
+ {
+  "artist": "Anna Calvi",
+  "genre": "Art Rock",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2026-08-07",
+  "setlist": "https://www.setlist.fm/setlist/anna-calvi/2026/grote-kaai-lokeren-belgium-5370733d.html"
+ },
+ {
+  "artist": "Editors",
+  "genre": "Post-Punk",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2026-08-07",
+  "setlist": "https://www.setlist.fm/setlist/editors/2026/grote-kaai-lokeren-belgium-b4ced52.html"
+ },
+ {
+  "artist": "Sons",
+  "genre": "A completer",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2026-08-07",
+  "setlist": "https://www.setlist.fm/setlist/sons/2026/grote-kaai-lokeren-belgium-6b76fa4a.html"
+ },
+ {
+  "artist": "Suede",
+  "genre": "Britpop",
+  "venue": "Lokerse Feesten",
+  "city": "Lokeren",
+  "type": "Festival",
+  "date": "2026-08-07",
+  "setlist": "https://www.setlist.fm/setlist/suede/2026/grote-kaai-lokeren-belgium-6376fa4f.html"
+ },
+ {
+  "artist": "Nothing",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "Botanique",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-09-03",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "shame",
+  "genre": "Post-Punk",
+  "venue": "Skatepark (Manchester)",
+  "city": "Manchester",
+  "type": "Salle",
+  "date": "2026-09-04",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Theatre",
+  "genre": "A completer",
+  "venue": "Skatepark (Manchester)",
+  "city": "Manchester",
+  "type": "Salle",
+  "date": "2026-09-04",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Angine de Poitrine",
+  "genre": "A completer",
+  "venue": "Manchester Psych Fest",
+  "city": "Manchester",
+  "type": "Festival",
+  "date": "2026-09-05",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "BDRMM",
+  "venue": "Manchester Psych Fest",
+  "city": "Manchester",
+  "date": "2026-09-05",
+  "type": "Festival",
+  "genre": "A completer",
+  "setlist": ""
+ },
+ {
+  "artist": "Bleech 93",
+  "genre": "A completer",
+  "venue": "Manchester Psych Fest",
+  "city": "Manchester",
+  "type": "Festival",
+  "date": "2026-09-05",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Stereolab",
+  "genre": "Noise Rock",
+  "venue": "Manchester Psych Fest",
+  "city": "Manchester",
+  "type": "Festival",
+  "date": "2026-09-05",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Kurt Vile",
+  "genre": "Indie/Alt Rock",
+  "venue": "Troxy",
+  "city": "Londres (UK)",
+  "type": "Salle",
+  "date": "2026-09-09",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Strokes",
+  "genre": "A completer",
+  "venue": "Ziggo Dome",
+  "city": "Amsterdam (NL)",
+  "type": "Salle",
+  "date": "2026-10-11",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Blood Red Shoes",
+  "genre": "Indie/Alt Rock",
+  "venue": "Aeronef",
+  "city": "Lille (FR)",
+  "type": "Salle",
+  "date": "2026-10-22",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Mogwai",
+  "genre": "Post-Rock",
+  "venue": "Bozar",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-11-13",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Bloc Party",
+  "genre": "Post-Punk",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-11-18",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Interpol",
+  "genre": "Post-Punk",
+  "venue": "Forest National",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-11-18",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Gurriers",
+  "genre": "Post-Punk",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-12-05",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Girls In Hawaii",
+  "genre": "Indie Pop",
+  "venue": "Ancienne Belgique (AB)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2026-12-15",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Eosine",
+  "genre": "Shoegaze/Dream Pop",
+  "venue": "AB (Petite Salle)",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2027-02-05",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ },
+ {
+  "artist": "Protomartyr",
+  "genre": "Post-Punk",
+  "venue": "Botanique",
+  "city": "Bruxelles",
+  "type": "Salle",
+  "date": "2027-02-20",
+  "setlist": "A venir (concert futur, pas encore de setlist)"
+ }
+]
