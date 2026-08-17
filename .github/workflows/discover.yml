@@ -21,7 +21,8 @@ jobs:
     env:
       HOME_LAT: "50.4108"
       HOME_LON: "4.4446"
-      RADIUS_KM: "350"
+      TM_RADIUS_KM: "800"
+      TOP_N_EVENTS: "250"
     steps:
       - uses: actions/checkout@v4
 
@@ -29,10 +30,11 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_releases.py
 
-      - name: Concerts à proximité (Ticketmaster)
+      - name: Concerts (Bandsintown + Ticketmaster)
         continue-on-error: true
         env:
-          TICKETMASTER_KEY: ${{ secrets.TICKETMASTER_KEY }}
+          BANDSINTOWN_APP_ID: ${{ secrets.BANDSINTOWN_APP_ID }}
+          TICKETMASTER_KEY:   ${{ secrets.TICKETMASTER_KEY }}
         run: python scripts/fetch_events.py
 
       - name: Publier

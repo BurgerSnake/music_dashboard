@@ -109,6 +109,9 @@ text-transform:uppercase;color:var(--dim);min-width:52px}
 .glist{display:grid;gap:5px 14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
 font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--dim)}
 .glist i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.ty{font-family:ui-monospace,Menlo,monospace;font-size:9.5px;letter-spacing:.1em;
+text-transform:uppercase;padding:1px 5px;border:1px solid currentColor;margin-right:6px}
+.ty-artiste{color:var(--cyan)}.ty-album{color:var(--amber)}.ty-titre{color:var(--violet)}
 .delta{font-family:ui-monospace,Menlo,monospace;font-size:11px}
 .up{color:var(--green)}.dn{color:var(--magenta)}
 .viewsw{display:flex;gap:5px;margin-left:auto}
@@ -145,9 +148,9 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
 <button data-t="ov" aria-selected="true">Vue d'ensemble</button>
 <button data-t="rec">Récent</button>
 <button data-t="art">Artistes</button>
-<button data-t="lib">Bibliothèque</button>
 <button data-t="alb">Albums</button>
 <button data-t="trk">Titres</button>
+<button data-t="lib">Bibliothèque</button>
 <button data-t="vin">Vinyles</button>
 <button data-t="con">Concerts</button>
 <button data-t="rel">Sorties</button>
@@ -187,20 +190,6 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   <div id="gaps"></div>
 </div>
 
-<div class="panel" id="p-lib">
-  <h2>Bibliothèque</h2><p class="sub" id="subL"></p>
-  <div class="chips" id="fL">
-    <button class="chip" data-v="tracks" aria-pressed="true">titres likés</button>
-    <button class="chip" data-v="albums">albums</button>
-    <button class="chip" data-v="artists">artistes suivis</button>
-    <span class="viewsw"><button data-vw="lib" data-m="grid" aria-pressed="true">grille</button>
-    <button data-vw="lib" data-m="list" aria-pressed="false">liste</button></span></div>
-  <div class="ctl"><input type="search" id="qL" placeholder="Chercher…">
-    <select id="sL"><option value="plays">par écoutes</option><option value="az">alphabétique</option>
-      <option value="never">jamais écoutés d'abord</option></select></div>
-  <p class="count" id="nL"></p><div class="rows" id="lL"></div><button class="more" id="mL">Afficher plus</button>
-</div>
-
 <div class="panel" id="p-rec">
   <h2>Écoutes récentes</h2><p class="sub" id="subR"></p>
   <div class="ctl"><input type="search" id="qR" placeholder="Filtrer…"></div>
@@ -219,6 +208,8 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
     <button class="chip" data-v="miss">non suivis</button>
     <button class="chip" data-v="gig">déjà vus</button>
     <button class="chip" data-v="next">concert à venir</button>
+    <button class="chip" data-v="fol">suivis</button>
+    <button class="chip" data-v="zero">jamais écoutés</button>
     <span class="viewsw"><button data-vw="art" data-m="list" aria-pressed="true">liste</button>
     <button data-vw="art" data-m="grid" aria-pressed="false">grille</button></span></div>
   <p class="count" id="nA"></p><div class="rows" id="lA"></div><button class="more" id="mA">Afficher plus</button>
@@ -233,6 +224,8 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   <div class="chips" id="fB">
     <button class="chip" data-v="all" aria-pressed="true">tous</button>
     <button class="chip" data-v="miss">non enregistrés</button>
+    <button class="chip" data-v="sav">enregistrés</button>
+    <button class="chip" data-v="zero">jamais écoutés</button>
     <span class="viewsw"><button data-vw="alb" data-m="list" aria-pressed="true">liste</button>
     <button data-vw="alb" data-m="grid" aria-pressed="false">grille</button></span></div>
   <p class="count" id="nB"></p><div class="rows" id="lB"></div><button class="more" id="mB">Afficher plus</button>
@@ -244,8 +237,25 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   <div class="ctl"><input type="search" id="qC" placeholder="Chercher un titre ou un artiste…"></div>
   <div class="chips" id="fC">
     <button class="chip" data-v="all" aria-pressed="true">tous</button>
-    <button class="chip" data-v="miss">pas likés</button></div>
+    <button class="chip" data-v="miss">pas likés</button>
+    <button class="chip" data-v="liked">likés</button>
+    <button class="chip" data-v="zero">jamais joués</button></div>
   <p class="count" id="nC"></p><div class="rows" id="lC"></div><button class="more" id="mC">Afficher plus</button>
+</div>
+
+<div class="panel" id="p-lib">
+  <h2>Bibliothèque</h2><p class="sub" id="subL"></p>
+  <div class="chips" id="fL">
+    <button class="chip" data-v="tracks" aria-pressed="true">titres likés</button>
+    <button class="chip" data-v="albums">albums</button>
+    <button class="chip" data-v="artists">artistes suivis</button>
+    <span class="viewsw"><button data-vw="lib" data-m="grid" aria-pressed="true">grille</button>
+      <button data-vw="lib" data-m="list" aria-pressed="false">liste</button></span></div>
+  <div class="ctl"><input type="search" id="qL" placeholder="Chercher…">
+    <select id="sL"><option value="plays">par écoutes</option><option value="az">alphabétique</option>
+      <option value="never">jamais écoutés d'abord</option></select></div>
+  <p class="count" id="nL"></p><div class="rows" id="lL"></div>
+  <button class="more" id="mL">Afficher plus</button>
 </div>
 
 <div class="panel" id="p-vin">
@@ -297,7 +307,11 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
 
 <div class="panel" id="p-evt">
   <h2>À proximité</h2><p class="sub" id="subF"></p>
-  <div class="ctl"><input type="search" id="qF" placeholder="Artiste ou ville…"></div>
+  <div class="ctl"><input type="search" id="qF" placeholder="Artiste, salle ou ville…">
+    <select id="cF"></select></div>
+  <div class="ctl"><label class="cap" style="min-width:24px">du</label><input type="date" id="dF1">
+    <label class="cap" style="min-width:24px">au</label><input type="date" id="dF2">
+    <button class="chip" id="dFclr">tout</button></div>
   <div class="chips" id="fF">
     <button class="chip" data-v="all" aria-pressed="true">tout</button>
     <button class="chip" data-v="top">artistes que j'écoute vraiment</button></div>
@@ -337,8 +351,8 @@ const fm=n=>Number(n).toLocaleString('fr-FR').replace(/[\u202f,]/g,' ');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const today=new Date().toISOString().slice(0,10);
 let D=null;
-const S={gf:'',per:{ov:'all',art:'all',alb:'all',trk:'all'},vw:{art:'list',alb:'list',lib:'grid'},lib:{k:'tracks',q:'',s:'plays',n:60},rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
-         con:{q:'',f:'all',t:'all',n:120},rel:{f:'all'},evt:{q:'',f:'all',n:60},vin:{f:'coll'}};
+const S={gf:'',lib:{k:'tracks',q:'',s:'plays',n:60},per:{ov:'all',art:'all',alb:'all',trk:'all'},vw:{art:'list',alb:'list',lib:'grid'},rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
+         con:{q:'',f:'all',t:'all',n:120},rel:{f:'all'},evt:{q:'',f:'all',c:'',d1:'',d2:'',n:60},vin:{f:'coll'}};
 
 function toast(m,ms=3200){const t=$('#toast');t.textContent=m;t.classList.add('on');
   clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),ms);}
@@ -532,7 +546,7 @@ function renderLib(){
   if(S.lib.q)r=r.filter(x=>(x[0]+' '+(x[1]||'')).toLowerCase().includes(S.lib.q));
   const pi=k==='tracks'?3:(k==='albums'?2:1);
   if(S.lib.s==='plays')r.sort((a,b)=>b[pi]-a[pi]);
-  else if(S.lib.s==='never')r.sort((a,b)=>a[pi]-b[pi]);
+  else if(S.lib.s==='never')r.sort((a,b)=>a[pi]-b[pi]||a[0].localeCompare(b[0],'fr'));
   else r.sort((a,b)=>a[0].localeCompare(b[0],'fr'));
   $('#subL').textContent=`${fm(L.tracks.length)} titres likés · ${fm(L.albums.length)} albums enregistrés · ${fm(L.artists.length)} artistes suivis.`;
   $('#nL').textContent=fm(r.length)+' '+lbl;
@@ -550,16 +564,18 @@ function renderLib(){
     $('#mL').style.display=r.length>S.lib.n?'block':'none';return;}
   $('#lL').className='rows';
   $('#lL').innerHTML=r.slice(0,S.lib.n).map((x,i)=>{
-    const zero=!x[pi]?'<span class="tag t-miss">jamais écouté</span>':'';
+    const z=!x[pi]?'<span class="tag t-miss">jamais écouté</span>':'';
+    const nv=(x[x.length-1]>1)?`${x[x.length-1]} versions`:'';
     if(k==='artists')return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgA(x[0]))}
-      <span><span class="nm">${esc(x[0])}</span><span class="mt">${zero}</span></span>
+      <span><span class="nm">${esc(x[0])}</span><span class="mt">${z} ${nv}</span></span>
       <span class="vv">${x[2]} h<small>${fm(x[1])} lect.</small></span></div>`;
     if(k==='albums')return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgB(x[1],x[0]))}
-      <span><span class="nm">${esc(x[0])}</span><span class="by">${esc(x[1])}</span><span class="mt">${zero}</span></span>
+      <span><span class="nm">${esc(x[0])}</span><span class="by">${esc(x[1])}</span>
+      <span class="mt">${z} ${nv}</span></span>
       <span class="vv">${fm(x[2])}<small>lectures</small></span></div>`;
     return `<div class="row pic"><span class="rk">${i+1}</span>${pic(imgB(x[1],x[2]))}
       <span><span class="nm">${esc(x[0])}</span><span class="by">${esc(x[1])}</span>
-      <span class="mt">${esc(x[2]||'')} ${zero}</span></span>
+      <span class="mt">${esc(x[2]||'')} ${z} ${nv}</span></span>
       <span class="vv">${fm(x[3])}<small>lectures</small></span></div>`;}).join('');
   $('#mL').style.display=r.length>S.lib.n?'block':'none';
 }
@@ -587,9 +603,10 @@ function renderArt(){
   const s=S.art;let r=srcArt();
   if(s.q)r=r.filter(a=>a[0].toLowerCase().includes(s.q));
   if(s.f==='miss')r=r.filter(a=>!a[5]); if(s.f==='gig')r=r.filter(a=>a[6]>0); if(s.f==='next')r=r.filter(a=>a[7]);
+  if(s.f==='fol')r=r.filter(a=>a[5]); if(s.f==='zero')r=r.filter(a=>!a[2]);
   if(S.gf)r=r.filter(a=>a[9]===S.gf);
   r=[...r].sort((a,b)=>b[s.s]-a[s.s]);
-  $('#subA').textContent=`${fm(D.arts.length)} artistes écoutés au moins 3 fois.`;
+  $('#subA').textContent=`${fm(D.arts.length)} artistes écoutés au moins 3 fois, plus tes artistes suivis jamais écoutés.`;
   $('#nA').textContent=fm(r.length)+' artistes'+periodNote(S.per.art,300);
   if(S.vw.art==='grid'){
     $('#lA').className='cards';
@@ -614,7 +631,8 @@ function renderAlb(){
   periodBar('alb',renderAlb);
   const s=S.alb;let r=srcAlb();
   if(s.q)r=r.filter(a=>(a[0]+' '+a[1]).toLowerCase().includes(s.q));
-  if(s.f==='miss')r=r.filter(a=>!a[6]);
+  if(s.f==='miss')r=r.filter(a=>!a[6]); if(s.f==='sav')r=r.filter(a=>a[6]);
+  if(s.f==='zero')r=r.filter(a=>!a[3]);
   r=[...r].sort((a,b)=>b[s.s]-a[s.s]);
   $('#subB').textContent=`${fm(D.albs.length)} albums dont tu connais au moins 3 titres.`;
   $('#nB').textContent=fm(r.length)+' albums'+periodNote(S.per.alb,250);
@@ -640,8 +658,9 @@ function renderTrk(){
   periodBar('trk',renderTrk);
   const s=S.trk;let r=srcTrk();
   if(s.q)r=r.filter(a=>(a[0]+' '+a[1]).toLowerCase().includes(s.q));
-  if(s.f==='miss')r=r.filter(a=>!a[5]);
-  $('#subC').textContent=`${fm(D.trks.length)} titres joués au moins 4 fois.`;
+  if(s.f==='miss')r=r.filter(a=>!a[5]); if(s.f==='liked')r=r.filter(a=>a[5]);
+  if(s.f==='zero')r=r.filter(a=>!a[2]);
+  $('#subC').textContent=`${fm(D.trks.length)} titres joués au moins 4 fois, plus tes titres likés jamais joués.`;
   $('#nC').textContent=fm(r.length)+' titres'+periodNote(S.per.trk,250);
   $('#lC').innerHTML=r.slice(0,s.n).map((a,i)=>{
     const like=(!a[5]&&a[6])?`<button class="act" data-save="${esc(a[6])}">liker</button>`:'';
@@ -716,19 +735,27 @@ function renderRel(){
 function renderEvt(){
   const s=S.evt;let r=D.events||[];
   if(s.f==='top')r=r.filter(e=>(e.hours||0)>=3);
-  if(s.q)r=r.filter(e=>((e.artist||'')+' '+(e.city||'')).toLowerCase().includes(s.q));
+  if(s.q)r=r.filter(e=>((e.artist||'')+' '+(e.city||'')+' '+(e.venue||'')).toLowerCase().includes(s.q));
+  if(s.c)r=r.filter(e=>e.country===s.c);
+  if(s.d1)r=r.filter(e=>e.date>=s.d1);
+  if(s.d2)r=r.filter(e=>e.date<=s.d2);
   r=[...r].sort((a,b)=>a.date.localeCompare(b.date));
   const known=D.concerts.map(c=>(c.artist||'').toLowerCase()+c.date);
-  $('#subF').textContent="Concerts trouvés autour de chez toi pour les artistes que tu écoutes.";
+  const pays=[...new Set((D.events||[]).map(e=>e.country).filter(Boolean))].sort();
+  if($('#cF').innerHTML.indexOf('option')<0)
+    $('#cF').innerHTML='<option value="">tous les pays</option>'+pays.map(c=>`<option>${esc(c)}</option>`).join('');
+  $('#subF').textContent=`${fm((D.events||[]).length)} dates annoncées pour les artistes que tu écoutes, dans ${pays.length} pays.`;
   $('#nF').textContent=fm(r.length)+' dates';
   $('#lF').innerHTML=r.length?r.slice(0,s.n).map(e=>{
     const d=e.date.split('-'),have=known.includes((e.artist||'').toLowerCase()+e.date);
     const payload=esc(JSON.stringify({a:e.artist,v:e.venue,c:e.city,d:e.date}));
     return `<div class="row pic"><span class="rk">${d[0].slice(2)}</span>${pic(imgA(e.artist))}
       <span><span class="nm">${esc(e.artist)}</span><span class="by">${esc(e.venue)} — ${esc(e.city)} (${esc(e.country)})</span>
-      <span class="mt">${d[2]}/${d[1]}/${d[0]}
+      <span class="mt">${d[2]}/${d[1]}/${d[0]}${e.time?' · '+esc(e.time):''}
       ${have?'<span class="tag t-n">déjà dans ton agenda</span>':`<button class="act" data-evadd="${payload}">j'y vais</button>`}
-      <a href="${esc(e.url)}" target="_blank" rel="noopener">billets</a></span></span>
+      ${e.tickets?`<a href="${esc(e.tickets)}" target="_blank" rel="noopener">acheter des billets</a>`
+                 :(e.url?`<a href="${esc(e.url)}" target="_blank" rel="noopener">détails</a>`:'')}
+      <span class="tag t-n">${esc(e.src||'')}</span></span></span>
       <span class="vv">${e.hours||0} h<small>écoutées</small></span></div>`;}).join('')
     : `<div class="note">Rien pour l'instant — le workflow quotidien remplira ça.</div>`;
 }
@@ -893,8 +920,10 @@ document.addEventListener('click',async e=>{
     catch(err){toast('Échec : '+err.message,6000);cd.disabled=false;}
     return;}
   if(ev){const d=JSON.parse(ev.dataset.evadd);
-    fillForm({artist:d.a,venue:d.v,city:d.c,date:d.d,type:/festival|fest/i.test(d.v)?'Festival':'Salle',genre:''});
-    setEdit(-1);tab('con');$('#cA').scrollIntoView({behavior:'smooth',block:'center'});
+    setEdit(-1);          // vide le formulaire AVANT de le remplir, pas après
+    fillForm({artist:d.a,venue:d.v,city:d.c,date:d.d,
+              type:/festival|fest|feest|open air/i.test(d.v||'')?'Festival':'Salle',genre:''});
+    tab('con');$('#cA').scrollIntoView({behavior:'smooth',block:'center'});
     toast('Formulaire pré-rempli — vérifie et clique Ajouter.');return;}
   const vd=e.target.closest('[data-vdel]'),wd=e.target.closest('[data-wdel]');
   if(vd){const[id,inst,fold]=vd.dataset.vdel.split('|');
@@ -979,6 +1008,9 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
   (()=>{const fams=D.ov.genre_fams||[];
     $('#gA').innerHTML='<option value="">tous les genres</option>'+fams.map(f=>`<option>${esc(f)}</option>`).join('');
     $('#gA').onchange=e=>{S.gf=e.target.value;S.art.n=60;renderArt();};})();
+  $('#qL').oninput=e=>{S.lib.q=e.target.value.toLowerCase();S.lib.n=60;};
+  $('#sL').onchange=e=>{S.lib.s=e.target.value;};
+  $('#mL').onclick=()=>{S.lib.n+=100;};
   $('#qL').oninput=e=>{S.lib.q=e.target.value.toLowerCase();S.lib.n=60;renderLib();};
   $('#sL').onchange=e=>{S.lib.s=e.target.value;renderLib();};
   $('#mL').onclick=()=>{S.lib.n+=100;renderLib();};
@@ -987,7 +1019,12 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
   $('#qB').oninput=e=>{S.alb.q=e.target.value.toLowerCase();S.alb.n=60;renderAlb();};
   $('#qC').oninput=e=>{S.trk.q=e.target.value.toLowerCase();S.trk.n=60;renderTrk();};
   $('#qD').oninput=e=>{S.con.q=e.target.value.toLowerCase();renderCon();};
-  $('#qF').oninput=e=>{S.evt.q=e.target.value.toLowerCase();renderEvt();};
+  $('#qF').oninput=e=>{S.evt.q=e.target.value.toLowerCase();S.evt.n=60;renderEvt();};
+  $('#cF').onchange=e=>{S.evt.c=e.target.value;S.evt.n=60;renderEvt();};
+  $('#dF1').onchange=e=>{S.evt.d1=e.target.value;renderEvt();};
+  $('#dF2').onchange=e=>{S.evt.d2=e.target.value;renderEvt();};
+  $('#dFclr').onclick=()=>{S.evt.c=S.evt.d1=S.evt.d2='';
+    $('#cF').value='';$('#dF1').value='';$('#dF2').value='';renderEvt();};
   $('#sA').onchange=e=>{S.art.s=+e.target.value;renderArt();};
   $('#sB').onchange=e=>{S.alb.s=+e.target.value;renderAlb();};
   $('#tD').onchange=e=>{S.con.t=e.target.value;renderCon();};

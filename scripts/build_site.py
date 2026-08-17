@@ -223,6 +223,31 @@ def main():
              len(v["days"]), k in liked_t, v["uri"]]
             for k, v in top(T, 10 ** 6, key=lambda v: v["n"]) if v["n"] >= 4]
 
+    # Un titre liké mais jamais joué n'apparaissait nulle part : on l'ajoute
+    # aux listes principales avec des compteurs à zéro, pour supprimer
+    # l'onglet Bibliothèque et tout regrouper au même endroit.
+    have_a = {norm(a[0]) for a in arts}
+    for a in lib["artists"]:
+        if norm(a["artist"]) not in have_a:
+            have_a.add(norm(a["artist"]))
+            arts.append([a["artist"], 0, 0, 0, 0, True, seen_gigs.get(norm(a["artist"]), 0),
+                         next_gig.get(norm(a["artist"])), [0] * len(years),
+                         GEN.get(norm(a["artist"]), "")])
+    have_b = {(norm(a[1]), norm(a[0])) for a in albs}
+    for a in lib["albums"]:
+        k = (norm(a["artist"]), norm(a["album"]))
+        if k not in have_b:
+            have_b.add(k)
+            albs.append([a["album"], a["artist"], 0, 0, 0, 0, True, a.get("uri", "")])
+    have_t = {(norm(t[1]), norm(t[0])) for t in trks}
+    for t in lib["tracks"]:
+        k = (norm(t["artist"]), norm(t["track"]))
+        if k not in have_t:
+            have_t.add(k)
+            trks.append([t["track"], t["artist"], 0, 0, 0, True, t.get("uri", "")])
+    print(f"  listes complétées par la bibliothèque : {len(arts)} artistes, "
+          f"{len(albs)} albums, {len(trks)} titres")
+
     hmap = {norm(a[0]): a[1] for a in arts}
     nmap = {norm(a[0]): a[0] for a in arts}
     pt = {k: v["n"] for k, v in T.items()}
@@ -256,6 +281,7 @@ def main():
     )
     print(f"  bibliothèque dédoublonnée : {len(lib['tracks'])} → {len(library['tracks'])} titres, "
           f"{len(lib['albums'])} → {len(library['albums'])} albums")
+
 
     for c in concerts:
         c["hours"] = hmap.get(norm(c.get("artist", "")), 0)

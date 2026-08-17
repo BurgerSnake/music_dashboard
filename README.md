@@ -11,7 +11,7 @@ la donnée bouge réellement :
 | **Recalculer le site** | à la demande | ~30 s | rien d'autre que `build_site.py` — **c'est celui à lancer après un changement de code** |
 | Écoutes | toutes les 30 min | ~1 min | écoutes Spotify + envoi ListenBrainz |
 | Synchro quotidienne | 4h20 | ~1-2 min | bibliothèque Spotify + vinyles Discogs |
-| Sorties et concerts | lundi et jeudi | ~4 min | MusicBrainz + Ticketmaster |
+| Sorties et concerts | lundi et jeudi | ~6 min | MusicBrainz + Bandsintown + Ticketmaster |
 | Genres | samedi | ~8 min | familles de genres depuis MusicBrainz |
 | Images | le 1er du mois | ~4 min | photos et pochettes Deezer |
 - Le site est une page statique publiée par GitHub Pages.
@@ -82,6 +82,7 @@ Le dossier doit contenir `Streaming_History_Audio_*.json`, et si tu les as
 | `DISCOGS_TOKEN` | Discogs → Settings → Developers → *Generate token* |
 | `DISCOGS_USER` | ton nom d'utilisateur Discogs |
 | `TICKETMASTER_KEY` | developer.ticketmaster.com → créer une app (gratuit) |
+| `BANDSINTOWN_APP_ID` | profil Bandsintown for Artists → Settings → General → *Get API Key*. Sans profil artiste, il faut le demander via artists.bandsintown.com/support et attendre l'accord. Peut rester vide : Ticketmaster tourne seul. |
 | `LISTENBRAINZ_TOKEN` | listenbrainz.org → Settings (facultatif mais recommandé) |
 
 Pour Spotify : crée une app sur developer.spotify.com/dashboard, ajoute
@@ -167,6 +168,33 @@ que les deux autres réunis.
 Granularité de la courbe, choisie automatiquement : heures sur 24 h, jours
 jusqu'à 45 jours, semaines jusqu'à 220 jours, mois jusqu'à 1 000 jours, années
 au-delà.
+
+## Les concerts à venir
+
+Deux sources complémentaires. **Bandsintown** agrège les annonces des artistes
+eux-mêmes : c'est la seule qui voit correctement l'Ancienne Belgique, le
+Botanique ou le Trix, et elle renvoie toutes les dates d'un artiste dans le
+monde. **Ticketmaster** ne connaît que son propre inventaire — gros festivals
+et grandes salles — mais fournit des liens de billetterie fiables.
+
+Les deux sont fusionnées sur artiste + date + ville : le nom de salle vient de
+Bandsintown, le lien billetterie de celle qui en a un. Aucun filtre
+géographique n'est appliqué au stockage ; le tri par pays, ville et dates se
+fait dans le navigateur, instantanément.
+
+Si l'un des deux secrets manque, l'autre source fonctionne quand même.
+
+## L'onglet Bibliothèque
+
+Placé après Artistes, Albums et Titres. Trois vues au choix — titres likés,
+albums enregistrés, artistes suivis — avec recherche, tri (écoutes,
+alphabétique, jamais écoutés d'abord) et bascule grille/liste. Un badge
+indique le nombre de versions quand Spotify en garde plusieurs pour un même
+titre.
+
+Les onglets Artistes, Albums et Titres portent en plus les filtres
+« suivis / likés / enregistrés » et « jamais écoutés » : les entrées de la
+bibliothèque jamais jouées y sont injectées avec des compteurs à zéro.
 
 ## Les genres
 
