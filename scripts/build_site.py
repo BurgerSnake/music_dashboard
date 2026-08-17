@@ -133,12 +133,17 @@ def main():
             top10=round(sum(w[:10]) / tot * 100, 1) if w else 0,
             clock=[round(x / 60, 1) for x in p["clock"]],
             dow=[round(x / 60, 1) for x in p["dow"]],
-            topA=[[v["name"], round(v["min"] / 60, 1), v["n"], len(v["tracks"])]
-                  for _, v in top(p["A"], 40)],
-            topB=[[v["name"], v["artist"], round(v["min"] / 60, 1), v["n"]]
-                  for _, v in top(p["B"], 30)],
-            topT=[[v["name"], v["artist"], v["n"], round(v["min"] / 60, 1)]
-                  for _, v in top(p["T"], 30, key=lambda v: v["n"])],
+            # mêmes champs que les listes globales, pour que les filtres
+            # (non suivi / pas liké / concert) fonctionnent sur toutes les périodes
+            topA=[[v["name"], round(v["min"] / 60, 1), v["n"], len(v["tracks"]), 0,
+                   k in follow, seen_gigs.get(k, 0), next_gig.get(k)]
+                  for k, v in top(p["A"], 300)],
+            topB=[[v["name"], v["artist"], round(v["min"] / 60, 1), v["n"], 0, 0,
+                   k in saved_a, ""]
+                  for k, v in top(p["B"], 250)],
+            topT=[[v["name"], v["artist"], v["n"], round(v["min"] / 60, 1), 0,
+                   k in liked_t, ""]
+                  for k, v in top(p["T"], 250, key=lambda v: v["n"])],
         )
 
     arts = [[v["name"], round(v["min"] / 60, 1), v["n"], len(v["tracks"]), len(v["days"]),

@@ -53,17 +53,28 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_images.py
 
-      - name: Récupérer les écritures faites depuis le site
+      - name: Publier les données
         run: |
           git config user.name  "dashboard-bot"
           git config user.email "dashboard-bot@users.noreply.github.com"
-          git pull --rebase --autostash
 
-      - name: Recalculer le tableau de bord
-        run: python scripts/build_site.py
-
-      - name: Commiter
-        run: |
-          git add data/library.json data/vinyl.json data/releases.json data/events.json data/images.json data/mbid_cache.json site/data
+          # 1. on committe NOS fichiers d'abord : plus rien d'intraçable ne traîne,
+          #    sinon un fichier non suivi (actions_log.jsonl) bloque le pull.
+          git add data/library.json data/vinyl.json data/releases.json data/events.json data/images.json data/mbid_cache.json
           git diff --staged --quiet || git commit -m "synchro quotidienne $(date -u +%F)"
+
+          # 2. on récupère ce que le site a écrit pendant l'exécution
+          git pull --rebase
+
+          # 3. on recalcule APRÈS, pour tenir compte de ces écritures
+          python scripts/build_site.py
+          git add site/data
+          git diff --staged --quiet || git commit -m "tableau de bord"
+
+          # 4. push avec relances : une autre Action peut avoir poussé entre-temps
+          for i in 1 2 3 4 5; do
+            git push && exit 0
+            echo "push refusé, nouvelle tentative $i"
+            sleep $((i * 5)); git pull --rebase || true
+          done
           git push
