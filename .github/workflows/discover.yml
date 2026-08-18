@@ -1,7 +1,7 @@
-name: Sorties et concerts (bihebdomadaire)
+name: Sorties (bihebdomadaire)
 
-# Sorties d'albums et annonces de tournées : ça bouge à la semaine,
-# pas à l'heure. Deux passages par semaine suffisent.
+# Les sorties d'albums bougent à la semaine, pas à l'heure.
+# Deux passages suffisent.
 
 on:
   schedule:
@@ -18,11 +18,6 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-latest
-    env:
-      HOME_LAT: "50.4108"
-      HOME_LON: "4.4446"
-      TM_RADIUS_KM: "800"
-      TOP_N_EVENTS: "250"
     steps:
       - uses: actions/checkout@v4
 
@@ -30,19 +25,12 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_releases.py
 
-      - name: Concerts (Bandsintown + Ticketmaster)
-        continue-on-error: true
-        env:
-          BANDSINTOWN_APP_ID: ${{ secrets.BANDSINTOWN_APP_ID }}
-          TICKETMASTER_KEY:   ${{ secrets.TICKETMASTER_KEY }}
-        run: python scripts/fetch_events.py
-
       - name: Publier
         run: |
           git config user.name  "dashboard-bot"
           git config user.email "dashboard-bot@users.noreply.github.com"
-          git add data/releases.json data/events.json data/mbid_cache.json
-          git diff --staged --quiet || git commit -m "sorties et concerts $(date -u +%F)"
+          git add data/releases.json data/mbid_cache.json
+          git diff --staged --quiet || git commit -m "sorties $(date -u +%F)"
           git pull --rebase
           python scripts/build_site.py
           git add site/data

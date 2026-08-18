@@ -1,4 +1,17 @@
-"""Concerts à venir des artistes écoutés — Bandsintown + Ticketmaster.
+"""DORMANT — non branché sur aucun workflow, et l'onglet a été retiré du site.
+
+Raison : aucune source ouverte ne couvre assez de salles pour être utile.
+Bandsintown réserve ses clés aux artistes, Songkick a suspendu les nouvelles
+demandes, et Ticketmaster ne voit que son propre inventaire — il ratait
+Manchester Psych Fest et les salles belges indépendantes. Une liste partielle
+est pire qu'aucune liste : elle laisse croire qu'on a regardé.
+
+Le code reste ici, prêt à resservir si une source suffisante apparaît
+(UiTdatabank pour la Flandre, collecteurs par salle, Skiddle pour le
+Royaume-Uni). Pour le réactiver : rebrancher l'étape dans discover.yml et
+restaurer l'onglet dans site/index.html.
+
+Concerts à venir des artistes écoutés — Bandsintown + Ticketmaster.
 
 Les deux sources sont complémentaires :
   - Bandsintown agrège les annonces des artistes eux-mêmes. Bien meilleure

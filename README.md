@@ -11,7 +11,7 @@ la donnée bouge réellement :
 | **Recalculer le site** | à la demande | ~30 s | rien d'autre que `build_site.py` — **c'est celui à lancer après un changement de code** |
 | Écoutes | toutes les 30 min | ~1 min | écoutes Spotify + envoi ListenBrainz |
 | Synchro quotidienne | 4h20 | ~1-2 min | bibliothèque Spotify + vinyles Discogs |
-| Sorties et concerts | lundi et jeudi | ~6 min | MusicBrainz + Bandsintown + Ticketmaster |
+| Sorties | lundi et jeudi | ~3 min | MusicBrainz |
 | Genres | samedi | ~8 min | familles de genres depuis MusicBrainz |
 | Images | le 1er du mois | ~4 min | photos et pochettes Deezer |
 - Le site est une page statique publiée par GitHub Pages.
@@ -169,32 +169,21 @@ Granularité de la courbe, choisie automatiquement : heures sur 24 h, jours
 jusqu'à 45 jours, semaines jusqu'à 220 jours, mois jusqu'à 1 000 jours, années
 au-delà.
 
-## Les concerts à venir
+## Pourquoi il n'y a pas d'onglet « concerts à proximité »
 
-Deux sources complémentaires. **Bandsintown** agrège les annonces des artistes
-eux-mêmes : c'est la seule qui voit correctement l'Ancienne Belgique, le
-Botanique ou le Trix, et elle renvoie toutes les dates d'un artiste dans le
-monde. **Ticketmaster** ne connaît que son propre inventaire — gros festivals
-et grandes salles — mais fournit des liens de billetterie fiables.
+Il en a existé un, alimenté par Ticketmaster. Il a été retiré, parce
+qu'aucune source ouverte ne couvre assez de salles pour être utile :
+Bandsintown réserve ses clés aux artistes, Songkick a suspendu les nouvelles
+demandes, Spotify n'expose pas sa page Concerts, et Ticketmaster ne connaît
+que son propre inventaire — il ratait Manchester, Courtrai et la plupart des
+salles belges indépendantes.
 
-Les deux sont fusionnées sur artiste + date + ville : le nom de salle vient de
-Bandsintown, le lien billetterie de celle qui en a un. Aucun filtre
-géographique n'est appliqué au stockage ; le tri par pays, ville et dates se
-fait dans le navigateur, instantanément.
+Une liste partielle est pire qu'aucune liste : elle laisse croire qu'on a
+regardé. Mieux vaut découvrir les concerts ailleurs et les saisir ici.
 
-Si l'un des deux secrets manque, l'autre source fonctionne quand même.
-
-## L'onglet Bibliothèque
-
-Placé après Artistes, Albums et Titres. Trois vues au choix — titres likés,
-albums enregistrés, artistes suivis — avec recherche, tri (écoutes,
-alphabétique, jamais écoutés d'abord) et bascule grille/liste. Un badge
-indique le nombre de versions quand Spotify en garde plusieurs pour un même
-titre.
-
-Les onglets Artistes, Albums et Titres portent en plus les filtres
-« suivis / likés / enregistrés » et « jamais écoutés » : les entrées de la
-bibliothèque jamais jouées y sont injectées avec des compteurs à zéro.
+`scripts/fetch_events.py` reste dans le dépôt, dormant. Pistes si ça change :
+UiTdatabank pour la Flandre et Bruxelles, un collecteur par salle (iCal,
+JSON:API, HTML), Skiddle pour le Royaume-Uni.
 
 ## Les genres
 

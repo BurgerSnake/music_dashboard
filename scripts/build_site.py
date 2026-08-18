@@ -37,7 +37,6 @@ def main():
     vinyl = read_json(DATA / "vinyl.json", {"collection": [], "wantlist": []})
     concerts = read_json(DATA / "concerts.json", [])
     releases = read_json(DATA / "releases.json", [])
-    events = read_json(DATA / "events.json", [])
     images = read_json(DATA / "images.json", {"artists": {}, "albums": {}})
     gen = read_json(DATA / "genres.json", {"by_artist": {}, "tags": {}})
     GEN = gen.get("by_artist", {})
@@ -285,8 +284,6 @@ def main():
 
     for c in concerts:
         c["hours"] = hmap.get(norm(c.get("artist", "")), 0)
-    for e in events:
-        e["hours"] = hmap.get(norm(e.get("artist", "")), 0)
     for r in releases:
         r["hours"] = hmap.get(norm(r.get("artist", "")), 0)
 
@@ -361,7 +358,7 @@ def main():
     print(f"  matrice : {len(cellA)} cellules artiste, {len(cellB)} album, {len(cellT)} titre")
 
     out = dict(ov=ov, per=per, matrix_ready=True, arts=arts, albs=albs, trks=trks, recent=recent,
-               library=library, concerts=concerts, events=events, releases=releases,
+               library=library, concerts=concerts, releases=releases,
                vinyl=vinyl, vinyl_gaps=vinyl_gaps, images=images,
                names=sorted(nmap.values(), key=lambda s: s.lower()),
                stats=dict(listens=len(raw), artists=len(arts), albums=len(albs),

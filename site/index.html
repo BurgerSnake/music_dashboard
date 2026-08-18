@@ -154,7 +154,6 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
 <button data-t="vin">Vinyles</button>
 <button data-t="con">Concerts</button>
 <button data-t="rel">Sorties</button>
-<button data-t="evt">À proximité</button>
 <button data-t="set">Réglages</button>
 </div></nav>
 
@@ -305,19 +304,6 @@ footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:v
   <p class="count" id="nE"></p><div class="rows" id="lE"></div>
 </div>
 
-<div class="panel" id="p-evt">
-  <h2>À proximité</h2><p class="sub" id="subF"></p>
-  <div class="ctl"><input type="search" id="qF" placeholder="Artiste, salle ou ville…">
-    <select id="cF"></select></div>
-  <div class="ctl"><label class="cap" style="min-width:24px">du</label><input type="date" id="dF1">
-    <label class="cap" style="min-width:24px">au</label><input type="date" id="dF2">
-    <button class="chip" id="dFclr">tout</button></div>
-  <div class="chips" id="fF">
-    <button class="chip" data-v="all" aria-pressed="true">tout</button>
-    <button class="chip" data-v="top">artistes que j'écoute vraiment</button></div>
-  <p class="count" id="nF"></p><div class="rows" id="lF"></div><button class="more" id="mF">Afficher plus</button>
-</div>
-
 <div class="panel" id="p-set">
   <h2>Réglages</h2>
   <p class="sub">Pour écrire depuis cette page (ajouter un concert, mettre un disque en wantlist),
@@ -352,7 +338,7 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const today=new Date().toISOString().slice(0,10);
 let D=null;
 const S={gf:'',lib:{k:'tracks',q:'',s:'plays',n:60},per:{ov:'all',art:'all',alb:'all',trk:'all'},vw:{art:'list',alb:'list',lib:'grid'},rec:{q:''},art:{q:'',f:'all',s:1,n:60},alb:{q:'',f:'all',s:2,n:60},trk:{q:'',f:'all',n:60},
-         con:{q:'',f:'all',t:'all',n:120},rel:{f:'all'},evt:{q:'',f:'all',c:'',d1:'',d2:'',n:60},vin:{f:'coll'}};
+         con:{q:'',f:'all',t:'all',n:120},rel:{f:'all'},vin:{f:'coll'}};
 
 function toast(m,ms=3200){const t=$('#toast');t.textContent=m;t.classList.add('on');
   clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),ms);}
@@ -732,33 +718,6 @@ function renderRel(){
       <span class="vv">${x.hours||0} h<small>sur l'artiste</small></span></div>`;}).join('')
     : `<div class="note">Aucune sortie enregistrée pour l'instant — le workflow quotidien remplira ça.</div>`;
 }
-function renderEvt(){
-  const s=S.evt;let r=D.events||[];
-  if(s.f==='top')r=r.filter(e=>(e.hours||0)>=3);
-  if(s.q)r=r.filter(e=>((e.artist||'')+' '+(e.city||'')+' '+(e.venue||'')).toLowerCase().includes(s.q));
-  if(s.c)r=r.filter(e=>e.country===s.c);
-  if(s.d1)r=r.filter(e=>e.date>=s.d1);
-  if(s.d2)r=r.filter(e=>e.date<=s.d2);
-  r=[...r].sort((a,b)=>a.date.localeCompare(b.date));
-  const known=D.concerts.map(c=>(c.artist||'').toLowerCase()+c.date);
-  const pays=[...new Set((D.events||[]).map(e=>e.country).filter(Boolean))].sort();
-  if($('#cF').innerHTML.indexOf('option')<0)
-    $('#cF').innerHTML='<option value="">tous les pays</option>'+pays.map(c=>`<option>${esc(c)}</option>`).join('');
-  $('#subF').textContent=`${fm((D.events||[]).length)} dates annoncées pour les artistes que tu écoutes, dans ${pays.length} pays.`;
-  $('#nF').textContent=fm(r.length)+' dates';
-  $('#lF').innerHTML=r.length?r.slice(0,s.n).map(e=>{
-    const d=e.date.split('-'),have=known.includes((e.artist||'').toLowerCase()+e.date);
-    const payload=esc(JSON.stringify({a:e.artist,v:e.venue,c:e.city,d:e.date}));
-    return `<div class="row pic"><span class="rk">${d[0].slice(2)}</span>${pic(imgA(e.artist))}
-      <span><span class="nm">${esc(e.artist)}</span><span class="by">${esc(e.venue)} — ${esc(e.city)} (${esc(e.country)})</span>
-      <span class="mt">${d[2]}/${d[1]}/${d[0]}${e.time?' · '+esc(e.time):''}
-      ${have?'<span class="tag t-n">déjà dans ton agenda</span>':`<button class="act" data-evadd="${payload}">j'y vais</button>`}
-      ${e.tickets?`<a href="${esc(e.tickets)}" target="_blank" rel="noopener">acheter des billets</a>`
-                 :(e.url?`<a href="${esc(e.url)}" target="_blank" rel="noopener">détails</a>`:'')}
-      <span class="tag t-n">${esc(e.src||'')}</span></span></span>
-      <span class="vv">${e.hours||0} h<small>écoutées</small></span></div>`;}).join('')
-    : `<div class="note">Rien pour l'instant — le workflow quotidien remplira ça.</div>`;
-}
 
 /* ---------- index pour retrouver suivi / enregistré / concerts ---------- */
 let FA=null,FB=null;
@@ -906,8 +865,7 @@ function chips(sel,key,obj,fn){$$(sel+' .chip').forEach(b=>b.onclick=()=>{
   obj[key]=b.dataset.v;if('n'in obj)obj.n=60;
   $$(sel+' .chip').forEach(x=>x.setAttribute('aria-pressed',x===b));fn();});}
 document.addEventListener('click',async e=>{
-  const ce=e.target.closest('[data-cedit]'),cd=e.target.closest('[data-cdel]'),
-        ev=e.target.closest('[data-evadd]');
+  const ce=e.target.closest('[data-cedit]'),cd=e.target.closest('[data-cdel]');
   if(ce){const c=D.concerts[+ce.dataset.cedit];fillForm(c);setEdit(+ce.dataset.cedit);
     $('#cA').scrollIntoView({behavior:'smooth',block:'center'});return;}
   if(cd){const i=+cd.dataset.cdel,c=D.concerts[i];
@@ -916,15 +874,9 @@ document.addEventListener('click',async e=>{
     cd.disabled=true;
     try{const list=D.concerts.filter((_,j)=>j!==i);
       await saveConcerts(list,'concert supprimé : '+c.artist);
-      D.concerts=list;renderCon();renderEvt();toast('Supprimé.');}
+      D.concerts=list;renderCon();toast('Supprimé.');}
     catch(err){toast('Échec : '+err.message,6000);cd.disabled=false;}
     return;}
-  if(ev){const d=JSON.parse(ev.dataset.evadd);
-    setEdit(-1);          // vide le formulaire AVANT de le remplir, pas après
-    fillForm({artist:d.a,venue:d.v,city:d.c,date:d.d,
-              type:/festival|fest|feest|open air/i.test(d.v||'')?'Festival':'Salle',genre:''});
-    tab('con');$('#cA').scrollIntoView({behavior:'smooth',block:'center'});
-    toast('Formulaire pré-rempli — vérifie et clique Ajouter.');return;}
   const vd=e.target.closest('[data-vdel]'),wd=e.target.closest('[data-wdel]');
   if(vd){const[id,inst,fold]=vd.dataset.vdel.split('|');
     if(!confirm('Retirer ce disque de la collection Discogs ?'))return;vd.disabled=true;
@@ -974,7 +926,7 @@ $('#cAdd').onclick=async()=>{
     const list=D.concerts.slice();
     if(editIdx>=0)list[editIdx]=c; else list.push(c);
     await saveConcerts(list,(editIdx>=0?'concert modifié : ':'concert : ')+c.artist);
-    D.concerts=list;setEdit(-1);renderCon();renderEvt();
+    D.concerts=list;setEdit(-1);renderCon();
     toast(c.hours?`Enregistré — ${c.hours} h sur cet artiste.`:'Enregistré (artiste pas encore écouté).');
   }catch(err){toast('Échec : '+err.message,6000);}
   $('#cAdd').disabled=false;
@@ -997,13 +949,13 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
   }catch(e){
     $('#stamp').textContent='erreur';
     $('#p-ov').innerHTML=`<div class="note warn">${esc(e.message)}</div>`;return;}
-  D.events=D.events||[];D.releases=D.releases||[];
+  D.releases=D.releases||[];
   D.vinyl=D.vinyl||{collection:[],wantlist:[]};D.vinyl_gaps=D.vinyl_gaps||[];D.recent=D.recent||[];
   D.images=D.images||{artists:{},albums:{}};D.library=D.library||{tracks:[],albums:[],artists:[]};D.per=D.per||{};
   $('#artistList').innerHTML=(D.names||[]).map(n=>`<option value="${esc(n)}">`).join('');
-  drawOv();renderOv2();drawGenreYears();renderLib();renderRec();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();renderEvt();
+  drawOv();renderOv2();drawGenreYears();renderLib();renderRec();renderArt();renderAlb();renderTrk();renderVin();renderCon();renderRel();
   chips('#fA','f',S.art,renderArt);chips('#fB','f',S.alb,renderAlb);chips('#fC','f',S.trk,renderTrk);
-  chips('#fD','f',S.con,renderCon);chips('#fE','f',S.rel,renderRel);chips('#fF','f',S.evt,renderEvt);
+  chips('#fD','f',S.con,renderCon);chips('#fE','f',S.rel,renderRel);
   chips('#fV','f',S.vin,renderVin);chips('#fL','k',S.lib,renderLib);
   (()=>{const fams=D.ov.genre_fams||[];
     $('#gA').innerHTML='<option value="">tous les genres</option>'+fams.map(f=>`<option>${esc(f)}</option>`).join('');
@@ -1019,19 +971,12 @@ function ghState(){$('#gState').textContent=GH.ok?`Connecté à ${GH.repo}`:'Auc
   $('#qB').oninput=e=>{S.alb.q=e.target.value.toLowerCase();S.alb.n=60;renderAlb();};
   $('#qC').oninput=e=>{S.trk.q=e.target.value.toLowerCase();S.trk.n=60;renderTrk();};
   $('#qD').oninput=e=>{S.con.q=e.target.value.toLowerCase();renderCon();};
-  $('#qF').oninput=e=>{S.evt.q=e.target.value.toLowerCase();S.evt.n=60;renderEvt();};
-  $('#cF').onchange=e=>{S.evt.c=e.target.value;S.evt.n=60;renderEvt();};
-  $('#dF1').onchange=e=>{S.evt.d1=e.target.value;renderEvt();};
-  $('#dF2').onchange=e=>{S.evt.d2=e.target.value;renderEvt();};
-  $('#dFclr').onclick=()=>{S.evt.c=S.evt.d1=S.evt.d2='';
-    $('#cF').value='';$('#dF1').value='';$('#dF2').value='';renderEvt();};
   $('#sA').onchange=e=>{S.art.s=+e.target.value;renderArt();};
   $('#sB').onchange=e=>{S.alb.s=+e.target.value;renderAlb();};
   $('#tD').onchange=e=>{S.con.t=e.target.value;renderCon();};
   $('#mA').onclick=()=>{S.art.n+=100;renderArt();};$('#mB').onclick=()=>{S.alb.n+=100;renderAlb();};
   $('#mC').onclick=()=>{S.trk.n+=100;renderTrk();};$('#mD').onclick=()=>{S.con.n+=150;renderCon();};
-  $('#mF').onclick=()=>{S.evt.n+=100;renderEvt();};
-  (()=>{const last=(D.ov.last_listen||'').slice(0,10);
+    (()=>{const last=(D.ov.last_listen||'').slice(0,10);
     const back=n=>new Date(Date.parse(last)-n*86400000).toISOString().slice(0,10);
     $('#d2').value=last;$('#d1').value=back(30);$('#d4').value=back(31);$('#d3').value=back(61);})();
   $('#gRepo').value=GH.repo;$('#gTok').value=GH.tok;ghState();
