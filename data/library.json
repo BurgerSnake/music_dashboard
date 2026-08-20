@@ -1,6 +1,62 @@
 {
  "tracks": [
   {
+   "track": "Beautiful",
+   "artist": "overpass",
+   "album": "From the Night",
+   "uri": "spotify:track:65NDRsNTjKcfWVhqdPJIx9",
+   "added": "2026-08-19T19:30:41Z"
+  },
+  {
+   "track": "Figure 8",
+   "artist": "Bleech 9:3",
+   "album": "Figure 8",
+   "uri": "spotify:track:2AbiWiDcpNcKkHeJqxWx1Z",
+   "added": "2026-08-19T19:25:19Z"
+  },
+  {
+   "track": "One (Skinty Fia Sessions)",
+   "artist": "Fontaines D.C.",
+   "album": "Skinty Fia go deo",
+   "uri": "spotify:track:6sOfNmXsPjI0qi6nNsd6uT",
+   "added": "2026-08-19T14:47:29Z"
+  },
+  {
+   "track": "Trainspotting",
+   "artist": "the north",
+   "album": "Trainspotting",
+   "uri": "spotify:track:6Ik29VomsPTJSWrRbFMArs",
+   "added": "2026-08-19T14:25:40Z"
+  },
+  {
+   "track": "Rocket to Russia (Darklands Version)",
+   "artist": "Fontaines D.C.",
+   "album": "Liberty Belle",
+   "uri": "spotify:track:35WsuYwrg5wsNRmebXdY7c",
+   "added": "2026-08-19T14:02:33Z"
+  },
+  {
+   "track": "A Scent",
+   "artist": "Eosine",
+   "album": "A Scent",
+   "uri": "spotify:track:4wuFbKAAfBfpUTuqFC2d8F",
+   "added": "2026-08-19T05:26:11Z"
+  },
+  {
+   "track": "Lavender",
+   "artist": "Druidess",
+   "album": "The Product Of My Love",
+   "uri": "spotify:track:73JlnwZjafppQRnzU2jRyd",
+   "added": "2026-08-19T05:12:09Z"
+  },
+  {
+   "track": "Down In A Hole (2022 Remaster)",
+   "artist": "Alice In Chains",
+   "album": "Dirt (2022 Remaster)",
+   "uri": "spotify:track:7FRfYOql61DGDp9VPPe2qA",
+   "added": "2026-08-19T05:06:07Z"
+  },
+  {
    "track": "Ceiling",
    "artist": "Bleech 9:3",
    "album": "Bleech 9:3",
@@ -43347,16 +43403,16 @@
  ],
  "albums": [
   {
-   "album": "Bleech 9:3",
-   "artist": "Bleech 9:3",
-   "uri": "spotify:album:6LnK2cmnchsy0iSsLJE9ib",
-   "added": "2026-08-18T21:13:57Z"
-  },
-  {
    "album": "Jar Of Flies",
    "artist": "Alice In Chains",
    "uri": "spotify:album:4FCoFSNIFhK36holxHWCnc",
    "added": "2026-04-21T22:44:33Z"
+  },
+  {
+   "album": "Bleech 9:3",
+   "artist": "Bleech 9:3",
+   "uri": "spotify:album:6LnK2cmnchsy0iSsLJE9ib",
+   "added": "2026-08-18T21:13:57Z"
   },
   {
    "album": "Dance on the Blacktop",
@@ -44835,12 +44891,6 @@
    "added": "2026-05-24T11:23:45Z"
   },
   {
-   "album": "GOLDSTAR",
-   "artist": "The Sophs",
-   "uri": "spotify:album:7mTtyluyCS8hY97tqZDpoc",
-   "added": "2026-04-13T14:47:42Z"
-  },
-  {
    "album": "hades (the nine stages of change at the deceased remains)",
    "artist": "my dead girlfriend",
    "uri": "spotify:album:4hBL8N0YTn1d8P1c0AZdLw",
@@ -44857,6 +44907,12 @@
    "artist": "True Widow",
    "uri": "spotify:album:5xkD0KbkpBYK3n8rDA0y6j",
    "added": "2026-04-24T08:27:41Z"
+  },
+  {
+   "album": "GOLDSTAR",
+   "artist": "The Sophs",
+   "uri": "spotify:album:7mTtyluyCS8hY97tqZDpoc",
+   "added": "2026-04-13T14:47:42Z"
   },
   {
    "album": "Kick The Curb",
