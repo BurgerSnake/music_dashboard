@@ -1,0 +1,1559 @@
+{
+ "by_artist": {
+  "pixies": "Shoegaze / Dream pop",
+  "arcticmonkeys": "Post-punk / Cold wave",
+  "fontainesdc": "Post-punk / Cold wave",
+  "redhotchilipeppers": "Indie / Alternative",
+  "cure": "Post-punk / Cold wave",
+  "strokes": "Post-punk / Cold wave",
+  "royalblood": "Metal / Hard rock",
+  "nirvana": "Grunge / 90s alt",
+  "blur": "Britpop",
+  "diiv": "Shoegaze / Dream pop",
+  "girlsinhawaii": "Indie / Alternative",
+  "dionysos": "Shoegaze / Dream pop",
+  "slowdive": "Shoegaze / Dream pop",
+  "smiths": "Post-punk / Cold wave",
+  "queensofthestoneage": "Metal / Hard rock",
+  "hauntedyouth": "Shoegaze / Dream pop",
+  "radiohead": "Indie / Alternative",
+  "supergrass": "Britpop",
+  "vampireweekend": "Indie / Alternative",
+  "beatles": "Pop",
+  "wolfalice": "Shoegaze / Dream pop",
+  "muse": "Rock classique",
+  "smashingpumpkins": "Shoegaze / Dream pop",
+  "garbage": "Grunge / 90s alt",
+  "newdad": "Shoegaze / Dream pop",
+  "franzferdinand": "Post-punk / Cold wave",
+  "beastieboys": "Punk / Hardcore",
+  "interpol": "Post-punk / Cold wave",
+  "foofighters": "Grunge / 90s alt",
+  "oasis": "Britpop",
+  "ride": "Shoegaze / Dream pop",
+  "shame": "Post-punk / Cold wave",
+  "mybloodyvalentine": "Shoegaze / Dream pop",
+  "amylandthesniffers": "Punk / Hardcore",
+  "dandywarhols": "Rock psyché / Garage",
+  "murdercapital": "Post-punk / Cold wave",
+  "widowspeak": "Indie / Alternative",
+  "raconteurs": "Jazz / Soul / Blues",
+  "sonicyouth": "Post-punk / Cold wave",
+  "cocteautwins": "Shoegaze / Dream pop",
+  "gurriers": "Shoegaze / Dream pop",
+  "slowcrush": "Shoegaze / Dream pop",
+  "blonderedhead": "Indie / Alternative",
+  "bloodredshoes": "Post-punk / Cold wave",
+  "rageagainstthemachine": "Grunge / 90s alt",
+  "queen": "Metal / Hard rock",
+  "placebo": "Indie / Alternative",
+  "pinkfloyd": "Rock psyché / Garage",
+  "ringodeathstarr": "Shoegaze / Dream pop",
+  "deftones": "Grunge / 90s alt",
+  "englishteacher": "Post-punk / Cold wave",
+  "viagraboys": "Post-punk / Cold wave",
+  "ffs": "Indie / Alternative",
+  "alvvays": "Shoegaze / Dream pop",
+  "kraftwerk": "Rock psyché / Garage",
+  "mogwai": "Post-rock / Drone",
+  "radiodept": "Shoegaze / Dream pop",
+  "bdrmm": "Shoegaze / Dream pop",
+  "lush": "Shoegaze / Dream pop",
+  "beachhouse": "Shoegaze / Dream pop",
+  "hives": "Rock psyché / Garage",
+  "holyfawn": "Shoegaze / Dream pop",
+  "nothing": "Shoegaze / Dream pop",
+  "brns": "Indie / Alternative",
+  "noirdesir": "Post-punk / Cold wave",
+  "greenday": "Punk / Hardcore",
+  "alcest": "Shoegaze / Dream pop",
+  "jesusandmarychain": "Shoegaze / Dream pop",
+  "sprints": "Post-punk / Cold wave",
+  "dropnineteens": "Shoegaze / Dream pop",
+  "ledzeppelin": "Metal / Hard rock",
+  "pinkshinyultrablast": "Shoegaze / Dream pop",
+  "stereolab": "Shoegaze / Dream pop",
+  "kasabian": "Rock psyché / Garage",
+  "editors": "Post-punk / Cold wave",
+  "chameleons": "Shoegaze / Dream pop",
+  "marsvolta": "Metal / Hard rock",
+  "dirtyprettythings": "Rock psyché / Garage",
+  "blondie": "Post-punk / Cold wave",
+  "vines": "Rock psyché / Garage",
+  "florenceroad": "Indie / Alternative",
+  "whirr": "Shoegaze / Dream pop",
+  "smile": "Post-punk / Cold wave",
+  "flyyingcolours": "Shoegaze / Dream pop",
+  "fratellis": "Indie / Alternative",
+  "catherinewheel": "Shoegaze / Dream pop",
+  "builttospill": "Indie / Alternative",
+  "grandaddy": "Rock psyché / Garage",
+  "deafheaven": "Shoegaze / Dream pop",
+  "aerosmith": "Metal / Hard rock",
+  "haveanicelife": "Shoegaze / Dream pop",
+  "coldwarkids": "Jazz / Soul / Blues",
+  "kurtvile": "Indie / Alternative",
+  "breeders": "Shoegaze / Dream pop",
+  "idles": "Post-punk / Cold wave",
+  "klaxons": "Indie / Alternative",
+  "rem": "Indie / Alternative",
+  "gorillaz": "Hip-hop",
+  "foals": "Grunge / 90s alt",
+  "acdc": "Metal / Hard rock",
+  "lastdinnerparty": "Rock classique",
+  "mgmt": "Rock psyché / Garage",
+  "hatchie": "Shoegaze / Dream pop",
+  "blocparty": "Post-punk / Cold wave",
+  "chuckberry": "Jazz / Soul / Blues",
+  "joydivision": "Post-punk / Cold wave",
+  "jimihendrix": "Metal / Hard rock",
+  "amenra": "Punk / Hardcore",
+  "asobiseksu": "Shoegaze / Dream pop",
+  "aplacetoburystrangers": "Shoegaze / Dream pop",
+  "fugazi": "Punk / Hardcore",
+  "limegarden": "Post-punk / Cold wave",
+  "sound": "Post-punk / Cold wave",
+  "verve": "Britpop",
+  "sparks": "Post-punk / Cold wave",
+  "mazzystar": "Shoegaze / Dream pop",
+  "brianjonestownmassacre": "Rock psyché / Garage",
+  "yardact": "Post-punk / Cold wave",
+  "gunsnroses": "Metal / Hard rock",
+  "lastshadowpuppets": "Indie / Alternative",
+  "fragileanimals": "Shoegaze / Dream pop",
+  "grianchatten": "Folk / Americana",
+  "swervedriver": "Shoegaze / Dream pop",
+  "slowpulp": "Indie / Alternative",
+  "protomartyr": "Post-punk / Cold wave",
+  "launder": "Shoegaze / Dream pop",
+  "shesgreen": "Shoegaze / Dream pop",
+  "tamaryn": "Shoegaze / Dream pop",
+  "panchiko": "Shoegaze / Dream pop",
+  "clash": "Post-punk / Cold wave",
+  "kinghannah": "Shoegaze / Dream pop",
+  "royelotis": "Post-punk / Cold wave",
+  "gleemer": "Punk / Hardcore",
+  "traumaray": "Shoegaze / Dream pop",
+  "liamgallagher": "Britpop",
+  "highvis": "Punk / Hardcore",
+  "basement": "Électronique",
+  "elastica": "Britpop",
+  "nojoy": "Shoegaze / Dream pop",
+  "doors": "Rock psyché / Garage",
+  "iggypop": "Punk / Hardcore",
+  "creedenceclearwaterrevival": "Folk / Americana",
+  "palesaints": "Shoegaze / Dream pop",
+  "turbowolf": "Grunge / 90s alt",
+  "alexturner": "Folk / Americana",
+  "yolatengo": "Shoegaze / Dream pop",
+  "graywave": "Shoegaze / Dream pop",
+  "kneecap": "Hip-hop",
+  "killers": "Post-punk / Cold wave",
+  "mysterines": "Grunge / 90s alt",
+  "alisonshalo": "Shoegaze / Dream pop",
+  "neworder": "Post-punk / Cold wave",
+  "starflyer59": "Shoegaze / Dream pop",
+  "paulmccartney": "Pop",
+  "hundredth": "Shoegaze / Dream pop",
+  "kitchensofdistinction": "Shoegaze / Dream pop",
+  "themcrookedvultures": "Metal / Hard rock",
+  "tameimpala": "Rock psyché / Garage",
+  "stillcorners": "Shoegaze / Dream pop",
+  "soundgarden": "Grunge / 90s alt",
+  "pulp": "Britpop",
+  "marilynmanson": "Grunge / 90s alt",
+  "eagles": "Folk / Americana",
+  "hole": "Grunge / 90s alt",
+  "blackkeys": "Rock psyché / Garage",
+  "libertines": "Post-punk / Cold wave",
+  "stoneroses": "Rock psyché / Garage",
+  "throwingmuses": "Post-punk / Cold wave",
+  "fleetwoodmac": "Jazz / Soul / Blues",
+  "momma": "Indie / Alternative",
+  "wolfmother": "Metal / Hard rock",
+  "showercurtain": "Indie / Alternative",
+  "whitestripes": "Rock psyché / Garage",
+  "autolux": "Shoegaze / Dream pop",
+  "chemicalbrothers": "Rock psyché / Garage",
+  "kraus": "Rock classique",
+  "airformation": "Shoegaze / Dream pop",
+  "sparklehorse": "Post-rock / Drone",
+  "twilightsad": "Post-punk / Cold wave",
+  "mannequinpussy": "Grunge / 90s alt",
+  "greetdeath": "Shoegaze / Dream pop",
+  "newmoon": "Shoegaze / Dream pop",
+  "6ix9ine": "Punk / Hardcore",
+  "zztop": "Metal / Hard rock",
+  "painsofbeingpureatheart": "Indie / Alternative",
+  "whisperingsons": "Shoegaze / Dream pop",
+  "baston": "Hip-hop",
+  "papercuts": "Indie / Alternative",
+  "kurtcobain": "Grunge / 90s alt",
+  "holymotors": "Shoegaze / Dream pop",
+  "silversunpickups": "Shoegaze / Dream pop",
+  "sundays": "Shoegaze / Dream pop",
+  "landoftalk": "Indie / Alternative",
+  "cagetheelephant": "Rock psyché / Garage",
+  "kooks": "Indie / Alternative",
+  "bnny": "Indie / Alternative",
+  "ditz": "Grunge / 90s alt",
+  "preoccupations": "Post-punk / Cold wave",
+  "aswarmofthesun": "Post-rock / Drone",
+  "anginedepoitrine": "Grunge / 90s alt",
+  "ceciliaeyes": "Post-rock / Drone",
+  "woodenshjips": "Rock psyché / Garage",
+  "buzzcocks": "Post-punk / Cold wave",
+  "davidbowie": "Rock classique",
+  "aliceinchains": "Grunge / 90s alt",
+  "weezer": "Indie / Alternative",
+  "walkmen": "Post-punk / Cold wave",
+  "dinosaurjr": "Post-punk / Cold wave",
+  "fews": "Shoegaze / Dream pop",
+  "wire": "Post-punk / Cold wave",
+  "wildnothing": "Shoegaze / Dream pop",
+  "boa": "Folk / Americana",
+  "police": "Post-punk / Cold wave",
+  "suede": "Britpop",
+  "junius": "Post-rock / Drone",
+  "arkane": "Shoegaze / Dream pop",
+  "wombo": "Post-punk / Cold wave",
+  "kvb": "Shoegaze / Dream pop"
+ },
+ "tags": {
+  "pixies": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "arcticmonkeys": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "fontainesdc": [
+   "post-punk",
+   "post-punk",
+   "indie rock",
+   "rock"
+  ],
+  "redhotchilipeppers": [
+   "funk rock",
+   "funk rock",
+   "alternative rock",
+   "rock"
+  ],
+  "cure": [
+   "gothic rock",
+   "new wave",
+   "post-punk",
+   "gothic rock"
+  ],
+  "strokes": [
+   "indie rock",
+   "indie rock",
+   "garage rock revival",
+   "garage rock revival"
+  ],
+  "royalblood": [
+   "hard rock",
+   "hard rock",
+   "alternative rock",
+   "blues rock"
+  ],
+  "nirvana": [
+   "grunge",
+   "grunge",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "blur": [
+   "alternative rock",
+   "alternative rock",
+   "britpop",
+   "britpop"
+  ],
+  "diiv": [
+   "dream pop",
+   "dream pop",
+   "indie rock",
+   "indie rock"
+  ],
+  "girlsinhawaii": [
+   "indie rock",
+   "belgian",
+   "indie rock",
+   "indie pop"
+  ],
+  "dionysos": [
+   "indie rock",
+   "french",
+   "indie rock",
+   "art rock"
+  ],
+  "slowdive": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "dream pop"
+  ],
+  "smiths": [
+   "jangle pop",
+   "jangle pop",
+   "indie pop",
+   "indie pop"
+  ],
+  "queensofthestoneage": [
+   "stoner rock",
+   "stoner rock",
+   "hard rock",
+   "hard rock"
+  ],
+  "hauntedyouth": [
+   "dream pop",
+   "psychedelic",
+   "shoegaze",
+   "dream pop"
+  ],
+  "radiohead": [
+   "alternative rock",
+   "alternative rock",
+   "art rock",
+   "art rock"
+  ],
+  "supergrass": [
+   "britpop",
+   "britpop",
+   "alternative rock",
+   "power pop"
+  ],
+  "vampireweekend": [
+   "indie rock",
+   "indie rock",
+   "indie pop",
+   "indie pop"
+  ],
+  "beatles": [
+   "rock",
+   "rock",
+   "pop",
+   "pop"
+  ],
+  "wolfalice": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "muse": [
+   "alternative rock",
+   "alternative rock",
+   "rock",
+   "rock"
+  ],
+  "smashingpumpkins": [
+   "alternative rock",
+   "alternative rock",
+   "dream pop",
+   "dream pop"
+  ],
+  "garbage": [
+   "alternative rock",
+   "alternative rock",
+   "alternative dance",
+   "industrial rock"
+  ],
+  "newdad": [
+   "indie pop",
+   "indie rock",
+   "indie pop",
+   "indie rock"
+  ],
+  "franzferdinand": [
+   "indie rock",
+   "indie rock",
+   "post-punk revival",
+   "post-punk revival"
+  ],
+  "beastieboys": [
+   "hip hop",
+   "hip hop",
+   "rap rock",
+   "rap rock"
+  ],
+  "interpol": [
+   "indie rock",
+   "indie rock",
+   "post-punk",
+   "post-punk"
+  ],
+  "foofighters": [
+   "rock",
+   "rock",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "oasis": [
+   "britpop",
+   "britpop",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "ride": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "dream pop"
+  ],
+  "shame": [
+   "post-punk",
+   "post-punk",
+   "art punk",
+   "indie rock"
+  ],
+  "mybloodyvalentine": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "dream pop"
+  ],
+  "amylandthesniffers": [
+   "punk rock",
+   "punk rock",
+   "australia",
+   "garage rock"
+  ],
+  "dandywarhols": [
+   "alternative rock",
+   "indie pop",
+   "indie rock",
+   "neo-psychedelia"
+  ],
+  "murdercapital": [
+   "post-punk",
+   "post-punk",
+   "post-punk revival",
+   "post-punk 2k"
+  ],
+  "widowspeak": [
+   "alternative rock",
+   "indie rock",
+   "alternative rock",
+   "indie"
+  ],
+  "raconteurs": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "sonicyouth": [
+   "alternative rock",
+   "alternative rock",
+   "noise rock",
+   "noise rock"
+  ],
+  "cocteautwins": [
+   "dream pop",
+   "dream pop",
+   "shoegaze",
+   "shoegaze"
+  ],
+  "gurriers": [
+   "post-punk",
+   "post-punk",
+   "alternative rock",
+   "indie rock"
+  ],
+  "slowcrush": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "indie rock"
+  ],
+  "blonderedhead": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "4ad"
+  ],
+  "bloodredshoes": [
+   "garage rock",
+   "indie rock",
+   "garage rock",
+   "indie rock"
+  ],
+  "rageagainstthemachine": [
+   "alternative metal",
+   "alternative metal",
+   "rap metal",
+   "rap metal"
+  ],
+  "queen": [
+   "rock",
+   "rock",
+   "glam rock",
+   "glam rock"
+  ],
+  "placebo": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "british"
+  ],
+  "pinkfloyd": [
+   "progressive rock",
+   "progressive rock",
+   "psychedelic rock",
+   "psychedelic rock"
+  ],
+  "ringodeathstarr": [
+   "indie pop",
+   "indie rock",
+   "noise pop",
+   "psychedelic pop"
+  ],
+  "deftones": [
+   "alternative metal",
+   "alternative metal",
+   "nu metal",
+   "nu metal"
+  ],
+  "englishteacher": [
+   "indie rock",
+   "indie rock",
+   "post-punk",
+   "post-punk"
+  ],
+  "viagraboys": [
+   "post-punk",
+   "post-punk",
+   "garage punk",
+   "garage punk"
+  ],
+  "ffs": [
+   "alternative pop",
+   "indie rock",
+   "alternative pop",
+   "indie rock"
+  ],
+  "alvvays": [
+   "dream pop",
+   "indie pop",
+   "indie rock",
+   "dream pop"
+  ],
+  "kraftwerk": [
+   "electronic",
+   "electronic",
+   "krautrock",
+   "synth-pop"
+  ],
+  "mogwai": [
+   "post-rock",
+   "post-rock",
+   "instrumental",
+   "instrumental"
+  ],
+  "radiodept": [
+   "dream pop",
+   "dream pop",
+   "indie pop",
+   "shoegaze"
+  ],
+  "bdrmm": [
+   "shoegaze",
+   "shoegaze",
+   "electronic",
+   "indie rock"
+  ],
+  "lush": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "dream pop"
+  ],
+  "beachhouse": [
+   "dream pop",
+   "dream pop",
+   "indie pop",
+   "indie pop"
+  ],
+  "hives": [
+   "garage punk",
+   "garage punk",
+   "garage rock",
+   "garage rock"
+  ],
+  "holyfawn": [
+   "doomgaze",
+   "doomgaze",
+   "post-rock",
+   "shoegaze"
+  ],
+  "nothing": [
+   "shoegaze",
+   "shoegaze",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "brns": [
+   "alternative rock",
+   "indie pop",
+   "indie rock",
+   "alternative rock"
+  ],
+  "noirdesir": [
+   "rock",
+   "french",
+   "rock",
+   "alternative rock"
+  ],
+  "greenday": [
+   "punk rock",
+   "punk rock",
+   "pop punk",
+   "pop punk"
+  ],
+  "alcest": [
+   "blackgaze",
+   "blackgaze",
+   "shoegaze",
+   "shoegaze"
+  ],
+  "jesusandmarychain": [
+   "alternative rock",
+   "noise pop",
+   "shoegaze",
+   "alternative rock"
+  ],
+  "sprints": [
+   "alternative rock",
+   "garage punk",
+   "post-punk",
+   "rock"
+  ],
+  "dropnineteens": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "dream pop"
+  ],
+  "ledzeppelin": [
+   "hard rock",
+   "hard rock",
+   "rock",
+   "rock"
+  ],
+  "pinkshinyultrablast": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "noise pop"
+  ],
+  "stereolab": [
+   "art pop",
+   "experimental rock",
+   "indie pop",
+   "noise pop"
+  ],
+  "kasabian": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "editors": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "chameleons": [
+   "post-punk",
+   "post-punk",
+   "dream pop",
+   "dream pop"
+  ],
+  "marsvolta": [
+   "progressive rock",
+   "progressive rock",
+   "art rock",
+   "rock"
+  ],
+  "dirtyprettythings": [
+   "indie rock",
+   "indie rock",
+   "garage rock revival",
+   "garage rock revival"
+  ],
+  "blondie": [
+   "new wave",
+   "new wave",
+   "disco",
+   "rock"
+  ],
+  "vines": [
+   "alternative rock",
+   "alternative rock",
+   "garage rock",
+   "garage rock"
+  ],
+  "florenceroad": [
+   "indie rock",
+   "indie rock",
+   "indie pop",
+   "power pop"
+  ],
+  "whirr": [
+   "shoegaze",
+   "shoegaze",
+   "noise pop",
+   "noise pop"
+  ],
+  "smile": [
+   "art rock",
+   "art rock",
+   "post-punk",
+   "post-punk"
+  ],
+  "flyyingcolours": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "neo-psychedelia"
+  ],
+  "fratellis": [
+   "indie rock",
+   "indie rock",
+   "rock",
+   "rock"
+  ],
+  "catherinewheel": [
+   "shoegaze",
+   "shoegaze",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "builttospill": [
+   "indie rock",
+   "indie rock",
+   "rock",
+   "american"
+  ],
+  "grandaddy": [
+   "indie rock",
+   "lo-fi",
+   "indie rock",
+   "lo-fi"
+  ],
+  "deafheaven": [
+   "blackgaze",
+   "blackgaze",
+   "post-metal",
+   "shoegaze"
+  ],
+  "aerosmith": [
+   "hard rock",
+   "hard rock",
+   "blues rock",
+   "blues rock"
+  ],
+  "haveanicelife": [
+   "post-punk",
+   "post-punk",
+   "shoegaze",
+   "shoegaze"
+  ],
+  "coldwarkids": [
+   "indie rock",
+   "indie rock",
+   "blues rock",
+   "blues rock"
+  ],
+  "kurtvile": [
+   "indie folk",
+   "indie rock",
+   "indie folk",
+   "indie rock"
+  ],
+  "breeders": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "idles": [
+   "post-punk",
+   "post-punk",
+   "art punk",
+   "art rock"
+  ],
+  "klaxons": [
+   "dance-punk",
+   "indie rock",
+   "indietronica",
+   "new rave"
+  ],
+  "rem": [
+   "alternative rock",
+   "alternative rock",
+   "jangle pop",
+   "jangle pop"
+  ],
+  "gorillaz": [
+   "electronic",
+   "electronic",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "foals": [
+   "indie rock",
+   "indie rock",
+   "math rock",
+   "math rock"
+  ],
+  "acdc": [
+   "hard rock",
+   "hard rock",
+   "rock",
+   "rock"
+  ],
+  "lastdinnerparty": [
+   "glam rock",
+   "indie rock",
+   "glam rock",
+   "indie rock"
+  ],
+  "mgmt": [
+   "indie rock",
+   "indie rock",
+   "neo-psychedelia",
+   "psychedelic pop"
+  ],
+  "hatchie": [
+   "shoegaze",
+   "indie",
+   "shoegaze"
+  ],
+  "blocparty": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "chuckberry": [
+   "rock and roll",
+   "rock and roll",
+   "rock",
+   "rock"
+  ],
+  "joydivision": [
+   "post-punk",
+   "post-punk",
+   "new wave",
+   "new wave"
+  ],
+  "jimihendrix": [
+   "blues rock",
+   "blues rock",
+   "psychedelic rock",
+   "psychedelic rock"
+  ],
+  "amenra": [
+   "sludge metal",
+   "sludge metal",
+   "post-hardcore",
+   "post-metal"
+  ],
+  "asobiseksu": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "dream pop"
+  ],
+  "aplacetoburystrangers": [
+   "noise rock",
+   "noise rock",
+   "post-punk",
+   "shoegaze"
+  ],
+  "fugazi": [
+   "post-hardcore",
+   "post-hardcore",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "limegarden": [
+   "dance-punk",
+   "dance-punk",
+   "indie pop",
+   "new rave"
+  ],
+  "sound": [
+   "post-punk",
+   "post-punk",
+   "new wave",
+   "new wave"
+  ],
+  "verve": [
+   "alternative rock",
+   "alternative rock",
+   "britpop",
+   "britpop"
+  ],
+  "sparks": [
+   "art pop",
+   "glam rock",
+   "art pop",
+   "glam rock"
+  ],
+  "mazzystar": [
+   "dream pop",
+   "dream pop",
+   "slowcore",
+   "slowcore"
+  ],
+  "brianjonestownmassacre": [
+   "neo-psychedelia",
+   "neo-psychedelia",
+   "psychedelic rock",
+   "psychedelic rock"
+  ],
+  "yardact": [
+   "indie rock",
+   "indie rock",
+   "post-punk",
+   "post-punk"
+  ],
+  "gunsnroses": [
+   "hard rock",
+   "hard rock",
+   "glam metal",
+   "glam metal"
+  ],
+  "lastshadowpuppets": [
+   "indie rock",
+   "indie rock",
+   "british",
+   "baroque pop"
+  ],
+  "fragileanimals": [
+   "dream pop",
+   "dream pop"
+  ],
+  "grianchatten": [
+   "chamber pop",
+   "indie folk",
+   "singer-songwriter",
+   "chamber pop"
+  ],
+  "swervedriver": [
+   "alternative rock",
+   "shoegaze",
+   "alternative rock",
+   "shoegaze"
+  ],
+  "slowpulp": [
+   "bedroom pop",
+   "indie rock",
+   "bedroom pop",
+   "indie rock"
+  ],
+  "protomartyr": [
+   "art rock",
+   "post-punk",
+   "art rock",
+   "post-punk"
+  ],
+  "launder": [
+   "dream pop",
+   "post-punk",
+   "rock",
+   "shoegaze"
+  ],
+  "shesgreen": [
+   "shoegaze",
+   "shoegaze"
+  ],
+  "tamaryn": [
+   "dream pop",
+   "post-punk",
+   "shoegaze",
+   "dream pop"
+  ],
+  "panchiko": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "trip hop"
+  ],
+  "clash": [
+   "punk rock",
+   "punk rock",
+   "dance-punk",
+   "dance-punk"
+  ],
+  "kinghannah": [
+   "rock",
+   "rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "royelotis": [
+   "indie rock",
+   "pop",
+   "alternative/indie rock",
+   "aussie rock"
+  ],
+  "gleemer": [
+   "emo",
+   "indie rock",
+   "emo",
+   "indie rock"
+  ],
+  "traumaray": [
+   "alternative rock",
+   "shoegaze",
+   "alternative rock",
+   "shoegaze"
+  ],
+  "liamgallagher": [
+   "rock",
+   "rock",
+   "britpop",
+   "britpop"
+  ],
+  "highvis": [
+   "punk",
+   "punk"
+  ],
+  "basement": [
+   "dance",
+   "electronic",
+   "house",
+   "dance"
+  ],
+  "elastica": [
+   "britpop",
+   "britpop",
+   "alternative rock",
+   "indie rock"
+  ],
+  "nojoy": [
+   "shoegaze",
+   "shoegaze",
+   "electronic",
+   "indie rock"
+  ],
+  "doors": [
+   "psychedelic rock",
+   "psychedelic rock",
+   "blues rock",
+   "blues rock"
+  ],
+  "iggypop": [
+   "rock",
+   "rock",
+   "punk rock",
+   "punk rock"
+  ],
+  "creedenceclearwaterrevival": [
+   "swamp rock",
+   "swamp rock",
+   "rock",
+   "rock"
+  ],
+  "palesaints": [
+   "shoegaze",
+   "shoegaze",
+   "dream pop",
+   "dream pop"
+  ],
+  "turbowolf": [
+   "alternative metal",
+   "hard rock",
+   "alternative metal",
+   "hard rock"
+  ],
+  "alexturner": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "pop"
+  ],
+  "yolatengo": [
+   "indie rock",
+   "indie rock",
+   "dream pop",
+   "dream pop"
+  ],
+  "graywave": [
+   "alternative metal",
+   "dream pop",
+   "post-metal",
+   "shoegaze"
+  ],
+  "kneecap": [
+   "hip hop",
+   "political hip hop",
+   "hip hop",
+   "political hip hop"
+  ],
+  "killers": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "mysterines": [
+   "alternative rock",
+   "alternative rock",
+   "post-grunge",
+   "post-grunge"
+  ],
+  "alisonshalo": [
+   "dream pop",
+   "shoegaze",
+   "dream pop",
+   "shoegaze"
+  ],
+  "neworder": [
+   "new wave",
+   "new wave",
+   "post-punk",
+   "post-punk"
+  ],
+  "starflyer59": [
+   "alternative rock",
+   "shoegaze",
+   "alternative rock",
+   "shoegaze"
+  ],
+  "paulmccartney": [
+   "pop",
+   "pop",
+   "pop rock",
+   "pop rock"
+  ],
+  "hundredth": [
+   "dream pop",
+   "indie pop",
+   "melodic hardcore",
+   "post-hardcore"
+  ],
+  "kitchensofdistinction": [
+   "dream pop",
+   "shoegaze",
+   "dream pop",
+   "shoegaze"
+  ],
+  "themcrookedvultures": [
+   "alternative rock",
+   "alternative rock",
+   "hard rock",
+   "rock"
+  ],
+  "tameimpala": [
+   "psychedelic rock",
+   "psychedelic rock",
+   "neo-psychedelia",
+   "neo-psychedelia"
+  ],
+  "stillcorners": [
+   "dream pop",
+   "dream pop",
+   "indie pop",
+   "indie pop"
+  ],
+  "soundgarden": [
+   "grunge",
+   "grunge",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "pulp": [
+   "britpop",
+   "britpop",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "marilynmanson": [
+   "industrial rock",
+   "industrial rock",
+   "alternative metal",
+   "industrial metal"
+  ],
+  "eagles": [
+   "rock",
+   "rock",
+   "country rock",
+   "country rock"
+  ],
+  "hole": [
+   "alternative rock",
+   "grunge",
+   "alternative rock",
+   "grunge"
+  ],
+  "blackkeys": [
+   "blues rock",
+   "blues rock",
+   "rock",
+   "rock"
+  ],
+  "libertines": [
+   "garage rock revival",
+   "indie rock",
+   "garage rock revival",
+   "indie rock"
+  ],
+  "stoneroses": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "throwingmuses": [
+   "alternative rock",
+   "indie rock",
+   "post-punk",
+   "4ad"
+  ],
+  "fleetwoodmac": [
+   "rock",
+   "rock",
+   "soft rock",
+   "soft rock"
+  ],
+  "momma": [
+   "alternative rock",
+   "indie rock",
+   "alternative rock",
+   "indie rock"
+  ],
+  "wolfmother": [
+   "hard rock",
+   "hard rock",
+   "blues rock",
+   "blues rock"
+  ],
+  "showercurtain": [
+   "lo-fi",
+   "indie",
+   "lo-fi"
+  ],
+  "whitestripes": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "autolux": [
+   "alternative rock",
+   "alternative rock",
+   "dream pop",
+   "indie rock"
+  ],
+  "chemicalbrothers": [
+   "electronic",
+   "electronic",
+   "big beat",
+   "big beat"
+  ],
+  "kraus": [
+   "rock and roll",
+   "schlager",
+   "actor",
+   "rock and roll"
+  ],
+  "airformation": [
+   "post-rock",
+   "shoegaze",
+   "post-rock",
+   "shoegaze"
+  ],
+  "sparklehorse": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "twilightsad": [
+   "indie rock",
+   "post-punk",
+   "indie rock",
+   "post-punk"
+  ],
+  "mannequinpussy": [
+   "indie rock",
+   "punk rock",
+   "indie rock",
+   "punk rock"
+  ],
+  "greetdeath": [
+   "slowcore",
+   "slowcore",
+   "alternative rock",
+   "rock"
+  ],
+  "newmoon": [
+   "shoegaze",
+   "dreampop",
+   "shoegaze"
+  ],
+  "6ix9ine": [
+   "hip hop",
+   "trap",
+   "hip hop",
+   "trap"
+  ],
+  "zztop": [
+   "blues rock",
+   "blues rock",
+   "rock",
+   "southern rock"
+  ],
+  "painsofbeingpureatheart": [
+   "indie pop",
+   "indie pop",
+   "c86",
+   "alternative"
+  ],
+  "whisperingsons": [
+   "post-punk",
+   "shoegaze",
+   "post-punk",
+   "shoegaze"
+  ],
+  "baston": [
+   "hip hop",
+   "indie pop",
+   "pop",
+   "garage pop"
+  ],
+  "papercuts": [
+   "indie pop",
+   "american",
+   "américain",
+   "indie"
+  ],
+  "kurtcobain": [
+   "seattle",
+   "united states",
+   "grunge",
+   "rock"
+  ],
+  "holymotors": [
+   "americana",
+   "shoegaze",
+   "americana",
+   "shoegaze"
+  ],
+  "silversunpickups": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indietronica"
+  ],
+  "sundays": [
+   "dream pop",
+   "dream pop",
+   "jangle pop",
+   "jangle pop"
+  ],
+  "landoftalk": [
+   "indie rock",
+   "indie rock",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "cagetheelephant": [
+   "alternative rock",
+   "alternative rock",
+   "indie rock",
+   "indie rock"
+  ],
+  "kooks": [
+   "indie rock",
+   "indie rock",
+   "indie pop",
+   "indie pop"
+  ],
+  "bnny": [
+   "indie rock",
+   "indie rock"
+  ],
+  "ditz": [
+   "noise rock",
+   "noise rock"
+  ],
+  "preoccupations": [
+   "post-punk",
+   "post-punk",
+   "art punk",
+   "art punk"
+  ],
+  "aswarmofthesun": [
+   "post-metal",
+   "post-rock",
+   "post-metal",
+   "post-rock"
+  ],
+  "anginedepoitrine": [
+   "math rock",
+   "math rock",
+   "experimental rock",
+   "experimental rock"
+  ],
+  "ceciliaeyes": [
+   "post-rock",
+   "post-rock"
+  ],
+  "woodenshjips": [
+   "space rock",
+   "space rock",
+   "psychedelic rock",
+   "psychedelic rock"
+  ],
+  "buzzcocks": [
+   "power pop",
+   "punk rock",
+   "power pop",
+   "punk rock"
+  ],
+  "davidbowie": [
+   "art rock",
+   "glam rock",
+   "art rock",
+   "glam rock"
+  ],
+  "aliceinchains": [
+   "grunge",
+   "grunge",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "weezer": [
+   "alternative rock",
+   "alternative rock",
+   "power pop",
+   "power pop"
+  ],
+  "walkmen": [
+   "indie rock",
+   "post-punk revival",
+   "rock",
+   "indie rock"
+  ],
+  "dinosaurjr": [
+   "alternative rock",
+   "indie rock",
+   "alternative rock",
+   "indie rock"
+  ],
+  "fews": [
+   "krautrock",
+   "post-punk",
+   "shoegaze",
+   "alternative"
+  ],
+  "wire": [
+   "post-punk",
+   "post-punk",
+   "art punk",
+   "punk rock"
+  ],
+  "wildnothing": [
+   "dream pop",
+   "indie pop",
+   "indie rock",
+   "shoegaze"
+  ],
+  "boa": [
+   "k-pop",
+   "k-pop",
+   "j-pop",
+   "j-pop"
+  ],
+  "police": [
+   "new wave",
+   "new wave",
+   "rock",
+   "rock"
+  ],
+  "suede": [
+   "britpop",
+   "britpop",
+   "alternative rock",
+   "alternative rock"
+  ],
+  "junius": [
+   "post-metal",
+   "post-rock",
+   "post-metal",
+   "post-rock"
+  ],
+  "arkane": [
+   "dream pop",
+   "dream pop",
+   "shoegaze",
+   "4ad"
+  ],
+  "wombo": [
+   "indie rock",
+   "indie rock",
+   "post-punk",
+   "post-punk"
+  ],
+  "kvb": [
+   "post-punk",
+   "post-punk",
+   "shoegaze",
+   "shoegaze"
+  ]
+ },
+ "misses": [
+  "113",
+  "airiel",
+  "basht",
+  "beck",
+  "beenstellar",
+  "bleech93",
+  "bluesmiley",
+  "brutus",
+  "cardinals",
+  "chalk",
+  "chapterhouse",
+  "chloegallardo",
+  "cruush",
+  "deadletter",
+  "ellis",
+  "eosine",
+  "froth",
+  "grivo",
+  "keep",
+  "lifeonvenus",
+  "lowtide",
+  "magon",
+  "marathon",
+  "pipblom",
+  "prettyvicious",
+  "radiofreealice",
+  "ryanfisherman",
+  "seapony",
+  "serenamaneesh",
+  "sharko",
+  "slate",
+  "sophs",
+  "theatre",
+  "theyareguttingabodyofwater",
+  "tokyowitch",
+  "tramhaus",
+  "vant",
+  "warhaus",
+  "wisp",
+  "wunderhorse"
+ ]
+}
