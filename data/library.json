@@ -1,6 +1,146 @@
 {
  "tracks": [
   {
+   "track": "Losing a Whole Year",
+   "artist": "Third Eye Blind",
+   "album": "Third Eye Blind",
+   "uri": "spotify:track:5lgOUdoMBB3eZuSmc5HL4r",
+   "added": "2026-08-22T23:18:07Z"
+  },
+  {
+   "track": "New Fang",
+   "artist": "Them Crooked Vultures",
+   "album": "Them Crooked Vultures",
+   "uri": "spotify:track:7uJLdyIAaYLGT0oLw7I6b3",
+   "added": "2026-08-22T23:12:29Z"
+  },
+  {
+   "track": "Save the Population",
+   "artist": "Red Hot Chili Peppers",
+   "album": "Greatest Hits",
+   "uri": "spotify:track:1TcopjnLmQnzaQfMo50yJn",
+   "added": "2026-08-22T22:56:22Z"
+  },
+  {
+   "track": "Alive",
+   "artist": "Pearl Jam",
+   "album": "Ten",
+   "uri": "spotify:track:1L94M3KIu7QluZe63g64rv",
+   "added": "2026-08-22T22:48:10Z"
+  },
+  {
+   "track": "Getaway Car",
+   "artist": "Audioslave",
+   "album": "Audioslave",
+   "uri": "spotify:track:0wZFW4fMb6l08Nn2MuLf3P",
+   "added": "2026-08-22T22:43:55Z"
+  },
+  {
+   "track": "Creep - 2017 Remaster",
+   "artist": "Stone Temple Pilots",
+   "album": "Core (Super Deluxe Edition)",
+   "uri": "spotify:track:6dmueYtoihUhlQZlImBCmm",
+   "added": "2026-08-22T22:02:01Z"
+  },
+  {
+   "track": "Moleasskiss - Soundworks Demo",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:3eKmjeq0VIoxYqF9PavqXW",
+   "added": "2026-08-22T19:02:26Z"
+  },
+  {
+   "track": "Hello Kitty Kat - Soundworks Demo",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:0pS4t0AvsXJTLY7aWef0qF",
+   "added": "2026-08-22T19:02:26Z"
+  },
+  {
+   "track": "Luna - Apartment Demo",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:0DPETQJ17SfCwpXWwDaOkE",
+   "added": "2026-08-22T19:02:25Z"
+  },
+  {
+   "track": "Quiet - BBC Session/BC Mix",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:120DJqNCHmU1eXqU60ofSk",
+   "added": "2026-08-22T19:02:25Z"
+  },
+  {
+   "track": "Siamese Dream - Broadway Rehearsals Demo",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:6e1NB8dyguNIENFZ6Tb7PU",
+   "added": "2026-08-22T19:02:24Z"
+  },
+  {
+   "track": "STP - Rehearsal Demo",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:5pqMOdMl1IuRniHXFI2xFD",
+   "added": "2026-08-22T19:02:24Z"
+  },
+  {
+   "track": "Frail And Bedazzled - Soundworks Demo",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:795kaa8U6yZuejw67b8sfe",
+   "added": "2026-08-22T19:02:24Z"
+  },
+  {
+   "track": "Pissant - Siamese Sessions Rough Mix",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:4vqzQSZRn9NQnvmOsuDSii",
+   "added": "2026-08-22T19:02:23Z"
+  },
+  {
+   "track": "Hummer - 2011 Remaster",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:6tULAjasyLTeJecwhcIHCo",
+   "added": "2026-08-22T18:23:24Z"
+  },
+  {
+   "track": "Rocket - 2011 Remaster",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:59d0TRQ1IlsRQfBEtGmj5N",
+   "added": "2026-08-22T18:23:24Z"
+  },
+  {
+   "track": "Silverfuck - 2011 Remaster",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:6qzPIHZ3iujtOYjNkA5CL3",
+   "added": "2026-08-22T18:23:24Z"
+  },
+  {
+   "track": "Spaceboy - 2011 Remaster",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:0KQbsC4lUfm0qmRW68g6BF",
+   "added": "2026-08-22T18:23:23Z"
+  },
+  {
+   "track": "Quiet - 2011 Remaster",
+   "artist": "The Smashing Pumpkins",
+   "album": "Siamese Dream (Deluxe Edition)",
+   "uri": "spotify:track:5h9qCxrIrS7atH6OEglH8X",
+   "added": "2026-08-22T18:23:20Z"
+  },
+  {
+   "track": "Coming of Age",
+   "artist": "the north",
+   "album": "Coming of Age",
+   "uri": "spotify:track:0jnPGD9FIVHa5SsM9upOr0",
+   "added": "2026-08-22T08:55:05Z"
+  },
+  {
    "track": "Ordinary World",
    "artist": "Duran Duran",
    "album": "Duran Duran",
@@ -5763,7 +5903,7 @@
   },
   {
    "track": "Wasn’t Present In Me",
-   "artist": "Wedgy",
+   "artist": "Camera 02",
    "album": "Wasn’t Present In Me",
    "uri": "spotify:track:2AoBKzOIwUL5PFNzRBJGNI",
    "added": "2026-06-04T05:13:29Z"
@@ -6197,7 +6337,7 @@
   },
   {
    "track": "Static Blur",
-   "artist": "Wedgy",
+   "artist": "Camera 02",
    "album": "Static Blur",
    "uri": "spotify:track:4IhcYtiDn8AxnBVcEqMAJr",
    "added": "2026-05-19T05:56:23Z"
@@ -43438,6 +43578,18 @@
  ],
  "albums": [
   {
+   "album": "Siamese Dream (Deluxe Edition)",
+   "artist": "The Smashing Pumpkins",
+   "uri": "spotify:album:0bQglEvsHphrS19FGODEGo",
+   "added": "2026-01-03T22:17:47Z"
+  },
+  {
+   "album": "Radio Free Alice",
+   "artist": "Radio Free Alice",
+   "uri": "spotify:album:6gA2Q1xceLTDCQ8ddOb2e8",
+   "added": "2026-07-27T17:48:53Z"
+  },
+  {
    "album": "Wish You Were Here",
    "artist": "Pink Floyd",
    "uri": "spotify:album:0bCAjiUamIFqKJsekOYuRw",
@@ -43448,12 +43600,6 @@
    "artist": "Fontaines D.C.",
    "uri": "spotify:album:2lK23mYbRD6bCJpjI8BbdC",
    "added": "2026-01-05T15:24:33Z"
-  },
-  {
-   "album": "Radio Free Alice",
-   "artist": "Radio Free Alice",
-   "uri": "spotify:album:6gA2Q1xceLTDCQ8ddOb2e8",
-   "added": "2026-07-27T17:48:53Z"
   },
   {
    "album": "Dance on the Blacktop",
@@ -45212,12 +45358,6 @@
    "artist": "Interpol",
    "uri": "spotify:album:5NUna7cH8t5yLMgBxmW4NL",
    "added": "2026-01-03T22:17:53Z"
-  },
-  {
-   "album": "Siamese Dream (Deluxe Edition)",
-   "artist": "The Smashing Pumpkins",
-   "uri": "spotify:album:0bQglEvsHphrS19FGODEGo",
-   "added": "2026-01-03T22:17:47Z"
   },
   {
    "album": "Visions Of A Life",
