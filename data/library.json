@@ -1,6 +1,265 @@
 {
  "tracks": [
   {
+   "track": "ranger",
+   "artist": "dottie",
+   "album": "single",
+   "uri": "spotify:track:0WcIQz3lIyz5tcgXKJs1vH",
+   "added": "2026-08-24T22:16:54Z"
+  },
+  {
+   "track": "Day Dreamy",
+   "artist": "Ringo Deathstarr",
+   "album": "Colour Trip",
+   "uri": "spotify:track:2lOMMKn5EViTZ2zgUY2nBB",
+   "added": "2026-08-24T22:16:51Z"
+  },
+  {
+   "track": "Summer's Gone",
+   "artist": "An April March",
+   "album": "Adagio",
+   "uri": "spotify:track:1JBOp9AScxKG62SXvepLym",
+   "added": "2026-08-24T22:16:49Z"
+  },
+  {
+   "track": "Through The Dark",
+   "artist": "The Sundays",
+   "album": "Cry",
+   "uri": "spotify:track:5tZOD8u1pepAFJTYs9B9uP",
+   "added": "2026-08-24T22:16:40Z"
+  },
+  {
+   "track": "Built to Last",
+   "artist": "Southpacific",
+   "album": "Constance",
+   "uri": "spotify:track:1D7OScT6EXwwEmodXfbg8l",
+   "added": "2026-08-24T22:16:38Z"
+  },
+  {
+   "track": "A Window",
+   "artist": "The Radio Dept.",
+   "album": "Pet Grief",
+   "uri": "spotify:track:0rChtQ1msGMCaILr6F1szt",
+   "added": "2026-08-24T22:16:37Z"
+  },
+  {
+   "track": "I Thought I Saw",
+   "artist": "elricfd",
+   "album": "Slowdive into",
+   "uri": "spotify:track:701rUslR2UCQi1ynHE7AJJ",
+   "added": "2026-08-24T22:16:35Z"
+  },
+  {
+   "track": "Just Like You",
+   "artist": "Ringo Deathstarr",
+   "album": "Ringo Deathstarr",
+   "uri": "spotify:track:2jMZXod3NKBK9sNxM8DYH7",
+   "added": "2026-08-24T22:16:33Z"
+  },
+  {
+   "track": "Stardust",
+   "artist": "An April March",
+   "album": "It Goes Without Saying",
+   "uri": "spotify:track:4ga32OlFtxCGK7MHtqbHxT",
+   "added": "2026-08-24T22:16:32Z"
+  },
+  {
+   "track": "Nothing Sweet",
+   "artist": "The Sundays",
+   "album": "Summertime",
+   "uri": "spotify:track:7ihBwEIEQkBJmytxzdoLjM",
+   "added": "2026-08-24T22:16:31Z"
+  },
+  {
+   "track": "Deliverance",
+   "artist": "The Radio Dept.",
+   "album": "I Don't Need Love, I've Got My Band",
+   "uri": "spotify:track:20wW4oVYEb1CIGKaRK1ZBT",
+   "added": "2026-08-24T21:21:02Z"
+  },
+  {
+   "track": "Leave This City",
+   "artist": "The Sundays",
+   "album": "Static And Silence",
+   "uri": "spotify:track:2e3IvHEIwnQF4X4x8g783X",
+   "added": "2026-08-24T21:16:38Z"
+  },
+  {
+   "track": "Bleed",
+   "artist": "elricfd",
+   "album": "Slowdive into",
+   "uri": "spotify:track:4jNdjmHn2ABuKBDGX6kK7v",
+   "added": "2026-08-24T21:15:18Z"
+  },
+  {
+   "track": "While You're Sleeping, I'm Dreaming",
+   "artist": "Tamaryn",
+   "album": "Tender New Signs",
+   "uri": "spotify:track:4bmdPA3Ctw7hOSPmxDK1AH",
+   "added": "2026-08-24T21:15:13Z"
+  },
+  {
+   "track": "Life Goes On",
+   "artist": "The Sundays",
+   "album": "Cry",
+   "uri": "spotify:track:6st8aj6PmtqGctnLAat95M",
+   "added": "2026-08-24T21:15:11Z"
+  },
+  {
+   "track": "Fragile",
+   "artist": "The Fauns",
+   "album": "The Fauns",
+   "uri": "spotify:track:0G6ir4hbGUOVraGknGsA9Q",
+   "added": "2026-08-24T21:15:10Z"
+  },
+  {
+   "track": "Silver Screen",
+   "artist": "elricfd",
+   "album": "Slowdive into",
+   "uri": "spotify:track:4zi9iLpH9Iy6K817jUZhkT",
+   "added": "2026-08-24T21:15:07Z"
+  },
+  {
+   "track": "Never Drive",
+   "artist": "Ringo Deathstarr",
+   "album": "Colour Trip",
+   "uri": "spotify:track:1XkGoUrHao4qo3ubo5LzZK",
+   "added": "2026-08-24T21:08:10Z"
+  },
+  {
+   "track": "Beyond the Clouds",
+   "artist": "You'll Never Get to Heaven",
+   "album": "Images",
+   "uri": "spotify:track:5eVXg6BhWXAUxzMSJvMafj",
+   "added": "2026-08-24T20:30:46Z"
+  },
+  {
+   "track": "Someone Else",
+   "artist": "The Radio Dept.",
+   "album": "I Don't Need Love, I've Got My Band",
+   "uri": "spotify:track:740iMeqJIz0zgIIzepoVwa",
+   "added": "2026-08-24T20:30:43Z"
+  },
+  {
+   "track": "Far Rider",
+   "artist": "Still Corners",
+   "album": "Far Rider",
+   "uri": "spotify:track:3xVLARLWM40eEePrgyuKn6",
+   "added": "2026-08-24T20:26:46Z"
+  },
+  {
+   "track": "Sleep",
+   "artist": "elricfd",
+   "album": "Slowdive into",
+   "uri": "spotify:track:0hd8YlgI2QN7lULr4hdiWP",
+   "added": "2026-08-24T20:26:44Z"
+  },
+  {
+   "track": "Disease",
+   "artist": "Ringo Deathstarr",
+   "album": "Ringo Deathstarr",
+   "uri": "spotify:track:4GSybl7oBclLPfiBLyXSQd",
+   "added": "2026-08-24T20:26:43Z"
+  },
+  {
+   "track": "Jetpacks for Julian",
+   "artist": "Alison's Halo",
+   "album": "Eyedazzler",
+   "uri": "spotify:track:2cYgq0fcSt7yuLB7QOhIhh",
+   "added": "2026-08-24T20:26:41Z"
+  },
+  {
+   "track": "Blood on My Hands",
+   "artist": "The Sundays",
+   "album": "Blind",
+   "uri": "spotify:track:5RYYDUdReZKsWBkcKqxhFY",
+   "added": "2026-08-24T20:26:40Z"
+  },
+  {
+   "track": "Regular Disease",
+   "artist": "Blind Mr. Jones",
+   "album": "Stereo Musicale",
+   "uri": "spotify:track:4YAQckxDe7qBmoIpjisNNf",
+   "added": "2026-08-24T20:00:00Z"
+  },
+  {
+   "track": "A Certain Someone",
+   "artist": "The Sundays",
+   "album": "Reading Writing And Arithmetic",
+   "uri": "spotify:track:6iliE1veEIz1KuiVgwRwsr",
+   "added": "2026-08-24T19:57:24Z"
+  },
+  {
+   "track": "Come Heaven",
+   "artist": "Chapterhouse",
+   "album": "Whirlpool, Before and After",
+   "uri": "spotify:track:5HqIIMcj5lhNdG7q2DAILW",
+   "added": "2026-08-24T19:57:22Z"
+  },
+  {
+   "track": "What Will Give",
+   "artist": "The Radio Dept.",
+   "album": "Pet Grief",
+   "uri": "spotify:track:0QavMO9lanK1DZBsKGld4B",
+   "added": "2026-08-24T19:57:17Z"
+  },
+  {
+   "track": "Always April",
+   "artist": "Alison's Halo",
+   "album": "Eyedazzler",
+   "uri": "spotify:track:0waLJ3VK0CQZ6NcyblbSdB",
+   "added": "2026-08-24T19:20:18Z"
+  },
+  {
+   "track": "Sounds Like Suzie",
+   "artist": "Alison's Halo",
+   "album": "Eyedazzler",
+   "uri": "spotify:track:5K93VHbO3TuNMgiTpu3Vf4",
+   "added": "2026-08-24T19:19:42Z"
+  },
+  {
+   "track": "I Saw The Sun",
+   "artist": "elricfd",
+   "album": "Slowdive into",
+   "uri": "spotify:track:33D8wOHZMEiZphHqjk1Hiu",
+   "added": "2026-08-24T19:19:39Z"
+  },
+  {
+   "track": "Porcelain",
+   "artist": "Ozean",
+   "album": "Ozean",
+   "uri": "spotify:track:7BzsldUSmzrW46iea9UFVn",
+   "added": "2026-08-24T19:19:25Z"
+  },
+  {
+   "track": "It's Personal",
+   "artist": "The Radio Dept.",
+   "album": "Pet Grief",
+   "uri": "spotify:track:3K1R7HPW1NplfVCpWhFMJW",
+   "added": "2026-08-24T19:19:24Z"
+  },
+  {
+   "track": "Tell",
+   "artist": "The Radio Dept.",
+   "album": "Pet Grief",
+   "uri": "spotify:track:0QaEbvdwNAWAQUM80Q3kSe",
+   "added": "2026-08-24T19:19:16Z"
+  },
+  {
+   "track": "Air Conditioning",
+   "artist": "DIIV",
+   "album": "Oshin",
+   "uri": "spotify:track:2raszrdq1XG6Nu1imBgxE2",
+   "added": "2026-08-24T19:19:14Z"
+  },
+  {
+   "track": "Waltzing Back",
+   "artist": "No Vacation",
+   "album": "Waltzing Back",
+   "uri": "spotify:track:3JcvpTfI64SmXxUl7XUvQI",
+   "added": "2026-08-24T19:19:11Z"
+  },
+  {
    "track": "Shannon Waves",
    "artist": "Drop Nineteens",
    "album": "1991",
@@ -30045,7 +30304,7 @@
    "added": "2022-12-16T11:07:55Z"
   },
   {
-   "track": "Wave Of Mutilation",
+   "track": "Wave of Mutilation",
    "artist": "Pixies",
    "album": "Doolittle",
    "uri": "spotify:track:51Z2IzJvLCnZaIpBV0IYRr",
@@ -43634,6 +43893,12 @@
  ],
  "albums": [
   {
+   "album": "all songs",
+   "artist": "Oubliette",
+   "uri": "spotify:album:5IUqPYCngCOrG86JjzuE1b",
+   "added": "2026-08-24T22:41:53Z"
+  },
+  {
    "album": "R&B",
    "artist": "English Teacher",
    "uri": "spotify:album:1fr1VcE4Jo3WoaUcOi7chU",
@@ -46785,6 +47050,10 @@
   }
  ],
  "artists": [
+  {
+   "artist": "Oubliette",
+   "uri": "spotify:artist:4HvVw0FJvkR1aXjauVuRwl"
+  },
   {
    "artist": "Man/Woman/Chainsaw",
    "uri": "spotify:artist:0KheksMhWogVV4frHAihPJ"
