@@ -1,6 +1,90 @@
 {
  "tracks": [
   {
+   "track": "clean.",
+   "artist": "Static Dress",
+   "album": "clean.",
+   "uri": "spotify:track:1vIFieaqVeCU55JZjwpJID",
+   "added": "2026-08-25T13:24:30Z"
+  },
+  {
+   "track": "such.a.shame",
+   "artist": "Static Dress",
+   "album": "Rouge Carpet Disaster",
+   "uri": "spotify:track:460RXhCzhv2ey9HPZmFBUs",
+   "added": "2026-08-25T12:55:19Z"
+  },
+  {
+   "track": "Gearhead",
+   "artist": "Narrow Head",
+   "album": "Moments of Clarity",
+   "uri": "spotify:track:6JDn0dNafWchXMdNWuKwpx",
+   "added": "2026-08-25T12:37:15Z"
+  },
+  {
+   "track": "Blur",
+   "artist": "Superheaven",
+   "album": "Ours Is Chrome",
+   "uri": "spotify:track:4HJeWpk0egepZrDF8PJdlT",
+   "added": "2026-08-25T12:24:59Z"
+  },
+  {
+   "track": "Numb, But I Still Feel It",
+   "artist": "Title Fight",
+   "album": "Floral Green",
+   "uri": "spotify:track:3QUmsI9vrPZuZe7bZuFRk2",
+   "added": "2026-08-25T11:59:44Z"
+  },
+  {
+   "track": "Meet Me In St. Louis",
+   "artist": "Basement",
+   "album": "Songs About The Weather",
+   "uri": "spotify:track:40I5U24KYHNKMkRf4jXZ9D",
+   "added": "2026-08-25T11:17:48Z"
+  },
+  {
+   "track": "Afterparty",
+   "artist": "Balance And Composure",
+   "album": "Light We Made",
+   "uri": "spotify:track:2mSjHQ8hIAoW7ZWgCQAcTW",
+   "added": "2026-08-25T11:09:07Z"
+  },
+  {
+   "track": "Crescent-Shaped Depression",
+   "artist": "Title Fight",
+   "album": "Shed",
+   "uri": "spotify:track:2rmWNvXgq0LddvILeLyIn7",
+   "added": "2026-08-25T10:58:04Z"
+  },
+  {
+   "track": "Babylon...",
+   "artist": "Loathe",
+   "album": "The Cold Sun",
+   "uri": "spotify:track:08on2wzs5D8ccY4oRrMR7G",
+   "added": "2026-08-25T10:32:51Z"
+  },
+  {
+   "track": "In On It",
+   "artist": "Superheaven",
+   "album": "Jar",
+   "uri": "spotify:track:0ey0KwCzoUdjvPzbLX8qSa",
+   "added": "2026-08-25T10:27:54Z"
+  },
+  {
+   "track": "Breath",
+   "artist": "trauma ray",
+   "album": "Chameleon",
+   "uri": "spotify:track:6TcFmOZbPmyQDUFOTWSIUW",
+   "added": "2026-08-25T10:20:15Z"
+  },
+  {
+   "track": "Crawl",
+   "artist": "Superheaven",
+   "album": "Jar",
+   "uri": "spotify:track:3PlcWlICyKAkDxqeNZnYNx",
+   "added": "2026-08-25T10:05:24Z"
+  },
+  {
    "track": "ranger",
    "artist": "dottie",
    "album": "single",
@@ -43893,6 +43977,24 @@
  ],
  "albums": [
   {
+   "album": "Come On Pilgrim",
+   "artist": "Pixies",
+   "uri": "spotify:album:0YXEvIGfgX8LKrSSgnciZt",
+   "added": "2019-08-20T07:31:06Z"
+  },
+  {
+   "album": "MADRA",
+   "artist": "NewDad",
+   "uri": "spotify:album:1Z04cqirpWoJhEi9iovmqw",
+   "added": "2026-08-12T17:16:22Z"
+  },
+  {
+   "album": "Colourmeinkindness",
+   "artist": "Basement",
+   "uri": "spotify:album:5uRI7KHcBALPpwhAB9RKnb",
+   "added": "2026-01-28T19:23:24Z"
+  },
+  {
    "album": "all songs",
    "artist": "Oubliette",
    "uri": "spotify:album:5IUqPYCngCOrG86JjzuE1b",
@@ -44979,12 +45081,6 @@
    "added": "2026-08-12T17:16:30Z"
   },
   {
-   "album": "MADRA",
-   "artist": "NewDad",
-   "uri": "spotify:album:1Z04cqirpWoJhEi9iovmqw",
-   "added": "2026-08-12T17:16:22Z"
-  },
-  {
    "album": "Hatful of Hollow",
    "artist": "The Smiths",
    "uri": "spotify:album:1j57Q5ntVi7crpibb0h4sv",
@@ -45535,12 +45631,6 @@
    "artist": "A.R. Kane",
    "uri": "spotify:album:2OWtSSuyvrYEeLxym23rdk",
    "added": "2026-02-17T11:40:49Z"
-  },
-  {
-   "album": "Colourmeinkindness",
-   "artist": "Basement",
-   "uri": "spotify:album:5uRI7KHcBALPpwhAB9RKnb",
-   "added": "2026-01-28T19:23:24Z"
   },
   {
    "album": "My Love Is Cool",
@@ -46345,12 +46435,6 @@
    "artist": "Pixies",
    "uri": "spotify:album:2buKtzUMKIsPcusMqnRYTk",
    "added": "2019-08-20T07:31:19Z"
-  },
-  {
-   "album": "Come On Pilgrim",
-   "artist": "Pixies",
-   "uri": "spotify:album:0YXEvIGfgX8LKrSSgnciZt",
-   "added": "2019-08-20T07:31:06Z"
   },
   {
    "album": "A Collection Of Great Dance Songs",
