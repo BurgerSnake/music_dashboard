@@ -1,6 +1,440 @@
 {
  "tracks": [
   {
+   "track": "Tall Man Skinny Lady",
+   "artist": "Ty Segall",
+   "album": "Manipulator",
+   "uri": "spotify:track:0nIAP2jd3wybkJySEMEoAG",
+   "added": "2026-08-28T14:46:50Z"
+  },
+  {
+   "track": "Dreamlove",
+   "artist": "The Bright Light Social Hour",
+   "album": "Space Is Still the Place",
+   "uri": "spotify:track:5iorMduXhjiJoxYHQHyTlp",
+   "added": "2026-08-28T14:37:02Z"
+  },
+  {
+   "track": "The Righteous One",
+   "artist": "The Orwells",
+   "album": "Disgraceland",
+   "uri": "spotify:track:0XSSDRJkLfRCx3tOSW3VQ3",
+   "added": "2026-08-28T14:08:05Z"
+  },
+  {
+   "track": "Changes, Pts. 1 & 2",
+   "artist": "Neal Francis",
+   "album": "Changes",
+   "uri": "spotify:track:3N1D6ofDVT7i2B9oR6aKAQ",
+   "added": "2026-08-28T13:57:13Z"
+  },
+  {
+   "track": "Eyes Were Young",
+   "artist": "Little Barrie",
+   "album": "Shadow",
+   "uri": "spotify:track:5cC0CdoJauSjYISQGLvgVZ",
+   "added": "2026-08-28T13:39:20Z"
+  },
+  {
+   "track": "Cheap Regrets",
+   "artist": "The Districts",
+   "album": "You Know I'm Not Going Anywhere",
+   "uri": "spotify:track:4M2kErclJ5eWkjXxy8qDYp",
+   "added": "2026-08-28T13:32:29Z"
+  },
+  {
+   "track": "River to Consider",
+   "artist": "White Denim",
+   "album": "D",
+   "uri": "spotify:track:4bnGEVefRdAvPsRpVtI0NI",
+   "added": "2026-08-28T12:59:37Z"
+  },
+  {
+   "track": "Chew Nails",
+   "artist": "White Denim",
+   "album": "13",
+   "uri": "spotify:track:1kFKRiLd0jLNzOA9j2yw3G",
+   "added": "2026-08-28T09:29:44Z"
+  },
+  {
+   "track": "A Place to Start",
+   "artist": "White Denim",
+   "album": "Corsicana Lemonade",
+   "uri": "spotify:track:4H593joMKfSQlGj2DRmOxx",
+   "added": "2026-08-28T09:26:16Z"
+  },
+  {
+   "track": "(God Created) Lock and Key",
+   "artist": "White Denim",
+   "album": "13",
+   "uri": "spotify:track:038C1QuHsxwDPS357waWHM",
+   "added": "2026-08-28T09:18:14Z"
+  },
+  {
+   "track": "Ruby",
+   "artist": "White Denim",
+   "album": "13",
+   "uri": "spotify:track:1Vb8cNVryvjOQKILYxOYq2",
+   "added": "2026-08-28T09:13:33Z"
+  },
+  {
+   "track": "Just Dropped In (To See What Condition My Condition Is In)",
+   "artist": "White Denim",
+   "album": "Fargo Year 2 (Songs from the Original MGM / FXP Television Series)",
+   "uri": "spotify:track:1LHRk7kZ0mkCCOrU1MCz1W",
+   "added": "2026-08-28T09:07:46Z"
+  },
+  {
+   "track": "Take It Easy (Ever After Lasting Love)",
+   "artist": "White Denim",
+   "album": "Stiff",
+   "uri": "spotify:track:16rA17SnfOP6fGSrq2rAQC",
+   "added": "2026-08-28T09:00:54Z"
+  },
+  {
+   "track": "Do You",
+   "artist": "GHOSTWOMAN",
+   "album": "Ghost Woman",
+   "uri": "spotify:track:3nAutiQVVtS5DRYX3WEg4B",
+   "added": "2026-08-28T08:49:45Z"
+  },
+  {
+   "track": "All the Time",
+   "artist": "GHOSTWOMAN",
+   "album": "Ghost Woman",
+   "uri": "spotify:track:3P0ONdABTC2DIzAfoJydzH",
+   "added": "2026-08-28T08:44:31Z"
+  },
+  {
+   "track": "The End of a Gun",
+   "artist": "GHOSTWOMAN",
+   "album": "Anne, If",
+   "uri": "spotify:track:3S1fsqAI2wseDq6JcpamoY",
+   "added": "2026-08-28T08:41:47Z"
+  },
+  {
+   "track": "Time",
+   "artist": "Ty Segall",
+   "album": "Hair",
+   "uri": "spotify:track:5SwX4IIQkl4IRmSzCCVOag",
+   "added": "2026-08-28T08:38:43Z"
+  },
+  {
+   "track": "My Lady's On Fire",
+   "artist": "Ty Segall",
+   "album": "Freedom's Goblin",
+   "uri": "spotify:track:5EbTamOuKNYlEsOUGc51kE",
+   "added": "2026-08-28T08:33:53Z"
+  },
+  {
+   "track": "Tresor",
+   "artist": "Gwenno",
+   "album": "Tresor",
+   "uri": "spotify:track:5yDJtvXdkPv7YxTKKbHMyc",
+   "added": "2026-08-28T08:24:04Z"
+  },
+  {
+   "track": "Fratolish Hiang Perpeshki",
+   "artist": "Gwenno",
+   "album": "Y Dydd Olaf",
+   "uri": "spotify:track:3JqJxXBr39E29pf3PJAFaY",
+   "added": "2026-08-28T08:19:12Z"
+  },
+  {
+   "track": "Tir Ha mor",
+   "artist": "Gwenno",
+   "album": "Le Kov",
+   "uri": "spotify:track:2xDphPzzpFFW9p3quZGb5R",
+   "added": "2026-08-28T08:15:20Z"
+  },
+  {
+   "track": "Once",
+   "artist": "Virna Lindt",
+   "album": "Once (Gwenno’s Ritual Remix)",
+   "uri": "spotify:track:5BQmFAeZoATsFl5lQTm21C",
+   "added": "2026-08-28T08:15:16Z"
+  },
+  {
+   "track": "swordsman",
+   "artist": "Night Tapes",
+   "album": "portals//polarities",
+   "uri": "spotify:track:5hC9vQXqNLn0tkhXUNc7wK",
+   "added": "2026-08-28T08:06:28Z"
+  },
+  {
+   "track": "Mantras",
+   "artist": "Shaking Hand",
+   "album": "Shaking Hand",
+   "uri": "spotify:track:5kgARxKgU8qEWhGctsXn5W",
+   "added": "2026-08-28T07:52:59Z"
+  },
+  {
+   "track": "The Shining",
+   "artist": "Shaking Hand",
+   "album": "The Shining",
+   "uri": "spotify:track:61tvXmnLXbCR3YPO0XxaNW",
+   "added": "2026-08-28T07:48:48Z"
+  },
+  {
+   "track": "In For a… Pound!",
+   "artist": "Shaking Hand",
+   "album": "Shaking Hand",
+   "uri": "spotify:track:6jG8AxYrpn0O0L7igDygi0",
+   "added": "2026-08-28T07:45:49Z"
+  },
+  {
+   "track": "Pills I Swallow",
+   "artist": "The Twilight Sad",
+   "album": "Nobody Wants to Be Here & Nobody Wants to Leave",
+   "uri": "spotify:track:7jIv7GhGm4Kmyy4qbg23nZ",
+   "added": "2026-08-28T07:42:15Z"
+  },
+  {
+   "track": "Sudden",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:5uUGsf1aoGmuUHpELL3t4y",
+   "added": "2026-08-28T07:31:23Z"
+  },
+  {
+   "track": "Bird and The Serpent",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:7fndcGgGihL4RqsWUMsoH0",
+   "added": "2026-08-28T07:31:20Z"
+  },
+  {
+   "track": "Enemy",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:13YIz6TKtAD9EMBM4KJVfk",
+   "added": "2026-08-28T07:31:17Z"
+  },
+  {
+   "track": "Wake Up",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:2JI0oiMyoO1G7V8alI8R5A",
+   "added": "2026-08-28T07:19:22Z"
+  },
+  {
+   "track": "Darling Thoughts",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:7mUgniAC7CXDPRU0HfkGyI",
+   "added": "2026-08-28T07:19:21Z"
+  },
+  {
+   "track": "So Rides the Reindeer",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:7vB4vTCOB0rhz1ySpRbGBh",
+   "added": "2026-08-28T07:19:18Z"
+  },
+  {
+   "track": "Ever the Actor",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:12Hk9VzSIdv3jxXW53d0M1",
+   "added": "2026-08-28T07:06:08Z"
+  },
+  {
+   "track": "Wings On Fire",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:36g619h8gPXcIxOQKDLQ5D",
+   "added": "2026-08-28T07:06:06Z"
+  },
+  {
+   "track": "Wounded Soldier",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:37kbYkuuT3zrFNoEXUdtDS",
+   "added": "2026-08-28T06:55:11Z"
+  },
+  {
+   "track": "Iron City",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:58N4hiH9cKYLkHEhzAdIP1",
+   "added": "2026-08-28T06:55:10Z"
+  },
+  {
+   "track": "See Out Loud",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:32rGbTvS1MXQ8ipl0Ap8e2",
+   "added": "2026-08-28T06:55:08Z"
+  },
+  {
+   "track": "This Mirror Weighs a Ton",
+   "artist": "Interpol",
+   "album": "This Mirror Weighs a Ton",
+   "uri": "spotify:track:6MsEmkwmyhQZSVeDNhQ2aH",
+   "added": "2026-08-28T06:55:06Z"
+  },
+  {
+   "track": "Revolution - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "The Beatles 1967 - 1970 (Remastered)",
+   "uri": "spotify:track:3UDmHZcBTQp8Iu8droNtUl",
+   "added": "2026-08-28T05:58:08Z"
+  },
+  {
+   "track": "Paranoid - 2009 Remaster",
+   "artist": "Black Sabbath",
+   "album": "Paranoid",
+   "uri": "spotify:track:3Jnxngdff0lVu2rza1GVx6",
+   "added": "2026-08-28T05:54:26Z"
+  },
+  {
+   "track": "Knockin' On Heaven's Door",
+   "artist": "Bob Dylan",
+   "album": "Pat Garrett & Billy The Kid (Soundtrack From The Motion Picture)",
+   "uri": "spotify:track:6HSXNV0b4M4cLJ7ljgVVeh",
+   "added": "2026-08-28T05:54:06Z"
+  },
+  {
+   "track": "The Man Who Sold the World - 2015 Remaster",
+   "artist": "David Bowie",
+   "album": "The Man Who Sold the World (2015 Remaster)",
+   "uri": "spotify:track:4mWahKerLaVddUjb8d1Q4Q",
+   "added": "2026-08-28T05:51:09Z"
+  },
+  {
+   "track": "4U",
+   "artist": "Deeper",
+   "album": "Auto-Pain",
+   "uri": "spotify:track:3cQV1CBhbH0hHFC0MdUGvu",
+   "added": "2026-08-27T20:03:17Z"
+  },
+  {
+   "track": "Narrator",
+   "artist": "Squid",
+   "album": "Bright Green Field",
+   "uri": "spotify:track:0P6GPDe3093RggSntHqQcR",
+   "added": "2026-08-27T19:58:56Z"
+  },
+  {
+   "track": "I Stare at Floors",
+   "artist": "Protomartyr",
+   "album": "Under Color of Official Right",
+   "uri": "spotify:track:7zh72XfQm2DKhRYK49tna8",
+   "added": "2026-08-27T19:58:54Z"
+  },
+  {
+   "track": "Nu Punk",
+   "artist": "Ovlov",
+   "album": "Am",
+   "uri": "spotify:track:5nZQJfH5THDw2hdDSATZ3G",
+   "added": "2026-08-27T19:58:23Z"
+  },
+  {
+   "track": "Senor Siniestro",
+   "artist": "DITZ",
+   "album": "Never Exhale",
+   "uri": "spotify:track:1mPSIyTe2pxquYgXAlDkSJ",
+   "added": "2026-08-27T19:58:22Z"
+  },
+  {
+   "track": "The Sheer Drop",
+   "artist": "Ulrika Spacek",
+   "album": "Compact Trauma",
+   "uri": "spotify:track:4QjRO3VnXTWavahvGrnDfh",
+   "added": "2026-08-27T19:58:21Z"
+  },
+  {
+   "track": "2010",
+   "artist": "Squid",
+   "album": "Bright Green Field",
+   "uri": "spotify:track:57KF6T3QJ8d156PQXsVIPm",
+   "added": "2026-08-27T19:58:20Z"
+  },
+  {
+   "track": "Tarpeian Rock",
+   "artist": "Protomartyr",
+   "album": "Under Color of Official Right",
+   "uri": "spotify:track:1ogNwQd85gR9IuGA3wESD0",
+   "added": "2026-08-27T19:58:18Z"
+  },
+  {
+   "track": "A Boat to Drown In",
+   "artist": "Metz",
+   "album": "Atlas Vending",
+   "uri": "spotify:track:0Fs3fNLgsHmKXfYpEZw3wn",
+   "added": "2026-08-27T19:58:10Z"
+  },
+  {
+   "track": "Feast of Stephen",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:7kH8qIV05Y2vMWZCVuiSJT",
+   "added": "2026-08-27T19:01:35Z"
+  },
+  {
+   "track": "Ellen",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:6yzuSrwiW8qL1VnhTXk2uy",
+   "added": "2026-08-27T19:01:34Z"
+  },
+  {
+   "track": "Clandestine Time",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:024ADykpgwEukvmChppMXi",
+   "added": "2026-08-27T18:53:29Z"
+  },
+  {
+   "track": "The Hermit",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:4hLSLQ2R4IyiqeqaPOKFTX",
+   "added": "2026-08-27T18:53:28Z"
+  },
+  {
+   "track": "Uncle Mother's",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:5Hnxhr4a234XDwaSlxspRk",
+   "added": "2026-08-27T18:53:27Z"
+  },
+  {
+   "track": "Dope Cloud",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:2T5O1xJlmUBw1ZNUxI0nT4",
+   "added": "2026-08-27T18:53:27Z"
+  },
+  {
+   "track": "Boyce or Boice",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:1C3g0uFbcqlKi5KpIGCFcR",
+   "added": "2026-08-27T18:41:28Z"
+  },
+  {
+   "track": "I Forgive You",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:20TJ4uqzxj9O1JZY0PxUEA",
+   "added": "2026-08-27T18:30:58Z"
+  },
+  {
+   "track": "The Devil in His Youth",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:7erB0WqRa33hTQvrSMRYeB",
+   "added": "2026-08-27T18:30:57Z"
+  },
+  {
+   "track": "Cowards Starve",
+   "artist": "Protomartyr",
+   "album": "The Agent Intellect",
+   "uri": "spotify:track:2GWe3bIA13DX2HQZsw5gQk",
+   "added": "2026-08-27T18:30:57Z"
+  },
+  {
    "track": "Kashmir - Remaster",
    "artist": "Led Zeppelin",
    "album": "Physical Graffiti (Deluxe Edition)",
@@ -19160,7 +19594,7 @@
    "added": "2025-05-23T20:06:38Z"
   },
   {
-   "track": "A Lucid Dreamer (Live Version)",
+   "track": "A Lucid Dreamer - Live Version",
    "artist": "Fontaines D.C.",
    "album": "A Lucid Dreamer (Live Version)",
    "uri": "spotify:track:2ANfyDGltZtx4ZZSl5hzh8",
@@ -44011,6 +44445,30 @@
    "added": "2026-08-11T14:28:43Z"
   },
   {
+   "album": "This Mirror Weighs a Ton",
+   "artist": "Interpol",
+   "uri": "spotify:album:2LgXUDNp1uPV0t55aTlfUT",
+   "added": "2026-08-27T22:00:00Z"
+  },
+  {
+   "album": "Reality Awaits",
+   "artist": "The Strokes",
+   "uri": "spotify:album:6x0nmCMjHeuN3rYBmI5Bor",
+   "added": "2026-07-23T22:00:00Z"
+  },
+  {
+   "album": "Silent Alarm",
+   "artist": "Bloc Party",
+   "uri": "spotify:album:1VpqO2dBJdAS3YAimXlhEM",
+   "added": "2026-08-11T08:17:33Z"
+  },
+  {
+   "album": "The Agent Intellect",
+   "artist": "Protomartyr",
+   "uri": "spotify:album:7wMrFduh4Gyqq3EeeOJL0V",
+   "added": "2026-08-12T18:21:00Z"
+  },
+  {
    "album": "Come On Pilgrim",
    "artist": "Pixies",
    "uri": "spotify:album:0YXEvIGfgX8LKrSSgnciZt",
@@ -44125,12 +44583,6 @@
    "added": "2026-08-15T20:18:00Z"
   },
   {
-   "album": "Reality Awaits",
-   "artist": "The Strokes",
-   "uri": "spotify:album:6x0nmCMjHeuN3rYBmI5Bor",
-   "added": "2026-07-23T22:00:00Z"
-  },
-  {
    "album": "The Stone Roses",
    "artist": "The Stone Roses",
    "uri": "spotify:album:0um9FI6BLBldL5POP4D4Cw",
@@ -44161,12 +44613,6 @@
    "added": "2026-08-14T11:53:14Z"
   },
   {
-   "album": "Silent Alarm",
-   "artist": "Bloc Party",
-   "uri": "spotify:album:1VpqO2dBJdAS3YAimXlhEM",
-   "added": "2026-08-11T08:17:33Z"
-  },
-  {
    "album": "The Further Still",
    "artist": "Coastlands",
    "uri": "spotify:album:09dWwHE1tXf1GwkooNPR88",
@@ -44195,12 +44641,6 @@
    "artist": "Pale Saints",
    "uri": "spotify:album:3YZJ5Uiyy1vCMubtZDG7a2",
    "added": "2026-08-12T18:21:19Z"
-  },
-  {
-   "album": "The Agent Intellect",
-   "artist": "Protomartyr",
-   "uri": "spotify:album:7wMrFduh4Gyqq3EeeOJL0V",
-   "added": "2026-08-12T18:21:00Z"
   },
   {
    "album": "Adore",
@@ -47162,6 +47602,18 @@
   }
  ],
  "artists": [
+  {
+   "artist": "White Denim",
+   "uri": "spotify:artist:0RdRumkn2UydUjqytNJ2Cp"
+  },
+  {
+   "artist": "GHOSTWOMAN",
+   "uri": "spotify:artist:4IEpQR24sUgq6BQw2MdZIy"
+  },
+  {
+   "artist": "Shaking Hand",
+   "uri": "spotify:artist:3HPGoeMdjOGfyi1GGl0G0J"
+  },
   {
    "artist": "Oubliette",
    "uri": "spotify:artist:4HvVw0FJvkR1aXjauVuRwl"
