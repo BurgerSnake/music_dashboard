@@ -1,6 +1,482 @@
 {
  "tracks": [
   {
+   "track": "The Heir",
+   "artist": "Slate",
+   "album": "Deathless",
+   "uri": "spotify:track:6AY7G8eCPi4O3Xlby2xZiG",
+   "added": "2026-08-30T00:14:30Z"
+  },
+  {
+   "track": "Hero",
+   "artist": "DEADLETTER",
+   "album": "Pop Culture Connoisseur",
+   "uri": "spotify:track:1IiNjcR35O5KoNf61UtnG0",
+   "added": "2026-08-30T00:04:17Z"
+  },
+  {
+   "track": "Square Wave",
+   "artist": "The Voidz",
+   "album": "Like All Before You",
+   "uri": "spotify:track:2L5IV1QFrY4S3A6oyO8vOq",
+   "added": "2026-08-29T23:52:06Z"
+  },
+  {
+   "track": "What Is Life - 2014 Remaster",
+   "artist": "George Harrison",
+   "album": "All Things Must Pass (2014 Remaster)",
+   "uri": "spotify:track:0Nux6Q8aJZ1i4vUpPDBvlX",
+   "added": "2026-08-29T20:18:48Z"
+  },
+  {
+   "track": "Bring It on Home - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:1rxD34LAtkafrMUHqHIV76",
+   "added": "2026-08-29T20:18:47Z"
+  },
+  {
+   "track": "Moby Dick - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:0IxtJOcnoS2DPmBfV2HDfW",
+   "added": "2026-08-29T20:01:47Z"
+  },
+  {
+   "track": "Heartbreaker - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:3buvRn4CDX86EO9LHTITGn",
+   "added": "2026-08-29T20:01:45Z"
+  },
+  {
+   "track": "Living Loving Maid (She's Just a Woman) - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:49C6EGQhCUSgyADHYvJ7ez",
+   "added": "2026-08-29T20:01:45Z"
+  },
+  {
+   "track": "Ramble On - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:1oCOp1kVAgNlXX9Tx9mvzq",
+   "added": "2026-08-29T20:01:44Z"
+  },
+  {
+   "track": "Thank You - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:4pW4DF1119GLHiuWE7Jcb4",
+   "added": "2026-08-29T20:01:42Z"
+  },
+  {
+   "track": "The Lemon Song - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:6Qjc36CLNJHkWwSNIPbghM",
+   "added": "2026-08-29T19:38:14Z"
+  },
+  {
+   "track": "What Is and What Should Never Be - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin II (Remaster)",
+   "uri": "spotify:track:3g3LzkOMh3lx2FmCgb40bj",
+   "added": "2026-08-29T19:38:13Z"
+  },
+  {
+   "track": "How Many More Times - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:2aQd3uZDUKXwzZXvJ1oa0P",
+   "added": "2026-08-29T19:25:14Z"
+  },
+  {
+   "track": "I Can't Quit You Baby - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:2idijP1bI3eqkU0gbVMdjU",
+   "added": "2026-08-29T19:25:13Z"
+  },
+  {
+   "track": "Black Mountain Side - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:6AhZVsDudTq5KdJ5LbE32f",
+   "added": "2026-08-29T19:25:12Z"
+  },
+  {
+   "track": "Communication Breakdown - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:2E64SWjM9rQmAshItmdbcw",
+   "added": "2026-08-29T19:25:12Z"
+  },
+  {
+   "track": "Babe I'm Gonna Leave You - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:38KeSzb6FZYSogDXpc7xz8",
+   "added": "2026-08-29T19:25:11Z"
+  },
+  {
+   "track": "You Shook Me - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:4HIunZLibo5KfbYIQRrHSu",
+   "added": "2026-08-29T19:25:11Z"
+  },
+  {
+   "track": "Dazed and Confused - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:5MWfv4F84sJhScYq18yqbN",
+   "added": "2026-08-29T19:25:11Z"
+  },
+  {
+   "track": "Your Time Is Gonna Come - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:5RPiBNQVmuEm7YlVVotrLa",
+   "added": "2026-08-29T19:25:11Z"
+  },
+  {
+   "track": "Good Times Bad Times - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Remaster)",
+   "uri": "spotify:track:0kfjZ0JCXU9sSg99gbQpbJ",
+   "added": "2026-08-29T19:25:10Z"
+  },
+  {
+   "track": "Good Times Bad Times / Communication Breakdown - Live in Paris, 1969",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:4uxti0X0LKCVhrWDoJs9HK",
+   "added": "2026-08-29T19:24:52Z"
+  },
+  {
+   "track": "How Many More Times - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:2SznNPgrjsmxXKhqeAN7WK",
+   "added": "2026-08-29T19:24:48Z"
+  },
+  {
+   "track": "Communication Breakdown - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:2whQxHDxButA5STZ32FYme",
+   "added": "2026-08-29T19:24:47Z"
+  },
+  {
+   "track": "I Can't Quit You Baby - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:4OQjzsqsnSy4YPB9yaRh0f",
+   "added": "2026-08-29T19:24:47Z"
+  },
+  {
+   "track": "Black Mountain Side - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:2W76zIzxrSLb5dqLz6s2tJ",
+   "added": "2026-08-29T19:24:46Z"
+  },
+  {
+   "track": "Your Time Is Gonna Come - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:0by20SqfRktdZ6hdd0byjt",
+   "added": "2026-08-29T18:51:22Z"
+  },
+  {
+   "track": "You Shook Me - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:2Y1HhOfvtzms7urVKFY67n",
+   "added": "2026-08-29T18:51:21Z"
+  },
+  {
+   "track": "Dazed and Confused - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:2WbfcArcwBvsbnikIQdBN9",
+   "added": "2026-08-29T18:51:21Z"
+  },
+  {
+   "track": "Street Joy",
+   "artist": "White Denim",
+   "album": "D",
+   "uri": "spotify:track:65SIli5Q1Su6ralNYFQnIA",
+   "added": "2026-08-29T16:16:47Z"
+  },
+  {
+   "track": "Babe I'm Gonna Leave You - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:1Y6xEUUKAVWO060yJRCces",
+   "added": "2026-08-29T15:04:46Z"
+  },
+  {
+   "track": "Good Times Bad Times - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "uri": "spotify:track:6sMGNw1E4q79DoAFGDCYuD",
+   "added": "2026-08-29T15:04:45Z"
+  },
+  {
+   "track": "Isn't It a Pity - 2014 Remaster",
+   "artist": "George Harrison",
+   "album": "All Things Must Pass (2014 Remaster)",
+   "uri": "spotify:track:0vTvkf24wkCG3DTKgoNnih",
+   "added": "2026-08-29T14:56:32Z"
+  },
+  {
+   "track": "Dizzy Miss Lizzy - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:70Dohn82wv6VtxGesqRzbZ",
+   "added": "2026-08-29T14:43:26Z"
+  },
+  {
+   "track": "Out on the Tiles - Remaster",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin III (Remaster)",
+   "uri": "spotify:track:6fxcpQMUoX0ofnbIHVnVWN",
+   "added": "2026-08-29T14:43:25Z"
+  },
+  {
+   "track": "You Like Me Too Much - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:0y1LLH0NiwOD5tM3aNMXTr",
+   "added": "2026-08-29T14:31:46Z"
+  },
+  {
+   "track": "I've Just Seen A Face - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:788U1Sqej9M6c4iikuDGxO",
+   "added": "2026-08-29T14:31:46Z"
+  },
+  {
+   "track": "It's Only Love - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:2ue1KRstSKHF8jQkIJZiNC",
+   "added": "2026-08-29T14:31:45Z"
+  },
+  {
+   "track": "Tell Me What You See - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:2jnr9KaaMAmvk0zMcM9UzV",
+   "added": "2026-08-29T14:31:45Z"
+  },
+  {
+   "track": "You're Going To Lose That Girl - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:70HNt0eoBVqr4ss68U8x3B",
+   "added": "2026-08-29T14:31:42Z"
+  },
+  {
+   "track": "Act Naturally - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:0IxxqsYBcCHEQ1HqLYJnwx",
+   "added": "2026-08-29T14:31:42Z"
+  },
+  {
+   "track": "I Need You - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:5EzvwjFwdP5Kfl5AZAemzu",
+   "added": "2026-08-29T14:31:41Z"
+  },
+  {
+   "track": "Another Girl - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:7hefVXaGsFPesbK6fKwS6F",
+   "added": "2026-08-29T14:31:41Z"
+  },
+  {
+   "track": "You've Got To Hide Your Love Away - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:4F1AgKpuFRMLEgtPETVwZk",
+   "added": "2026-08-29T14:31:40Z"
+  },
+  {
+   "track": "The Night Before - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Help! (Remastered)",
+   "uri": "spotify:track:5xcfepnz1v7a83T8An9gjw",
+   "added": "2026-08-29T14:31:39Z"
+  },
+  {
+   "track": "One of These Nights - 2013 Remaster",
+   "artist": "Eagles",
+   "album": "One of These Nights (2013 Remaster)",
+   "uri": "spotify:track:608xszaAxVh4m7NcKJiAbF",
+   "added": "2026-08-29T14:00:42Z"
+  },
+  {
+   "track": "Wait - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:0CGbof9amBnsNlRhZ8IY2H",
+   "added": "2026-08-29T13:55:38Z"
+  },
+  {
+   "track": "Run For Your Life - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:4gUYV3ktbaOeAK5KrXMWV5",
+   "added": "2026-08-29T13:55:38Z"
+  },
+  {
+   "track": "If I Needed Someone - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:7C6hdDIz90Uf5YmdZnYbJJ",
+   "added": "2026-08-29T13:55:37Z"
+  },
+  {
+   "track": "Girl - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:6tQvjqDIK9GXWIC6mejms8",
+   "added": "2026-08-29T13:55:36Z"
+  },
+  {
+   "track": "I'm Looking Through You - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:5E3BVY66TEDexFutOO5GeS",
+   "added": "2026-08-29T13:55:36Z"
+  },
+  {
+   "track": "What Goes On - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:19QXdPRZFHI5kNK3tN8Mh7",
+   "added": "2026-08-29T13:55:35Z"
+  },
+  {
+   "track": "Think For Yourself - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:64bKVrkaXQAKx04dLHqCNz",
+   "added": "2026-08-29T13:55:34Z"
+  },
+  {
+   "track": "The Word - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:4GBaPHvAyj4V2jeobD9tsy",
+   "added": "2026-08-29T13:55:34Z"
+  },
+  {
+   "track": "You Won't See Me - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Rubber Soul (Remastered 2009)",
+   "uri": "spotify:track:4LLBKnNCrSRrSjSTuiwjE9",
+   "added": "2026-08-29T13:55:33Z"
+  },
+  {
+   "track": "Almost Cut My Hair",
+   "artist": "Crosby, Stills, Nash & Young",
+   "album": "Deja Vu",
+   "uri": "spotify:track:0gCJkpD0RhF2rjiALLHBQL",
+   "added": "2026-08-29T13:11:03Z"
+  },
+  {
+   "track": "Doctor Robert - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:1ob06Ol8FMIPQgjpg7bMyk",
+   "added": "2026-08-29T13:10:58Z"
+  },
+  {
+   "track": "Tomorrow Never Knows - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:00oZhqZIQfL9P5CjOP6JsO",
+   "added": "2026-08-29T13:10:57Z"
+  },
+  {
+   "track": "I Want To Tell You - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:7orb0y6ySGdsYZywMoQtsD",
+   "added": "2026-08-29T13:10:56Z"
+  },
+  {
+   "track": "Got To Get You Into My Life - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:3tGhRLgcCP6SIZU3tbGl7l",
+   "added": "2026-08-29T13:10:56Z"
+  },
+  {
+   "track": "For No One - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:1kDkaFlmkdEZiVUogaP9OZ",
+   "added": "2026-08-29T13:10:54Z"
+  },
+  {
+   "track": "And Your Bird Can Sing - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:4KRgqwb4kvBuTz1utbYxfb",
+   "added": "2026-08-29T13:10:53Z"
+  },
+  {
+   "track": "She Said She Said - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:3VSuWxZM6x6V3ig5nYtikL",
+   "added": "2026-08-29T13:10:52Z"
+  },
+  {
+   "track": "Good Day Sunshine - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:7HTH1ppjkkOe7RLoBDKXYJ",
+   "added": "2026-08-29T13:10:52Z"
+  },
+  {
+   "track": "Yellow Submarine - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:50xwQXPtfNZFKFeZ0XePWc",
+   "added": "2026-08-29T13:10:51Z"
+  },
+  {
+   "track": "I'm Only Sleeping - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:2ylCrFiBu98SC0vFfaCent",
+   "added": "2026-08-29T13:10:50Z"
+  },
+  {
+   "track": "Love You To - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:4RdJFhfLQcezwN5LsXl4qP",
+   "added": "2026-08-29T13:10:50Z"
+  },
+  {
+   "track": "Taxman - Remastered 2009",
+   "artist": "The Beatles",
+   "album": "Revolver (Remastered)",
+   "uri": "spotify:track:4BRkPBUxOYffM2QXVlq7aC",
+   "added": "2026-08-29T13:10:49Z"
+  },
+  {
    "track": "Mr. Tambourine Man",
    "artist": "Bob Dylan",
    "album": "Bringing It All Back Home",
@@ -44649,6 +45125,36 @@
  ],
  "albums": [
   {
+   "album": "Led Zeppelin II (Remaster)",
+   "artist": "Led Zeppelin",
+   "uri": "spotify:album:58MQ0PLijVHePUonQlK76Y",
+   "added": "2026-08-12T18:13:23Z"
+  },
+  {
+   "album": "Led Zeppelin (Deluxe Edition)",
+   "artist": "Led Zeppelin",
+   "uri": "spotify:album:22BzOOZKYZ2jYYKLpOlnET",
+   "added": "2026-08-29T19:25:01Z"
+  },
+  {
+   "album": "Led Zeppelin (Remaster)",
+   "artist": "Led Zeppelin",
+   "uri": "spotify:album:1J8QW9qsMLx3staWaHpQmU",
+   "added": "2026-08-29T19:25:14Z"
+  },
+  {
+   "album": "Rubber Soul (Remastered 2009)",
+   "artist": "The Beatles",
+   "uri": "spotify:album:50o7kf2wLwVmOTVYJOTplm",
+   "added": "2026-08-29T13:14:14Z"
+  },
+  {
+   "album": "Revolver (Remastered)",
+   "artist": "The Beatles",
+   "uri": "spotify:album:3PRoXYsngSwjEQWR5PsHWR",
+   "added": "2026-08-29T12:19:56Z"
+  },
+  {
    "album": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
    "artist": "The Beatles",
    "uri": "spotify:album:6QaVfG1pHYl1z15ZxkvVDW",
@@ -44815,12 +45321,6 @@
    "artist": "Sonic Youth",
    "uri": "spotify:album:5iYYQwB0oH9FVyVlaOXZdr",
    "added": "2026-08-12T18:02:37Z"
-  },
-  {
-   "album": "Led Zeppelin II (Remaster)",
-   "artist": "Led Zeppelin",
-   "uri": "spotify:album:58MQ0PLijVHePUonQlK76Y",
-   "added": "2026-08-12T18:13:23Z"
   },
   {
    "album": "Please Please Me (Remastered)",
@@ -47812,6 +48312,10 @@
   }
  ],
  "artists": [
+  {
+   "artist": "Slate",
+   "uri": "spotify:artist:2qf9rIU7fNJBZvqptGu863"
+  },
   {
    "artist": "White Denim",
    "uri": "spotify:artist:0RdRumkn2UydUjqytNJ2Cp"
