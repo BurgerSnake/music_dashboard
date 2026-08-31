@@ -1,6 +1,195 @@
 {
  "tracks": [
   {
+   "track": "Thank God For Sinners",
+   "artist": "Ty Segall",
+   "album": "Twins",
+   "uri": "spotify:track:790hyFyKPRYjkPeyzcJpJf",
+   "added": "2026-08-31T10:37:57Z"
+  },
+  {
+   "track": "Every 1's a Winner",
+   "artist": "Ty Segall",
+   "album": "Freedom's Goblin",
+   "uri": "spotify:track:1bShWI36VQ686EHVo3uxS3",
+   "added": "2026-08-31T10:37:53Z"
+  },
+  {
+   "track": "Goodbye Bread",
+   "artist": "Ty Segall",
+   "album": "Goodbye Bread",
+   "uri": "spotify:track:64eEA41fT8fejJDUXZdG48",
+   "added": "2026-08-31T10:37:50Z"
+  },
+  {
+   "track": "Would You Be My Love",
+   "artist": "Ty Segall",
+   "album": "Twins",
+   "uri": "spotify:track:6S2aDgzVz6LhAF5lHkVtxo",
+   "added": "2026-08-31T10:37:46Z"
+  },
+  {
+   "track": "Alta",
+   "artist": "Ty Segall",
+   "album": "Freedom's Goblin",
+   "uri": "spotify:track:5CVWisAINP7CDvZ0NNv2qT",
+   "added": "2026-08-31T10:37:45Z"
+  },
+  {
+   "track": "Green Belly",
+   "artist": "Ty Segall",
+   "album": "Manipulator",
+   "uri": "spotify:track:5NDdspVCSr9dvKsoGLssfz",
+   "added": "2026-08-31T10:37:43Z"
+  },
+  {
+   "track": "Girlfriend",
+   "artist": "Ty Segall",
+   "album": "Melted",
+   "uri": "spotify:track:5xCcEmw6FEJF8dPENu9GkZ",
+   "added": "2026-08-31T10:37:40Z"
+  },
+  {
+   "track": "Ghost",
+   "artist": "Ty Segall",
+   "album": "Twins",
+   "uri": "spotify:track:38LCJ4ckmbNyEZyxStWkZb",
+   "added": "2026-08-31T10:37:34Z"
+  },
+  {
+   "track": "Caesar",
+   "artist": "Ty Segall",
+   "album": "Melted",
+   "uri": "spotify:track:3h5bMQMGcRexCvntJ89qBF",
+   "added": "2026-08-31T10:37:32Z"
+  },
+  {
+   "track": "Black Paint",
+   "artist": "Ty Segall",
+   "album": "Chrome",
+   "uri": "spotify:track:52bG6V6BFa3VlfYr5PetAI",
+   "added": "2026-08-31T10:37:31Z"
+  },
+  {
+   "track": "Hospital",
+   "artist": "Ty Segall",
+   "album": "Chrome",
+   "uri": "spotify:track:3i5bOxK87oCfVeM63X8aBR",
+   "added": "2026-08-31T10:37:28Z"
+  },
+  {
+   "track": "(I Can't) Get Around You",
+   "artist": "Ty Segall",
+   "album": "Hair",
+   "uri": "spotify:track:1Ifl9nQohh42vRPzwo8tpb",
+   "added": "2026-08-31T10:37:19Z"
+  },
+  {
+   "track": "The Man Man",
+   "artist": "Ty Segall",
+   "album": "Sleeper",
+   "uri": "spotify:track:1CWFNXPAVWIimbmnrZbrH4",
+   "added": "2026-08-31T10:37:16Z"
+  },
+  {
+   "track": "Easy Ryder",
+   "artist": "Ty Segall",
+   "album": "Hair",
+   "uri": "spotify:track:5fc3OtAHC5Od69c30s7N11",
+   "added": "2026-08-31T10:37:05Z"
+  },
+  {
+   "track": "Imaginary Person",
+   "artist": "Ty Segall",
+   "album": "Melted",
+   "uri": "spotify:track:0H2FZTgfI33JNOgJ2ilU9x",
+   "added": "2026-08-31T10:36:59Z"
+  },
+  {
+   "track": "Glory",
+   "artist": "Cold Gawd",
+   "album": "Glory2",
+   "uri": "spotify:track:3Tahm8Il3UySqBQXEoNb2S",
+   "added": "2026-08-30T23:09:37Z"
+  },
+  {
+   "track": "Cable Ties",
+   "artist": "Shaking Hand",
+   "album": "Shaking Hand",
+   "uri": "spotify:track:0NXapclTPQkGhQTjydlLLi",
+   "added": "2026-08-30T19:14:03Z"
+  },
+  {
+   "track": "Italics",
+   "artist": "Shaking Hand",
+   "album": "Shaking Hand",
+   "uri": "spotify:track:2uQAy0UckjpD1qMb20IznL",
+   "added": "2026-08-30T19:13:55Z"
+  },
+  {
+   "track": "Night Owl",
+   "artist": "Shaking Hand",
+   "album": "Shaking Hand",
+   "uri": "spotify:track:0sJrG5nITka70ikEWfTkH3",
+   "added": "2026-08-30T19:13:54Z"
+  },
+  {
+   "track": "Up The Ante(lope)",
+   "artist": "Shaking Hand",
+   "album": "Shaking Hand",
+   "uri": "spotify:track:5mNtriaVpFf7cWWyNn6qmE",
+   "added": "2026-08-30T19:13:53Z"
+  },
+  {
+   "track": "Sundance",
+   "artist": "Shaking Hand",
+   "album": "Shaking Hand",
+   "uri": "spotify:track:5HhhqdWhNx2g4cBA2GXkt2",
+   "added": "2026-08-30T19:13:52Z"
+  },
+  {
+   "track": "Gone Too Fast",
+   "artist": "Pastel",
+   "album": "Souls In Motion",
+   "uri": "spotify:track:6IYQW7At1zINOOvqQjaQt7",
+   "added": "2026-08-30T16:29:21Z"
+  },
+  {
+   "track": "Mary",
+   "artist": "The Guest List",
+   "album": "Something Real",
+   "uri": "spotify:track:0FbW27cvJQYW65MixCGfHt",
+   "added": "2026-08-30T16:19:09Z"
+  },
+  {
+   "track": "Sick Animal",
+   "artist": "The Guest List",
+   "album": "Something Real",
+   "uri": "spotify:track:7B2V7d2rDHJHNtHp1KPjcM",
+   "added": "2026-08-30T15:39:50Z"
+  },
+  {
+   "track": "Rule 31",
+   "artist": "Radio Free Alice",
+   "album": "What's In Between",
+   "uri": "spotify:track:6CTAC9jqs3O2nTtONkgjK9",
+   "added": "2026-08-30T13:37:24Z"
+  },
+  {
+   "track": "Crying With You",
+   "artist": "Radio Free Alice",
+   "album": "Crying With You",
+   "uri": "spotify:track:7KyzVX3EUJduoARu312p2Y",
+   "added": "2026-08-30T13:37:16Z"
+  },
+  {
+   "track": "Ruine",
+   "artist": "The Guest List",
+   "album": "Something Real",
+   "uri": "spotify:track:49732G9x16Bb14veNs0FuY",
+   "added": "2026-08-30T13:32:43Z"
+  },
+  {
    "track": "The Heir",
    "artist": "Slate",
    "album": "Deathless",
@@ -48312,6 +48501,10 @@
   }
  ],
  "artists": [
+  {
+   "artist": "Ty Segall",
+   "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+  },
   {
    "artist": "Slate",
    "uri": "spotify:artist:2qf9rIU7fNJBZvqptGu863"
