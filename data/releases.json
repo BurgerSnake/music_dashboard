@@ -9,6 +9,14 @@
  },
  {
   "date": "2026-10-30",
+  "artist": "Editors",
+  "title": "Surface, Echo & Sound",
+  "type": "Album",
+  "mbid": "b7101327-b58c-4302-9c24-2368a5bbe65e",
+  "url": "https://musicbrainz.org/release-group/b7101327-b58c-4302-9c24-2368a5bbe65e"
+ },
+ {
+  "date": "2026-10-30",
   "artist": "DIIV",
   "title": "ZIRP!",
   "type": "Album",
@@ -17,19 +25,11 @@
  },
  {
   "date": "2026-10-30",
-  "artist": "Editors",
-  "title": "Surface, Echo & Sound",
+  "artist": "Queens of the Stone Age",
+  "title": "Perfecth",
   "type": "Album",
-  "mbid": "b7101327-b58c-4302-9c24-2368a5bbe65e",
-  "url": "https://musicbrainz.org/release-group/b7101327-b58c-4302-9c24-2368a5bbe65e"
- },
- {
-  "date": "2026-10-16",
-  "artist": "Fontaines D.C.",
-  "title": "Dopamine Chamber",
-  "type": "Album",
-  "mbid": "8897af6d-f344-4ad4-af70-83cb425d8397",
-  "url": "https://musicbrainz.org/release-group/8897af6d-f344-4ad4-af70-83cb425d8397"
+  "mbid": "b835704b-05f4-4572-ae8f-d0bb9d8a8f95",
+  "url": "https://musicbrainz.org/release-group/b835704b-05f4-4572-ae8f-d0bb9d8a8f95"
  },
  {
   "date": "2026-10-16",
@@ -38,6 +38,14 @@
   "type": "Album",
   "mbid": "bf6c521f-96fd-4f66-a911-e38bf44f82ce",
   "url": "https://musicbrainz.org/release-group/bf6c521f-96fd-4f66-a911-e38bf44f82ce"
+ },
+ {
+  "date": "2026-10-16",
+  "artist": "Fontaines D.C.",
+  "title": "Dopamine Chamber",
+  "type": "Album",
+  "mbid": "8897af6d-f344-4ad4-af70-83cb425d8397",
+  "url": "https://musicbrainz.org/release-group/8897af6d-f344-4ad4-af70-83cb425d8397"
  },
  {
   "date": "2026-09-25",
@@ -57,19 +65,19 @@
  },
  {
   "date": "2026-09-18",
-  "artist": "Blood Red Shoes",
-  "title": "Stay Lonely",
-  "type": "Album",
-  "mbid": "4fd6a903-cbd8-4cbe-8789-645137ac43da",
-  "url": "https://musicbrainz.org/release-group/4fd6a903-cbd8-4cbe-8789-645137ac43da"
- },
- {
-  "date": "2026-09-18",
   "artist": "Whirr",
   "title": "Whirr & Luster Split",
   "type": "EP",
   "mbid": "d629c0c8-507b-41aa-9e78-e0da5ec7ec1c",
   "url": "https://musicbrainz.org/release-group/d629c0c8-507b-41aa-9e78-e0da5ec7ec1c"
+ },
+ {
+  "date": "2026-09-18",
+  "artist": "Blood Red Shoes",
+  "title": "Stay Lonely",
+  "type": "Album",
+  "mbid": "4fd6a903-cbd8-4cbe-8789-645137ac43da",
+  "url": "https://musicbrainz.org/release-group/4fd6a903-cbd8-4cbe-8789-645137ac43da"
  },
  {
   "date": "2026-09-11",
@@ -126,6 +134,14 @@
   "type": "Album",
   "mbid": "006ceb53-e276-437b-ba8e-5d299346bd34",
   "url": "https://musicbrainz.org/release-group/006ceb53-e276-437b-ba8e-5d299346bd34"
+ },
+ {
+  "date": "2026-07-27",
+  "artist": "Gurriers",
+  "title": "Gurriers on Audiotree Live",
+  "type": "EP",
+  "mbid": "4bfa6ddb-c81f-4428-aafd-2ee9ea6ca903",
+  "url": "https://musicbrainz.org/release-group/4bfa6ddb-c81f-4428-aafd-2ee9ea6ca903"
  },
  {
   "date": "2026-07-24",
@@ -233,19 +249,19 @@
  },
  {
   "date": "2026-04-18",
-  "artist": "Sonic Youth",
-  "title": "Diamond Seas",
-  "type": "Album",
-  "mbid": "8def8259-3bf3-4b30-a428-e2de503f6cce",
-  "url": "https://musicbrainz.org/release-group/8def8259-3bf3-4b30-a428-e2de503f6cce"
- },
- {
-  "date": "2026-04-18",
   "artist": "Deafheaven",
   "title": "Live on KEXP: Under the Blue Valley",
   "type": "Album",
   "mbid": "00612e1e-d52d-43c0-92f0-39f36dda7732",
   "url": "https://musicbrainz.org/release-group/00612e1e-d52d-43c0-92f0-39f36dda7732"
+ },
+ {
+  "date": "2026-04-18",
+  "artist": "Sonic Youth",
+  "title": "Diamond Seas",
+  "type": "Album",
+  "mbid": "8def8259-3bf3-4b30-a428-e2de503f6cce",
+  "url": "https://musicbrainz.org/release-group/8def8259-3bf3-4b30-a428-e2de503f6cce"
  },
  {
   "date": "2026-04-15",
@@ -457,6 +473,14 @@
  },
  {
   "date": "2025-10-03",
+  "artist": "Sparks",
+  "title": "MADDER!",
+  "type": "EP",
+  "mbid": "1c09cedb-849f-4d15-88c3-57c8497539d8",
+  "url": "https://musicbrainz.org/release-group/1c09cedb-849f-4d15-88c3-57c8497539d8"
+ },
+ {
+  "date": "2025-10-03",
   "artist": "Foo Fighters",
   "title": "Are Playing Where??? Vol. I",
   "type": "EP",
@@ -470,14 +494,6 @@
   "type": "Album",
   "mbid": "942ab19a-81b8-475a-804d-1277481dd00e",
   "url": "https://musicbrainz.org/release-group/942ab19a-81b8-475a-804d-1277481dd00e"
- },
- {
-  "date": "2025-10-03",
-  "artist": "Sparks",
-  "title": "MADDER!",
-  "type": "EP",
-  "mbid": "1c09cedb-849f-4d15-88c3-57c8497539d8",
-  "url": "https://musicbrainz.org/release-group/1c09cedb-849f-4d15-88c3-57c8497539d8"
  },
  {
   "date": "2025-09-26",
@@ -521,6 +537,14 @@
  },
  {
   "date": "2025-08-29",
+  "artist": "IDLES",
+  "title": "Caught Stealing (The Original Motion Picture Soundtrack)",
+  "type": "Album",
+  "mbid": "66a71829-c293-4310-8ba2-17bc6b03d63a",
+  "url": "https://musicbrainz.org/release-group/66a71829-c293-4310-8ba2-17bc6b03d63a"
+ },
+ {
+  "date": "2025-08-29",
   "artist": "Slow Crush",
   "title": "Thirst",
   "type": "Album",
@@ -534,14 +558,6 @@
   "type": "Album",
   "mbid": "54799c5b-7f66-4b78-98f7-cceca58e6be7",
   "url": "https://musicbrainz.org/release-group/54799c5b-7f66-4b78-98f7-cceca58e6be7"
- },
- {
-  "date": "2025-08-29",
-  "artist": "IDLES",
-  "title": "Caught Stealing (The Original Motion Picture Soundtrack)",
-  "type": "Album",
-  "mbid": "66a71829-c293-4310-8ba2-17bc6b03d63a",
-  "url": "https://musicbrainz.org/release-group/66a71829-c293-4310-8ba2-17bc6b03d63a"
  },
  {
   "date": "2025-08-23",
@@ -649,34 +665,10 @@
  },
  {
   "date": "2025-07-25",
-  "artist": "Queen",
-  "title": "Ballads",
-  "type": "Album",
-  "mbid": "07ba88fb-893d-4c8a-99af-45fde8a7caa7",
-  "url": "https://musicbrainz.org/release-group/07ba88fb-893d-4c8a-99af-45fde8a7caa7"
- },
- {
-  "date": "2025-07-25",
   "artist": "Kurt Vile",
   "title": "Classic Love",
   "type": "EP",
   "mbid": "f4713772-216a-4fa5-8200-f9e2336a0e83",
   "url": "https://musicbrainz.org/release-group/f4713772-216a-4fa5-8200-f9e2336a0e83"
- },
- {
-  "date": "2025-07-22",
-  "artist": "Franz Ferdinand",
-  "title": "Some Remixes of Hooked",
-  "type": "EP",
-  "mbid": "40edf1d2-5f63-4fa3-bac6-d39b22fe0696",
-  "url": "https://musicbrainz.org/release-group/40edf1d2-5f63-4fa3-bac6-d39b22fe0696"
- },
- {
-  "date": "2025-07-18",
-  "artist": "Queen",
-  "title": "Funk",
-  "type": "Album",
-  "mbid": "06fcc667-c219-445d-ae8f-66f196d226a5",
-  "url": "https://musicbrainz.org/release-group/06fcc667-c219-445d-ae8f-66f196d226a5"
  }
 ]
