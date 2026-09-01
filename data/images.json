@@ -599,7 +599,19 @@
   "linnkochemmery": "https://cdn-images.dzcdn.net/images/artist/402411facdb14c15efd97a9d7a62b135/250x250-000000-80-0-0.jpg",
   "lazyeyes": "https://cdn-images.dzcdn.net/images/artist/0ab87bc89303cd43d0bb7b3d0dec70e0/250x250-000000-80-0-0.jpg",
   "leavetheplanet": "https://cdn-images.dzcdn.net/images/artist/142141f8805b73a4605dddca660d35ee/250x250-000000-80-0-0.jpg",
-  "songsung": "https://cdn-images.dzcdn.net/images/artist/467b94c073f04fd194448e84af65bd5b/250x250-000000-80-0-0.jpg"
+  "songsung": "https://cdn-images.dzcdn.net/images/artist/467b94c073f04fd194448e84af65bd5b/250x250-000000-80-0-0.jpg",
+  "tysegall": "https://cdn-images.dzcdn.net/images/artist/312ace535d2472a0feaeea4bcfee0803/250x250-000000-80-0-0.jpg",
+  "whitedenim": "https://cdn-images.dzcdn.net/images/artist/dfceb801b6bd8a141c8bd243d525707b/250x250-000000-80-0-0.jpg",
+  "titlefight": "https://cdn-images.dzcdn.net/images/artist/bff3aa3bef58ac38aea3eb007310f5c4/250x250-000000-80-0-0.jpg",
+  "guestlist": "https://cdn-images.dzcdn.net/images/artist/4706174da355e80f8cdc719b70e1dae2/250x250-000000-80-0-0.jpg",
+  "loathe": "https://cdn-images.dzcdn.net/images/artist/d1ffd74f65dd921ea70714dc101e4dc5/250x250-000000-80-0-0.jpg",
+  "narrowhead": "https://cdn-images.dzcdn.net/images/artist/b9726c5b86501858f58f4471a2c11e78/250x250-000000-80-0-0.jpg",
+  "worldnews": "https://cdn-images.dzcdn.net/images/artist/a676a9308b57ea11ba69dfa22e887aea/250x250-000000-80-0-0.jpg",
+  "overpass": "https://cdn-images.dzcdn.net/images/artist/d41d8cd98f00b204e9800998ecf8427e/250x250-000000-80-0-0.jpg",
+  "kinks": "https://cdn-images.dzcdn.net/images/artist/72b207adbd41f6ae13b84c041e8f965f/250x250-000000-80-0-0.jpg",
+  "voidz": "https://cdn-images.dzcdn.net/images/artist/e4f7d9949a634c34110887df80815785/250x250-000000-80-0-0.jpg",
+  "shakinghand": "https://cdn-images.dzcdn.net/images/artist/36f0aacbafc9034dd71cfe325a34b651/250x250-000000-80-0-0.jpg",
+  "deceits": "https://cdn-images.dzcdn.net/images/artist/f5f595055d14c8efccd2d924fb40eadd/250x250-000000-80-0-0.jpg"
  },
  "albums": {
   "pixies|doolittle": "https://cdn-images.dzcdn.net/images/cover/ad3c04ab094d37133ccbca4b3b54a193/250x250-000000-80-0-0.jpg",
@@ -1061,7 +1073,10 @@
   "cure|cure": "https://cdn-images.dzcdn.net/images/cover/7aaac360bd9a4b530f722e077b633922/250x250-000000-80-0-0.jpg",
   "pixies|deathtothepixies": "https://cdn-images.dzcdn.net/images/cover/fa4a3bb8ef29a683940f740a6ef85601/250x250-000000-80-0-0.jpg",
   "stereolab|dotsandloops": "https://cdn-images.dzcdn.net/images/cover/6ed209ddb99e0b76497e9430a58aec64/250x250-000000-80-0-0.jpg",
-  "lowtide|southernmind": "https://cdn-images.dzcdn.net/images/cover/99b5e6f0447c1431d22d157461c1ab4d/250x250-000000-80-0-0.jpg"
+  "lowtide|southernmind": "https://cdn-images.dzcdn.net/images/cover/99b5e6f0447c1431d22d157461c1ab4d/250x250-000000-80-0-0.jpg",
+  "strokes|realityawaits": "https://cdn-images.dzcdn.net/images/cover/47378e1fa6deeac44c86a815f5b07b3d/250x250-000000-80-0-0.jpg",
+  "basement|colourmeinkindness": "https://cdn-images.dzcdn.net/images/cover/bc1bf1a9fcc93e573bca5a37892cd36f/250x250-000000-80-0-0.jpg",
+  "kurtvile|blieveimgoindown": "https://cdn-images.dzcdn.net/images/cover/b4ed5cede3fcf8e81a0e0201c8103bfc/250x250-000000-80-0-0.jpg"
  },
  "misses": [
   "b:aerosmith|younglusttheaerosmithanthology",
