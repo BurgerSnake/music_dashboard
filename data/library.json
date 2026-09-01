@@ -1,6 +1,174 @@
 {
  "tracks": [
   {
+   "track": "Shakermaker - Remastered",
+   "artist": "Oasis",
+   "album": "Definitely Maybe (Deluxe Edition Remastered)",
+   "uri": "spotify:track:7HHNKKfD9oNshMTyklBeWu",
+   "added": "2026-09-01T06:38:00Z"
+  },
+  {
+   "track": "Up In The Sky - Remastered",
+   "artist": "Oasis",
+   "album": "Definitely Maybe (Deluxe Edition Remastered)",
+   "uri": "spotify:track:10fOKTNaGzajbX5SdS00Ut",
+   "added": "2026-09-01T06:37:58Z"
+  },
+  {
+   "track": "Columbia - Remastered",
+   "artist": "Oasis",
+   "album": "Definitely Maybe (Deluxe Edition Remastered)",
+   "uri": "spotify:track:20EkniSUbhZ86v1Oc0hhUI",
+   "added": "2026-09-01T06:37:56Z"
+  },
+  {
+   "track": "Bring It On Down - Remastered",
+   "artist": "Oasis",
+   "album": "Definitely Maybe (Deluxe Edition Remastered)",
+   "uri": "spotify:track:4dXBRhjGDoDjYR0JuvPuXu",
+   "added": "2026-09-01T06:37:53Z"
+  },
+  {
+   "track": "Cigarettes & Alcohol - Remastered",
+   "artist": "Oasis",
+   "album": "Definitely Maybe (Deluxe Edition Remastered)",
+   "uri": "spotify:track:5adjc9rGazKvYcyEHNtoz1",
+   "added": "2026-09-01T06:37:46Z"
+  },
+  {
+   "track": "This Velvet Glove",
+   "artist": "Red Hot Chili Peppers",
+   "album": "Californication",
+   "uri": "spotify:track:0GIDR7iLJgV5fJwdcv8TXo",
+   "added": "2026-09-01T05:13:01Z"
+  },
+  {
+   "track": "Skin/Twin",
+   "artist": "Pure Hex",
+   "album": "Spilling / Five of Tears",
+   "uri": "spotify:track:4R4mOhitw9q6NzZBrgCBNY",
+   "added": "2026-08-31T22:16:45Z"
+  },
+  {
+   "track": "Paddling",
+   "artist": "Squid",
+   "album": "Bright Green Field",
+   "uri": "spotify:track:7FXWKJGKhGrsaiYdMbWJdj",
+   "added": "2026-08-31T19:30:14Z"
+  },
+  {
+   "track": "The Lovers",
+   "artist": "Croíthe",
+   "album": "The Lovers",
+   "uri": "spotify:track:6LqdSUFNR0H2CwWBVHgUut",
+   "added": "2026-08-31T18:59:23Z"
+  },
+  {
+   "track": "Pamphlets",
+   "artist": "Squid",
+   "album": "Bright Green Field",
+   "uri": "spotify:track:3tOKVaYAYRMr3aaNqLxJaM",
+   "added": "2026-08-31T18:52:13Z"
+  },
+  {
+   "track": "Love, Hate, Love",
+   "artist": "Alice In Chains",
+   "album": "Facelift",
+   "uri": "spotify:track:2YolSRrYvFxhTGjbiT33yH",
+   "added": "2026-08-31T18:19:41Z"
+  },
+  {
+   "track": "Dog Song",
+   "artist": "Sweet Pill",
+   "album": "Where the Heart Is",
+   "uri": "spotify:track:2r63FDIX4pta7SEFyE5MdZ",
+   "added": "2026-08-31T14:25:37Z"
+  },
+  {
+   "track": "Split Me Open",
+   "artist": "Mannequin Pussy",
+   "album": "I Got Heaven",
+   "uri": "spotify:track:3AHtwnVC3hmQFOJY4rVb6I",
+   "added": "2026-08-31T13:12:15Z"
+  },
+  {
+   "track": "Pop Punk Anthem (Sorry for the Delay)",
+   "artist": "Die Spitz",
+   "album": "Something To Consume",
+   "uri": "spotify:track:0bklLrIusZYrRVRj7rOYUv",
+   "added": "2026-08-31T13:12:14Z"
+  },
+  {
+   "track": "Aching",
+   "artist": "Mannequin Pussy",
+   "album": "I Got Heaven",
+   "uri": "spotify:track:3yrTFqVJ3WT6YDzhhR0YJw",
+   "added": "2026-08-31T13:12:09Z"
+  },
+  {
+   "track": "Of Her",
+   "artist": "Mannequin Pussy",
+   "album": "I Got Heaven",
+   "uri": "spotify:track:2415zlo33NvXzYSZEH61s5",
+   "added": "2026-08-31T13:12:07Z"
+  },
+  {
+   "track": "Softly",
+   "artist": "Mannequin Pussy",
+   "album": "I Got Heaven",
+   "uri": "spotify:track:4IO9qsd71oamZ3HsEzeGmE",
+   "added": "2026-08-31T13:12:05Z"
+  },
+  {
+   "track": "OK? OK! OK? OK!",
+   "artist": "Mannequin Pussy",
+   "album": "I Got Heaven",
+   "uri": "spotify:track:2mVEPVf5YF4hukVUWaorF7",
+   "added": "2026-08-31T13:12:03Z"
+  },
+  {
+   "track": "Sometimes",
+   "artist": "Mannequin Pussy",
+   "album": "I Got Heaven",
+   "uri": "spotify:track:2hVbai5ZN5yykTbSteAPKy",
+   "added": "2026-08-31T13:12:02Z"
+  },
+  {
+   "track": "I Don't Know You",
+   "artist": "Mannequin Pussy",
+   "album": "I Got Heaven",
+   "uri": "spotify:track:2VO8CVuLDVXynM8tQECALM",
+   "added": "2026-08-31T13:11:57Z"
+  },
+  {
+   "track": "Polyawkward",
+   "artist": "English Teacher",
+   "album": "Polyawkward",
+   "uri": "spotify:track:0RpHpFI7hk7gRwRhnLAX47",
+   "added": "2026-08-31T12:35:15Z"
+  },
+  {
+   "track": "Give Me A Reason Why",
+   "artist": "swim school",
+   "album": "Swim School (Deluxe Edition)",
+   "uri": "spotify:track:06dg51rJpjkMup9zbHd7PM",
+   "added": "2026-08-31T12:28:08Z"
+  },
+  {
+   "track": "Adored",
+   "artist": "Been Stellar",
+   "album": "Adored",
+   "uri": "spotify:track:1hO9i2zie9Ociw0Goh1Ots",
+   "added": "2026-08-31T11:46:16Z"
+  },
+  {
+   "track": "Always On My Mind",
+   "artist": "Been Stellar",
+   "album": "Always On My Mind",
+   "uri": "spotify:track:5ANlhqIz2ai4B0aZo9NVx5",
+   "added": "2026-08-31T11:36:27Z"
+  },
+  {
    "track": "Thank God For Sinners",
    "artist": "Ty Segall",
    "album": "Twins",
@@ -45314,6 +45482,30 @@
  ],
  "albums": [
   {
+   "album": "Definitely Maybe (Deluxe Edition Remastered)",
+   "artist": "Oasis",
+   "uri": "spotify:album:3AMHMM2aNG6k3d7ybcQ5bY",
+   "added": "2026-08-12T17:15:28Z"
+  },
+  {
+   "album": "Jar Of Flies",
+   "artist": "Alice In Chains",
+   "uri": "spotify:album:4FCoFSNIFhK36holxHWCnc",
+   "added": "2026-04-21T22:44:33Z"
+  },
+  {
+   "album": "a short history of decay",
+   "artist": "Nothing",
+   "uri": "spotify:album:7euwYFDlezb1aLOvEE4p2P",
+   "added": "2026-08-06T20:18:16Z"
+  },
+  {
+   "album": "I Got Heaven",
+   "artist": "Mannequin Pussy",
+   "uri": "spotify:album:5ROzqM7rbMYoKbQIw4i7fp",
+   "added": "2026-08-12T18:07:03Z"
+  },
+  {
    "album": "Led Zeppelin II (Remaster)",
    "artist": "Led Zeppelin",
    "uri": "spotify:album:58MQ0PLijVHePUonQlK76Y",
@@ -45444,12 +45636,6 @@
    "artist": "Fontaines D.C.",
    "uri": "spotify:album:307RtUHysY6w6RO29i9YNL",
    "added": "2026-01-05T15:24:39Z"
-  },
-  {
-   "album": "Jar Of Flies",
-   "artist": "Alice In Chains",
-   "uri": "spotify:album:4FCoFSNIFhK36holxHWCnc",
-   "added": "2026-04-21T22:44:33Z"
   },
   {
    "album": "Bleech 9:3",
@@ -45930,12 +46116,6 @@
    "artist": "Mogwai",
    "uri": "spotify:album:474vVLzrq9sxOGpQMPHIPq",
    "added": "2026-08-12T18:07:12Z"
-  },
-  {
-   "album": "I Got Heaven",
-   "artist": "Mannequin Pussy",
-   "uri": "spotify:album:5ROzqM7rbMYoKbQIw4i7fp",
-   "added": "2026-08-12T18:07:03Z"
   },
   {
    "album": "Exploding Head",
@@ -46502,12 +46682,6 @@
    "added": "2026-08-12T17:15:36Z"
   },
   {
-   "album": "Definitely Maybe (Deluxe Edition Remastered)",
-   "artist": "Oasis",
-   "uri": "spotify:album:3AMHMM2aNG6k3d7ybcQ5bY",
-   "added": "2026-08-12T17:15:28Z"
-  },
-  {
    "album": "Definitely Maybe",
    "artist": "Oasis",
    "uri": "spotify:album:3LzKUdUTdJb6P7xGN6SotC",
@@ -46584,12 +46758,6 @@
    "artist": "The Haunted Youth",
    "uri": "spotify:album:1dNC3LocONxgz5YiSE6yzG",
    "added": "2026-05-07T22:00:00Z"
-  },
-  {
-   "album": "a short history of decay",
-   "artist": "Nothing",
-   "uri": "spotify:album:7euwYFDlezb1aLOvEE4p2P",
-   "added": "2026-08-06T20:18:16Z"
   },
   {
    "album": "viagr aboys",
@@ -48501,6 +48669,14 @@
   }
  ],
  "artists": [
+  {
+   "artist": "Croíthe",
+   "uri": "spotify:artist:1rt7AxU5xgNMAxeIzUsjXl"
+  },
+  {
+   "artist": "swim school",
+   "uri": "spotify:artist:7hC74DRW4q3obXLB5lTq4F"
+  },
   {
    "artist": "Ty Segall",
    "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
