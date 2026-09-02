@@ -1,6 +1,132 @@
 {
  "tracks": [
   {
+   "track": "Loverly",
+   "artist": "Dog silent",
+   "album": "Loverly",
+   "uri": "spotify:track:4Nj6uXXFEHNkiSejOvfGWe",
+   "added": "2026-09-02T07:59:55Z"
+  },
+  {
+   "track": "Stonecutters",
+   "artist": "DOPE LEMON",
+   "album": "Honey Bones",
+   "uri": "spotify:track:5JQeFVoT7dpl6NmVObf3LG",
+   "added": "2026-09-01T23:38:57Z"
+  },
+  {
+   "track": "Blankenship",
+   "artist": "DIIV",
+   "album": "Deceiver",
+   "uri": "spotify:track:4NvScucpzlADi1otVCTu3s",
+   "added": "2026-09-01T19:47:37Z"
+  },
+  {
+   "track": "The Swamp Song - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:1PCOqZEbrCvjmPFL6QtYiU",
+   "added": "2026-09-01T13:48:23Z"
+  },
+  {
+   "track": "Round Are Way - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:7iFb0atLdlW8g2i2ULNANJ",
+   "added": "2026-09-01T13:48:22Z"
+  },
+  {
+   "track": "Cum On Feel The Noize - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:0yvyAlyoLpledlpiwPr34Z",
+   "added": "2026-09-01T13:48:20Z"
+  },
+  {
+   "track": "Underneath The Sky - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:3RErQ95ws6sABDLXKLJy1s",
+   "added": "2026-09-01T13:48:18Z"
+  },
+  {
+   "track": "Step Out - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:4SeE8Yh2EMcKbNosy9aKXj",
+   "added": "2026-09-01T13:48:16Z"
+  },
+  {
+   "track": "The Masterplan - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:0QRF5DfHjWxd4MHoQk2rgO",
+   "added": "2026-09-01T13:48:10Z"
+  },
+  {
+   "track": "Rockin' Chair - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:3RQlPnPdfHkVLHOx6C4ijN",
+   "added": "2026-09-01T13:04:32Z"
+  },
+  {
+   "track": "It's Better People - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:2oa8YXhCiMbfBEc9Fpm28g",
+   "added": "2026-09-01T13:04:29Z"
+  },
+  {
+   "track": "Headshrinker - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:32drzZQvRLJ5oEVYQgIfJC",
+   "added": "2026-09-01T12:54:05Z"
+  },
+  {
+   "track": "Talk Tonight - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:2LNV0347QKt4AHxRSfCBij",
+   "added": "2026-09-01T12:43:05Z"
+  },
+  {
+   "track": "The Swamp Song (Excerpt 2) - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:2m7VqwOg21AirxmNOxeaKB",
+   "added": "2026-09-01T12:43:00Z"
+  },
+  {
+   "track": "The Swamp Song (Excerpt 1) - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:0C5sWHmcl8725KPaVJj1td",
+   "added": "2026-09-01T11:49:28Z"
+  },
+  {
+   "track": "Hey Now! - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:4FDEDR99kqoGZOV88Wpnpg",
+   "added": "2026-09-01T11:49:23Z"
+  },
+  {
+   "track": "Roll With It - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:3czgcbI4YZ4Gg29DOYFAnd",
+   "added": "2026-09-01T11:08:20Z"
+  },
+  {
+   "track": "Hello - Remastered",
+   "artist": "Oasis",
+   "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+   "uri": "spotify:track:1KcFLmFGCfkkAsooF6FJBr",
+   "added": "2026-09-01T10:59:44Z"
+  },
+  {
    "track": "Shakermaker - Remastered",
    "artist": "Oasis",
    "album": "Definitely Maybe (Deluxe Edition Remastered)",
@@ -45482,6 +45608,12 @@
  ],
  "albums": [
   {
+   "album": "I Got Heaven",
+   "artist": "Mannequin Pussy",
+   "uri": "spotify:album:5ROzqM7rbMYoKbQIw4i7fp",
+   "added": "2026-08-12T18:07:03Z"
+  },
+  {
    "album": "Definitely Maybe (Deluxe Edition Remastered)",
    "artist": "Oasis",
    "uri": "spotify:album:3AMHMM2aNG6k3d7ybcQ5bY",
@@ -45498,12 +45630,6 @@
    "artist": "Nothing",
    "uri": "spotify:album:7euwYFDlezb1aLOvEE4p2P",
    "added": "2026-08-06T20:18:16Z"
-  },
-  {
-   "album": "I Got Heaven",
-   "artist": "Mannequin Pussy",
-   "uri": "spotify:album:5ROzqM7rbMYoKbQIw4i7fp",
-   "added": "2026-08-12T18:07:03Z"
   },
   {
    "album": "Led Zeppelin II (Remaster)",
@@ -47000,12 +47126,6 @@
    "added": "2026-06-08T22:18:22Z"
   },
   {
-   "album": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
-   "artist": "David Bowie",
-   "uri": "spotify:album:48D1hRORqJq52qsnUYZX56",
-   "added": "2026-04-21T13:20:29Z"
-  },
-  {
    "album": "Roses",
    "artist": "Widowspeak",
    "uri": "spotify:album:2BN4p5eqhjLPUc17RGAogQ",
@@ -47046,6 +47166,12 @@
    "artist": "True Widow",
    "uri": "spotify:album:5xkD0KbkpBYK3n8rDA0y6j",
    "added": "2026-04-24T08:27:41Z"
+  },
+  {
+   "album": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
+   "artist": "David Bowie",
+   "uri": "spotify:album:48D1hRORqJq52qsnUYZX56",
+   "added": "2026-04-21T13:20:29Z"
   },
   {
    "album": "GOLDSTAR",
