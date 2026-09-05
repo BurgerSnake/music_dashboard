@@ -1,6 +1,13 @@
 {
  "tracks": [
   {
+   "track": "Medicate",
+   "artist": "AFI",
+   "album": "Crash Love (Deluxe)",
+   "uri": "spotify:track:42vwak6ZIFMscDhRB3S52z",
+   "added": "2026-09-04T18:08:30Z"
+  },
+  {
    "track": "Caroline's Gone",
    "artist": "The Asteroid No.4",
    "album": "Several Shapes of Solar Flares",
@@ -45629,6 +45636,12 @@
  ],
  "albums": [
   {
+   "album": "The Stone Roses",
+   "artist": "The Stone Roses",
+   "uri": "spotify:album:0um9FI6BLBldL5POP4D4Cw",
+   "added": "2026-01-15T10:43:29Z"
+  },
+  {
    "album": "Dance on the Blacktop",
    "artist": "Nothing",
    "uri": "spotify:album:4LSHNiX2fM8eKv4TyosARZ",
@@ -45825,12 +45838,6 @@
    "artist": "Man/Woman/Chainsaw",
    "uri": "spotify:album:1yN1NPr6d4TvVJyUyuMHpK",
    "added": "2026-08-15T20:18:00Z"
-  },
-  {
-   "album": "The Stone Roses",
-   "artist": "The Stone Roses",
-   "uri": "spotify:album:0um9FI6BLBldL5POP4D4Cw",
-   "added": "2026-01-15T10:43:29Z"
   },
   {
    "album": "Daydream Nation (Remastered Original Album)",
