@@ -45636,6 +45636,12 @@
  ],
  "albums": [
   {
+   "album": "Definitely Maybe (Deluxe Edition Remastered)",
+   "artist": "Oasis",
+   "uri": "spotify:album:3AMHMM2aNG6k3d7ybcQ5bY",
+   "added": "2026-08-12T17:15:28Z"
+  },
+  {
    "album": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
    "artist": "Oasis",
    "uri": "spotify:album:6tOe4eAF8xNhEkl9WyvsE4",
@@ -45664,12 +45670,6 @@
    "artist": "Mannequin Pussy",
    "uri": "spotify:album:5ROzqM7rbMYoKbQIw4i7fp",
    "added": "2026-08-12T18:07:03Z"
-  },
-  {
-   "album": "Definitely Maybe (Deluxe Edition Remastered)",
-   "artist": "Oasis",
-   "uri": "spotify:album:3AMHMM2aNG6k3d7ybcQ5bY",
-   "added": "2026-08-12T17:15:28Z"
   },
   {
    "album": "a short history of decay",
