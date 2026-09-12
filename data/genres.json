@@ -483,7 +483,22 @@
   "cypresshill": "Hip-hop",
   "sadloversgiants": "Post-punk / Cold wave",
   "charlottegainsbourg": "Indie / Alternative",
-  "mercury": "Shoegaze / Dream pop"
+  "mercury": "Shoegaze / Dream pop",
+  "manwomanchainsaw": "Indie / Alternative",
+  "carissaswierd": "Post-rock / Drone",
+  "whatisyourname": "Shoegaze / Dream pop",
+  "lilpump": "Hip-hop",
+  "hardfi": "Post-punk / Cold wave",
+  "kaiserchiefs": "Britpop",
+  "animals": "Rock psyché / Garage",
+  "jackwhite": "Rock psyché / Garage",
+  "reignwolf": "Rock psyché / Garage",
+  "haken": "Metal / Hard rock",
+  "janesaddiction": "Grunge / 90s alt",
+  "findlay": "Indie / Alternative",
+  "wipers": "Post-punk / Cold wave",
+  "draag": "Shoegaze / Dream pop",
+  "championne": "Shoegaze / Dream pop"
  },
  "tags": {
   "pixies": [
@@ -3303,6 +3318,94 @@
    "indie rock",
    "dream pop",
    "indie rock"
+  ],
+  "manwomanchainsaw": [
+   "art punk",
+   "indie rock",
+   "art punk",
+   "indie rock"
+  ],
+  "carissaswierd": [
+   "slowcore",
+   "slowcore",
+   "indie rock",
+   "indie rock"
+  ],
+  "whatisyourname": [
+   "dream pop",
+   "indie rock",
+   "math rock",
+   "dream pop"
+  ],
+  "lilpump": [
+   "hip hop",
+   "hip hop",
+   "trap",
+   "trap"
+  ],
+  "hardfi": [
+   "indie rock",
+   "indie rock",
+   "indie pop",
+   "post-punk revival"
+  ],
+  "kaiserchiefs": [
+   "indie rock",
+   "indie rock",
+   "britpop",
+   "british"
+  ],
+  "animals": [
+   "blues rock",
+   "psychedelic rock",
+   "blues rock",
+   "psychedelic rock"
+  ],
+  "jackwhite": [
+   "alternative rock",
+   "alternative rock",
+   "blues rock",
+   "rock"
+  ],
+  "reignwolf": [
+   "blues",
+   "blues rock",
+   "garage rock",
+   "rock"
+  ],
+  "haken": [
+   "progressive metal",
+   "progressive metal",
+   "progressive rock",
+   "progressive rock"
+  ],
+  "janesaddiction": [
+   "alternative rock",
+   "alternative rock",
+   "alternative metal",
+   "alternative metal"
+  ],
+  "findlay": [
+   "indie rock",
+   "indie rock"
+  ],
+  "wipers": [
+   "post-punk",
+   "punk rock",
+   "post-punk",
+   "punk rock"
+  ],
+  "draag": [
+   "alternative punk",
+   "dream pop",
+   "electronic",
+   "experimental"
+  ],
+  "championne": [
+   "coldwave",
+   "dream pop",
+   "indie pop",
+   "pop"
   ]
  },
  "misses": [
@@ -3322,18 +3425,21 @@
   "badnerves",
   "balancingact",
   "basht",
+  "beatlesrecoveredband",
   "beck",
   "beenstellar",
   "beforest",
   "biche",
   "bigspecial",
   "birdsflyingbackwards",
+  "blackhoney",
   "bleech93",
   "blindmrjones",
   "blouse",
   "bluesmiley",
   "bodega",
   "bodytype",
+  "bollard",
   "broadcast",
   "brutus",
   "burntlog",
@@ -3347,10 +3453,12 @@
   "cheatahs",
   "chloegallardo",
   "cleanersfromvenus",
+  "coachparty",
   "cola",
   "columbiamills",
   "computerkill",
   "cosmopaark",
+  "cqwrestling",
   "cruush",
   "cucamaras",
   "dailycommuters",
@@ -3359,6 +3467,7 @@
   "dbfc",
   "deadletter",
   "demobhappy",
+  "deniselemenice",
   "dogsilent",
   "dreamivory",
   "dylangers",
@@ -3377,6 +3486,7 @@
   "futuremagics",
   "glaascats",
   "goldensunbird",
+  "grandjojo",
   "grivo",
   "groscoeur",
   "guestlist",
@@ -3397,9 +3507,11 @@
   "lazyeyes",
   "leavetheplanet",
   "lifeonvenus",
+  "lightlead",
   "lilys",
   "linnkochemmery",
   "loop",
+  "lorenzo",
   "louse",
   "lowtide",
   "magon",
@@ -3484,6 +3596,7 @@
   "ttssfu",
   "turnstiles",
   "ultravividscene",
+  "ursapops",
   "vant",
   "vivienneeastwood",
   "warhaus",
