@@ -45636,6 +45636,12 @@
  ],
  "albums": [
   {
+   "album": "Jar Of Flies",
+   "artist": "Alice In Chains",
+   "uri": "spotify:album:4FCoFSNIFhK36holxHWCnc",
+   "added": "2026-04-21T22:44:33Z"
+  },
+  {
    "album": "Please Please Me (Remastered)",
    "artist": "The Beatles",
    "uri": "spotify:album:7gDXyW16byCQOgK965BRzn",
@@ -45670,12 +45676,6 @@
    "artist": "Nothing",
    "uri": "spotify:album:4LSHNiX2fM8eKv4TyosARZ",
    "added": "2026-08-11T14:28:43Z"
-  },
-  {
-   "album": "Jar Of Flies",
-   "artist": "Alice In Chains",
-   "uri": "spotify:album:4FCoFSNIFhK36holxHWCnc",
-   "added": "2026-04-21T22:44:33Z"
   },
   {
    "album": "I Got Heaven",
