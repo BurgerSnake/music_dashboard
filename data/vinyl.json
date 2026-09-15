@@ -220,6 +220,25 @@
   },
   {
    "kind": "collection",
+   "id": 18803836,
+   "instance_id": 2184497024,
+   "folder_id": 1,
+   "title": "Loveless",
+   "artist": "My Bloody Valentine",
+   "year": 2021,
+   "labels": [
+    "Domino",
+    "MBV Records"
+   ],
+   "formats": [
+    "Vinyl"
+   ],
+   "thumb": "https://i.discogs.com/VpC3NLE--kDR2WsE3o9v-9byyjuI7ztNjyPPwa_6KBo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4ODAz/ODM2LTE2NTAwMTY2/OTYtNzIwNy5qcGVn.jpeg",
+   "added": "2026-09-15T01:45:56-07:00",
+   "url": "https://www.discogs.com/release/18803836"
+  },
+  {
+   "kind": "collection",
    "id": 8971807,
    "instance_id": 2171394479,
    "folder_id": 1,
@@ -291,6 +310,24 @@
    "thumb": "https://i.discogs.com/CJweCn-KTRvmS7GcjNGfl0I0c_kh54zKWQ8L0CmHEgM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNTUx/MTQzLTE2NDA5NTE3/ODQtNzUyNS5qcGVn.jpeg",
    "added": "2026-08-07T05:57:10-07:00",
    "url": "https://www.discogs.com/release/21551143"
+  },
+  {
+   "kind": "collection",
+   "id": 37832670,
+   "instance_id": 2184496745,
+   "folder_id": 1,
+   "title": "Parklife",
+   "artist": "Blur",
+   "year": 2026,
+   "labels": [
+    "Food"
+   ],
+   "formats": [
+    "Vinyl"
+   ],
+   "thumb": "https://i.discogs.com/UVj8L3Kj7dX0yXzyoQKEXSOMAsoZq-2qJoGwnHsHlV0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3ODMy/NjcwLTE3ODM1NDcx/OTktNTYzMi5qcGVn.jpeg",
+   "added": "2026-09-15T01:44:16-07:00",
+   "url": "https://www.discogs.com/release/37832670"
   },
   {
    "kind": "collection",
@@ -442,6 +479,24 @@
   },
   {
    "kind": "collection",
+   "id": 27486498,
+   "instance_id": 2184497397,
+   "folder_id": 1,
+   "title": "Dogrel",
+   "artist": "Fontaines D.C.",
+   "year": 2019,
+   "labels": [
+    "Partisan Records"
+   ],
+   "formats": [
+    "Vinyl"
+   ],
+   "thumb": "https://i.discogs.com/tRXpFlt54xbQkpkbMuQmg12-EHhkuUyEuDHmKXHLQLA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3NDg2/NDk4LTE2ODc2NzY0/MzItOTQyOS5qcGVn.jpeg",
+   "added": "2026-09-15T01:48:36-07:00",
+   "url": "https://www.discogs.com/release/27486498"
+  },
+  {
+   "kind": "collection",
    "id": 22968419,
    "instance_id": 2171391383,
    "folder_id": 1,
@@ -512,6 +567,25 @@
    "thumb": "https://i.discogs.com/MrFgxM0YHMnL4O2VCqU2eiNcCsxd9-2ZDvwSdK2HKhM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NzU2/OTEwLTE3NzMzNzAw/ODUtNjk1NS5qcGVn.jpeg",
    "added": "2026-08-07T05:29:43-07:00",
    "url": "https://www.discogs.com/release/36756910"
+  },
+  {
+   "kind": "collection",
+   "id": 30170624,
+   "instance_id": 2184496593,
+   "folder_id": 1,
+   "title": "Jar Of Flies",
+   "artist": "Alice In Chains",
+   "year": 2024,
+   "labels": [
+    "Velvet Hammer",
+    "Columbia"
+   ],
+   "formats": [
+    "Vinyl"
+   ],
+   "thumb": "https://i.discogs.com/A9hXNtOjjQaWTs3I2SLEoQM1KN8FTb9FzE7o01muGx0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwMTcw/NjI0LTE3MTY3MjY0/NzUtOTk3NC5qcGVn.jpeg",
+   "added": "2026-09-15T01:43:14-07:00",
+   "url": "https://www.discogs.com/release/30170624"
   },
   {
    "kind": "collection",
