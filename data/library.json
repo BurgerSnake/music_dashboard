@@ -1,6 +1,125 @@
 {
  "tracks": [
   {
+   "track": "VCR",
+   "artist": "juno eclipse",
+   "album": "VCR",
+   "uri": "spotify:track:7DphcxjA2nUa18zLrSC5yg",
+   "added": "2026-09-18T08:21:29Z"
+  },
+  {
+   "track": "Catherine",
+   "artist": "Velvet",
+   "album": "porcelain & velvet",
+   "uri": "spotify:track:3BzAe9ukG2OW19jwcZ8XQC",
+   "added": "2026-09-18T08:18:42Z"
+  },
+  {
+   "track": "Thursday",
+   "artist": "Asobi Seksu",
+   "album": "Citrus",
+   "uri": "spotify:track:1KOguS8HY5FjsPX5NWVAtx",
+   "added": "2026-09-18T07:25:39Z"
+  },
+  {
+   "track": "MUD",
+   "artist": "Slow Pulp",
+   "album": "Yard",
+   "uri": "spotify:track:4TaDzzRy2PUQn8wAG6Fvpw",
+   "added": "2026-09-18T07:24:31Z"
+  },
+  {
+   "track": "Days",
+   "artist": "No Vacation",
+   "album": "Days",
+   "uri": "spotify:track:2VB1nVKJAqgU5w4kIg4c36",
+   "added": "2026-09-18T06:53:48Z"
+  },
+  {
+   "track": "Different Now",
+   "artist": "Chastity Belt",
+   "album": "I Used to Spend So Much Time Alone",
+   "uri": "spotify:track:0E1I6kwic9XnAfOdjPzRHS",
+   "added": "2026-09-18T06:53:42Z"
+  },
+  {
+   "track": "Winter",
+   "artist": "Velvet",
+   "album": "Winter + Spring",
+   "uri": "spotify:track:4PSdLD7pi1jbvIjhn9JDQW",
+   "added": "2026-09-17T20:52:06Z"
+  },
+  {
+   "track": "Killed by Egoistic Disease",
+   "artist": "Slowwves",
+   "album": "Killed by Egoistic Disease",
+   "uri": "spotify:track:2pYiQTuQtwEsMGifUSMD3P",
+   "added": "2026-09-17T20:52:03Z"
+  },
+  {
+   "track": "wildflower",
+   "artist": "easterlin",
+   "album": "wildflower",
+   "uri": "spotify:track:3vK6vBb4pdEWycME44lBgr",
+   "added": "2026-09-17T20:52:01Z"
+  },
+  {
+   "track": "Secret Place",
+   "artist": "juno eclipse",
+   "album": "How to Take a Fall",
+   "uri": "spotify:track:4c7mFNwI4YwXFyIG7YAwXW",
+   "added": "2026-09-17T20:52:00Z"
+  },
+  {
+   "track": "Anywhere Else",
+   "artist": "Slowwves",
+   "album": "Anywhere Else",
+   "uri": "spotify:track:3O4hfLPqGJcBJxvkpfr7yD",
+   "added": "2026-09-17T20:51:55Z"
+  },
+  {
+   "track": "Hannibal",
+   "artist": "trauma ray",
+   "album": "Hannibal",
+   "uri": "spotify:track:6nugJSaqFRVSGGKQmrK1GD",
+   "added": "2026-09-17T20:51:55Z"
+  },
+  {
+   "track": "if we didn't cry",
+   "artist": "smush",
+   "album": "if we didn't cry",
+   "uri": "spotify:track:22vymNJGSB1NIP3x1tncVT",
+   "added": "2026-09-17T20:51:54Z"
+  },
+  {
+   "track": "World Explode",
+   "artist": "juno eclipse",
+   "album": "How to Take a Fall",
+   "uri": "spotify:track:27xfVPze05gD9F0S2SrQDN",
+   "added": "2026-09-17T20:51:52Z"
+  },
+  {
+   "track": "Weighted (So Long)",
+   "artist": "whither",
+   "album": "Weighted (So Long)",
+   "uri": "spotify:track:2dtJA0I6EgxvJTMYA8MyNO",
+   "added": "2026-09-17T20:50:52Z"
+  },
+  {
+   "track": "Days Decay",
+   "artist": "despïa",
+   "album": "Memory Blur",
+   "uri": "spotify:track:6WJzrApwjLEv1QCea1iJhR",
+   "added": "2026-09-17T20:02:28Z"
+  },
+  {
+   "track": "VisiOns",
+   "artist": "YEAHRS",
+   "album": "VisiOns",
+   "uri": "spotify:track:1REgy0yoKmVafY7SKMv86G",
+   "added": "2026-09-17T20:00:40Z"
+  },
+  {
    "track": "Hollywood Daydream",
    "artist": "Cigarettes for Breakfast",
    "album": "Join the Circus",
