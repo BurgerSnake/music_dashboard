@@ -498,7 +498,8 @@
   "findlay": "Indie / Alternative",
   "wipers": "Post-punk / Cold wave",
   "draag": "Shoegaze / Dream pop",
-  "championne": "Shoegaze / Dream pop"
+  "championne": "Shoegaze / Dream pop",
+  "thrilled": "Shoegaze / Dream pop"
  },
  "tags": {
   "pixies": [
@@ -3406,6 +3407,12 @@
    "dream pop",
    "indie pop",
    "pop"
+  ],
+  "thrilled": [
+   "alternative rock",
+   "dream pop",
+   "indie rock",
+   "post-punk"
   ]
  },
  "misses": [
@@ -3452,6 +3459,7 @@
   "chapterhouse",
   "cheatahs",
   "chloegallardo",
+  "cigarettesforbreakfast",
   "cleanersfromvenus",
   "coachparty",
   "cola",
