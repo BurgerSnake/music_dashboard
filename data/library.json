@@ -1,6 +1,41 @@
 {
  "tracks": [
   {
+   "track": "Hannibal",
+   "artist": "trauma ray",
+   "album": "Carnival",
+   "uri": "spotify:track:3tvewqNpipjcxlaNMPKXtF",
+   "added": "2026-09-18T11:24:40Z"
+  },
+  {
+   "track": "Killed By Egoistic Disease",
+   "artist": "Slowwves",
+   "album": "Killed By Egoistic Disease",
+   "uri": "spotify:track:15em23gE5vrhXjdCvAZipo",
+   "added": "2026-09-18T11:24:36Z"
+  },
+  {
+   "track": "Anywhere Else",
+   "artist": "Slowwves",
+   "album": "Perfect Evasion",
+   "uri": "spotify:track:3XH92FKYpcqBn2RNMh2oTv",
+   "added": "2026-09-18T11:24:27Z"
+  },
+  {
+   "track": "if we didn't cry",
+   "artist": "smush",
+   "album": "if you were here i'd be home now",
+   "uri": "spotify:track:0nMS9PJHJBAuIDDvkqYaFR",
+   "added": "2026-09-18T11:24:18Z"
+  },
+  {
+   "track": "Shell",
+   "artist": "Yndling",
+   "album": "Shell",
+   "uri": "spotify:track:4Y3t75xwiQuJkvXXmNcgRc",
+   "added": "2026-09-18T10:30:14Z"
+  },
+  {
    "track": "VCR",
    "artist": "juno eclipse",
    "album": "VCR",
@@ -50,13 +85,6 @@
    "added": "2026-09-17T20:52:06Z"
   },
   {
-   "track": "Killed by Egoistic Disease",
-   "artist": "Slowwves",
-   "album": "Killed by Egoistic Disease",
-   "uri": "spotify:track:2pYiQTuQtwEsMGifUSMD3P",
-   "added": "2026-09-17T20:52:03Z"
-  },
-  {
    "track": "wildflower",
    "artist": "easterlin",
    "album": "wildflower",
@@ -69,27 +97,6 @@
    "album": "How to Take a Fall",
    "uri": "spotify:track:4c7mFNwI4YwXFyIG7YAwXW",
    "added": "2026-09-17T20:52:00Z"
-  },
-  {
-   "track": "Anywhere Else",
-   "artist": "Slowwves",
-   "album": "Anywhere Else",
-   "uri": "spotify:track:3O4hfLPqGJcBJxvkpfr7yD",
-   "added": "2026-09-17T20:51:55Z"
-  },
-  {
-   "track": "Hannibal",
-   "artist": "trauma ray",
-   "album": "Hannibal",
-   "uri": "spotify:track:6nugJSaqFRVSGGKQmrK1GD",
-   "added": "2026-09-17T20:51:55Z"
-  },
-  {
-   "track": "if we didn't cry",
-   "artist": "smush",
-   "album": "if we didn't cry",
-   "uri": "spotify:track:22vymNJGSB1NIP3x1tncVT",
-   "added": "2026-09-17T20:51:54Z"
   },
   {
    "track": "World Explode",
@@ -5867,13 +5874,6 @@
    "added": "2026-07-26T19:46:35Z"
   },
   {
-   "track": "Anywhere Else",
-   "artist": "Slowwves",
-   "album": "Perfect Evasion",
-   "uri": "spotify:track:3XH92FKYpcqBn2RNMh2oTv",
-   "added": "2026-07-26T19:43:02Z"
-  },
-  {
    "track": "Follow",
    "artist": "fawn",
    "album": "fawn / cement diver",
@@ -6047,13 +6047,6 @@
    "album": "Perfect Evasion",
    "uri": "spotify:track:1NZ8rFMBufSCwwaXpYVG8D",
    "added": "2026-07-24T14:26:18Z"
-  },
-  {
-   "track": "if we didn't cry",
-   "artist": "smush",
-   "album": "if you were here i'd be home now",
-   "uri": "spotify:track:0nMS9PJHJBAuIDDvkqYaFR",
-   "added": "2026-07-24T14:19:25Z"
   },
   {
    "track": "It's All About Transient Ideology",
@@ -47309,12 +47302,6 @@
    "added": "2026-06-18T12:05:45Z"
   },
   {
-   "album": "23",
-   "artist": "Blonde Redhead",
-   "uri": "spotify:album:7iOloZrq72k9GsuJUUo1pO",
-   "added": "2026-01-06T11:20:40Z"
-  },
-  {
    "album": "Hail To the Thief",
    "artist": "Radiohead",
    "uri": "spotify:album:5mzoI3VH0ZWk1pLFR6RoYy",
@@ -47619,6 +47606,12 @@
    "artist": "Widowspeak",
    "uri": "spotify:album:1Oc2xtOJniLCtlyKZg6g3z",
    "added": "2026-01-06T11:26:41Z"
+  },
+  {
+   "album": "23",
+   "artist": "Blonde Redhead",
+   "uri": "spotify:album:7iOloZrq72k9GsuJUUo1pO",
+   "added": "2026-01-06T11:20:40Z"
   },
   {
    "album": "Skinty Fia",
@@ -49033,6 +49026,10 @@
  ],
  "artists": [
   {
+   "artist": "Yndling",
+   "uri": "spotify:artist:2X2ErfWZbEsawLjylqXM3m"
+  },
+  {
    "artist": "Croíthe",
    "uri": "spotify:artist:1rt7AxU5xgNMAxeIzUsjXl"
   },
@@ -49343,10 +49340,6 @@
   {
    "artist": "Cold Weather Venture",
    "uri": "spotify:artist:3nRkkeLxrM8QIswQ6hHfwF"
-  },
-  {
-   "artist": "Yndling",
-   "uri": "spotify:artist:2X2ErfWZbEsawLjylqXM3m"
   },
   {
    "artist": "The Sophs",
